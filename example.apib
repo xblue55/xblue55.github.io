@@ -1,320 +1,153 @@
 FORMAT: 1A
-HOST: https://api.example.com
+HOST: https://alpha-api.app.net
 
-# API Title
-[Markdown](http://daringfireball.net/projects/markdown/syntax) **formatted** description.
+# Real World API
+This API Blueprint demonstrates a real world example documenting a portion of
+[App.net API](http://developers.app.net).
 
-## Subtitle
-Also Markdown *formatted*. This also includes automatic "smartypants" formatting -- hooray!
+NOTE: This document is a **work in progress**.
 
-> "A quote from another time and place"
+# Group Posts
+This section groups App.net post resources.
 
-Another paragraph. Code sample:
-
-```http
-Authorization: bearer 5262d64b892e8d4341000001
-```
-
-And some code with no highlighting:
-
-```no-highlight
-Foo bar baz
-```
-
-1. A list
-2. Of items
-3. Can be
-4. Very useful
-
-Here is a table:
-
-ID | Name | Description
---:| ---- | -----------
- 1 | Foo  | I am a foo.
- 8 | Bar  | I am a bar.
-15 | Baz  | I am a baz.
-
-::: note
-## Extensions
-Some non-standard Markdown extensions are also supported, such as this informational container, which can also contain **formatting**. Features include:
-
-* Informational block fenced with `::: note` and `:::`
-* Warning block fenced with `::: warning` and `:::`
-* [x] GitHub-style checkboxes using `[x]` and `[ ]`
-* Emoji support :smile: :ship: :cake: using `:smile:` ([cheat sheet](http://www.emoji-cheat-sheet.com/))
-
-These extensions may change in the future as the [CommonMark specification](http://spec.commonmark.org/) defines a [standard extension syntax](https://github.com/jgm/CommonMark/wiki/Proposed-Extensions).
-:::
-
-<!-- include(example-include.md) -->
-
-# Data Structures
-
-## NoteData
-+ id: 1 (required, number) - Unique identifier
-+ title: Grocery list (required) - Single line description
-+ body: Buy milk - Full description of the note which supports Markdown.
-
-## NoteList (array)
-+ (NoteData)
-
-# Group Notes
-Group description (also with *Markdown*)
-
-## Important Info
-Descriptions may also contain sub-headings and **more Markdown**.
-
-## Note List [/notes]
-Note list description
-
-+ Even
-+ More
-+ Markdown
-
-### Get Notes [GET]
-Get a list of notes.
-
-+ Response 200 (application/json)
-
-    + Headers
-
-            X-Request-ID: f72fc914
-            X-Response-Time: 4ms
-
-    + Attributes (NoteList)
-
-### Create New Note [POST]
-Create a new note using a title and an optional content body.
-
-+ Request with body (application/json)
-
-    + Body
-
-            {
-                "title": "My new note",
-                "body": "This is the body"
-            }
-
-+ Response 201
-
-+ Response 400 (application/json)
-
-    + Body
-
-            {
-                "error": "Invalid title"
-            }
-
-+ Request without body (application/json)
-
-    + Body
-
-            {
-                "title": "My new note"
-            }
-
-+ Response 201
-
-+ Response 400 (application/json)
-
-    + Body
-
-            {
-                "error": "Invalid title"
-            }
-
-## Note [/notes/{id}{?body}]
-Note description
+## Post [/stream/0/posts/{post_id}]
+A Post is the other central object utilized by the App.net Stream API. It has
+rich text and annotations which comprise all of the content a users sees in
+their feed. Posts are closely tied to the follow graph...
 
 + Parameters
+    + post_id: `1` (string) - The id of the Post.
 
-    + id: `68a5sdf67` (required, string) - The note ID
++ Model (application/json)
 
-### Get Note [GET]
-Get a single note.
+    ```js
+    {
+        "data": {
+            "id": "1", // note this is a string
+            "user": {
+                ...
+            },
+            "created_at": "2012-07-16T17:25:47Z",
+            "text": "@berg FIRST post on this new site #newsocialnetwork",
+            "html": "<span itemprop=\"mention\" data-mention-name=\"berg\" data-mention-id=\"2\">@berg</span> FIRST post on <a href=\"https://join.app.net\" rel=\"nofollow\">this new site</a> <span itemprop=\"hashtag\" data-hashtag-name=\"newsocialnetwork\">#newsocialnetwork</span>.",
+            "source": {
+                "client_id": "udxGzAVBdXwGtkHmvswR5MbMEeVnq6n4",
+                "name": "Clientastic for iOS",
+                "link": "http://app.net"
+            },
+            "machine_only": false,
+            "reply_to": null,
+            "thread_id": "1",
+            "num_replies": 3,
+            "num_reposts": 0,
+            "num_stars": 0,
+            "entities": {
+                "mentions": [{
+                    "name": "berg",
+                    "id": "2",
+                    "pos": 0,
+                    "len": 5
+                }],
+                "hashtags": [{
+                    "name": "newsocialnetwork",
+                    "pos": 34,
+                    "len": 17
+                }],
+                "links": [{
+                    "text": "this new site",
+                    "url": "https://join.app.net"
+                    "pos": 20,
+                    "len": 13
+                }]
+            },
+            "you_reposted": false,
+            "you_starred": false
+        },
+        "meta": {
+            "code": 200,
+        }
+    }
+    ```
 
-+ Parameters
+### Retrieve a Post [GET]
+Returns a specific Post.
 
-    + body: `false` (boolean) - Set to `false` to exclude note body content.
++ Response 200
 
-+ Response 200 (application/json)
+    [Post][]
 
-    + Headers
-
-            X-Request-ID: f72fc914
-            X-Response-Time: 4ms
-
-    + Attributes (NoteData)
-
-+ Response 404 (application/json)
-
-    + Headers
-
-            X-Request-ID: f72fc914
-            X-Response-Time: 4ms
-
-    + Body
-
-            {
-                "error": "Note not found"
-            }
-
-### Update a Note [PUT]
-Update a single note by setting the title and/or body.
-
-::: warning
-#### <i class="fa fa-warning"></i> Caution
-If the value for `title` or `body` is `null` or `undefined`, then the corresponding value is not modified on the server. However, if you send an empty string instead then it will **permanently overwrite** the original value.
-:::
-
-+ Request (application/json)
-
-    + Body
-
-            {
-                "title": "Grocery List (Safeway)"
-            }
-
-+ Response 200 (application/json)
-
-    + Headers
-
-            X-Request-ID: f72fc914
-            X-Response-Time: 4ms
-
-    + Attributes (NoteData)
-
-+ Response 404 (application/json)
-
-    + Headers
-
-            X-Request-ID: f72fc914
-            X-Response-Time: 4ms
-
-    + Body
-
-            {
-                "error": "Note not found"
-            }
-
-+ Request delete body (application/json)
-
-    + Body
-
-            {
-                "body": ""
-            }
-
-+ Response 200 (application/json)
-
-    + Headers
-
-            X-Request-ID: f72fc914
-            X-Response-Time: 4ms
-
-    + Attributes (NoteData)
-
-+ Response 404 (application/json)
-
-    + Headers
-
-            X-Request-ID: f72fc914
-            X-Response-Time: 4ms
-
-    + Body
-
-            {
-                "error": "Note not found"
-            }
-
-### Delete a Note [DELETE]
-Delete a single note
+### Delete a Post [DELETE]
+Delete a Post. The current user must be the same user who created the Post. It
+returns the deleted Post on success.
 
 + Response 204
 
-+ Response 404 (application/json)
+## Posts Collection [/stream/0/posts]
+A Collection of posts.
 
-    + Headers
++ Model (application/json)
 
-            X-Request-ID: f72fc914
-            X-Response-Time: 4ms
-
-    + Body
-
+    ```js
+    {
+        "data": [
             {
-                "error": "Note not found"
-            }
+                "id": "1", // note this is a string
+                ...
+            },
+            {
+                "id": "2",
+                ...
+            },
+            {
+                "id": "3",
+                ...
+            },
+        ],
+        "meta": {
+            "code": 200,
+        }
+    }
+    ```
 
-# Group Users
-Group description
+### Create a Post [POST]
+Create a new Post object. Mentions and hashtags will be parsed out of the post
+text, as will bare URLs...
 
-## User List [/users{?name,joinedBefore,joinedAfter,sort,limit}]
-A list of users
++ Request
 
-+ Parameters
+    [Post][]
 
-    + name: `alice` (string, optional) - Search for a user by name
-    + joinedBefore: `2011-01-01` (string, optional) - Search by join date
-    + joinedAfter: `2011-01-01` (string, optional, ) - Search by join date
-    + sort: `joined` (string, optional) - Which field to sort by
-        + Default: `name`
-        + Members
-            + `name`
-            + `joined`
-            + `-joined`
-            + `age`
-            + `-age`
-            + `location`
-            + `-location`
-            + `plan`
-            + `-plan`
-    + limit: `25` (integer, optional) - The maximum number of users to return, up to `50`
-      + Default: `10`
++ Response 201
 
-### Get users [GET]
-Get a list of users. Example:
+    [Post][]
 
-```no-highlight
-https://api.mywebsite.com/users?sort=joined&limit=5
-```
-
-+ Response 200 (application/json)
-
-    + Body
-
-            [
-                {
-                    "name": "alice",
-                    "image": "http://example.com/alice.jpg",
-                    "joined": "2013-11-01"
-                },
-                {
-                    "name": "bob",
-                    "image": "http://example.com/bob.jpg",
-                    "joined": "2013-11-02"
-                }
-            ]
-
-    + Schema
-
-            <!-- include(example-schema.json) -->
-
-# Group Tags and Tagging Long Title
-Get or set tags on notes
-
-## GET /tags
-Get a list of bars
-
-+ Response 200 (application/json)
-
-        ["tag1", "tag2", "tag3"]
-
-## Get one tag [/tags/{id}]
-Get a single tag
-
-+ Parameters
-    + id - Unique tag identifier
-
-### GET
+### Retrieve all Posts [GET]
+Retrieves all posts.
 
 + Response 200
+
+    [Posts Collection][]
+
+## Stars [/stream/0/posts/{post_id}/star]
+A User’s stars are visible to others, but they are not automatically added to
+your followers’ streams.
+
++ Parameters
+    + post_id: `1` (string) - The id of the Post.
+
+### Star a Post [POST]
+Save a given Post to the current User’s stars. This is just a “save” action,
+not a sharing action.
+
+*Note: A repost cannot be starred. Please star the parent Post.*
+
++ Response 200
+
+    [Post][]
+
+### Unstar a Post [DELETE]
+Remove a Star from a Post.
+
++ Response 200
+
+    [Post][]
