@@ -6,8 +6,8 @@ Api for wholesale connect oss
 
 NOTE: This document is a **work in progress**.
 
-# Group Posts
-This section groups App.net post resources.
+# Group Auth
+This section groups for auth
 
 ## Auth [/api/auth/get_tokens]
 A Post is the other central object utilized by the App.net Stream API. It has
@@ -34,10 +34,10 @@ their feed. Posts are closely tied to the follow graph...
     }
     ```
 
-### Post toekn [POST]
+### Get token [POST]
 Token data
 
-+ Request
++ Request (text/plain)
 
     ```js
     {
@@ -51,3 +51,93 @@ Token data
 
     [Auth][]
 
++ Response 401 (application/json)
+
+    ```js
+    {
+        "error_descrip": "Odoo User authentication failed!",
+        "error": "odoo_user_authentication_failed"
+    }
+    ```
+
++ Response 400 (application/json)
+
+    ```js
+    {
+        "error_descrip": "Bad request",
+        "error": "ex:wrong_dbname"
+    }
+    ```
+
+## Refresh token [/api/auth/refresh_token]
+Description here
+
+### Refresh token [POST]
+Refresh access token when expire
++ Request (text/plain)
+
+    ```js
+    {
+        "refresh_token": "30ad5a3356d4cecd0ee391caf8154b633ba4af11"
+    }
+    ```
++ Response 200
+
+    [Auth][]
+
++ Response 401 (application/json)
+
+    ```js
+    {
+        "error_descrip": "Token is expired or invalid!",
+        "error": "invalid_token"
+    }
+    ```
+
++ Response 400 (application/json)
+
+    ```js
+    {
+        "error_descrip": "Bad request",
+        "error": "ex:wrong_dbname"
+    }
+    ```
+
+
+## Refresh token [/api/auth/delete_token]
+Description here
+
+### Refresh token [POST]
+Refresh access token when expire
++ Request (text/plain)
+
+    ```js
+    {
+        "refresh_token": "30ad5a3356d4cecd0ee391caf8154b633ba4af11"
+    }
+    ```
++ Response 200 (application/json)
+
+    ```js
+    {
+        
+    }
+    ```
+
++ Response 401 (application/json)
+
+    ```js
+    {
+        "error_descrip": "Token is expired or invalid!",
+        "error": "invalid_token"
+    }
+    ```
+
++ Response 400 (application/json)
+
+    ```js
+    {
+        "error_descrip": "Bad request",
+        "error": "ex:wrong_dbname"
+    }
+    ```
