@@ -6,6 +6,13 @@ Api for wholesale connect oss
 
 NOTE: This document is a **work in progress**.
 
+All request with Authorization and content-type:
+
+```http
+Authorization: 5262d64b892e8d4341000001 (token_code from api get token)
+Content-type: text/plain
+```
+
 # Group Auth
 This section groups for auth
 
@@ -18,19 +25,17 @@ their feed. Posts are closely tied to the follow graph...
 
     ```js
     {
-        {
-            "user_context": {
-                "lang": "en_US",
-                "tz": "Asia/Saigon",
-                "uid": 145
-            },
-            "uid": 145,
-            "access_token": "56f26ff2ba6b1fdbe3656bd6ec8801b3c2a8abd8",
-            "expires_in": 86400,
-            "company_id": 1,
-            "refresh_expires_in": 93600,
-            "refresh_token": "f2c97b879da324722e6c674e4ec77a5d0a3d1968"
-        }
+        "user_context": {
+            "lang": "en_US",
+            "tz": "Asia/Saigon",
+            "uid": 145
+        },
+        "uid": 145,
+        "access_token": "56f26ff2ba6b1fdbe3656bd6ec8801b3c2a8abd8",
+        "expires_in": 86400,
+        "company_id": 1,
+        "refresh_expires_in": 93600,
+        "refresh_token": "f2c97b879da324722e6c674e4ec77a5d0a3d1968"
     }
     ```
 
@@ -41,9 +46,9 @@ Token data
 
     ```js
     {
-        "db":"thenewcdf",
-        "username":"ossconnect@cdf.com",
-        "password":"cdf@oss!2017"
+        "db":"crmcdf",
+        "username":"love@cdf.com",
+        "password":"0913579498"
     }
     ```
 
@@ -107,8 +112,8 @@ Refresh access token when expire
 ## Refresh token [/api/auth/delete_token]
 Description here
 
-### Refresh token [POST]
-Refresh access token when expire
+### Delete token [POST]
+Delete access token when expire
 + Request (text/plain)
 
     ```js
@@ -141,3 +146,7 @@ Refresh access token when expire
         "error": "ex:wrong_dbname"
     }
     ```
+
+<!-- include(saleorder.md) -->
+
+<!-- include(customer.md) -->

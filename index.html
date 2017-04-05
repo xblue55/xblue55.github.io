@@ -1,29 +1,30 @@
-<!DOCTYPE html><html><head><meta charset="utf-8"><title>API for wholesale</title><link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css"><style>@import url('https://fonts.googleapis.com/css?family=Roboto:400,700|Inconsolata|Raleway:200');.hljs-comment,.hljs-title{color:#8e908c}.hljs-variable,.hljs-attribute,.hljs-tag,.hljs-regexp,.ruby .hljs-constant,.xml .hljs-tag .hljs-title,.xml .hljs-pi,.xml .hljs-doctype,.html .hljs-doctype,.css .hljs-id,.css .hljs-class,.css .hljs-pseudo{color:#c82829}.hljs-number,.hljs-preprocessor,.hljs-pragma,.hljs-built_in,.hljs-literal,.hljs-params,.hljs-constant{color:#f5871f}.ruby .hljs-class .hljs-title,.css .hljs-rules .hljs-attribute{color:#eab700}.hljs-string,.hljs-value,.hljs-inheritance,.hljs-header,.ruby .hljs-symbol,.xml .hljs-cdata{color:#718c00}.css .hljs-hexcolor{color:#3e999f}.hljs-function,.python .hljs-decorator,.python .hljs-title,.ruby .hljs-function .hljs-title,.ruby .hljs-title .hljs-keyword,.perl .hljs-sub,.javascript .hljs-title,.coffeescript .hljs-title{color:#4271ae}.hljs-keyword,.javascript .hljs-function{color:#8959a8}.hljs{display:block;background:white;color:#4d4d4c;padding:.5em}.coffeescript .javascript,.javascript .xml,.tex .hljs-formula,.xml .javascript,.xml .vbscript,.xml .css,.xml .hljs-cdata{opacity:.5}.right .hljs-comment{color:#969896}.right .css .hljs-class,.right .css .hljs-id,.right .css .hljs-pseudo,.right .hljs-attribute,.right .hljs-regexp,.right .hljs-tag,.right .hljs-variable,.right .html .hljs-doctype,.right .ruby .hljs-constant,.right .xml .hljs-doctype,.right .xml .hljs-pi,.right .xml .hljs-tag .hljs-title{color:#c66}.right .hljs-built_in,.right .hljs-constant,.right .hljs-literal,.right .hljs-number,.right .hljs-params,.right .hljs-pragma,.right .hljs-preprocessor{color:#de935f}.right .css .hljs-rule .hljs-attribute,.right .ruby .hljs-class .hljs-title{color:#f0c674}.right .hljs-header,.right .hljs-inheritance,.right .hljs-name,.right .hljs-string,.right .hljs-value,.right .ruby .hljs-symbol,.right .xml .hljs-cdata{color:#b5bd68}.right .css .hljs-hexcolor,.right .hljs-title{color:#8abeb7}.right .coffeescript .hljs-title,.right .hljs-function,.right .javascript .hljs-title,.right .perl .hljs-sub,.right .python .hljs-decorator,.right .python .hljs-title,.right .ruby .hljs-function .hljs-title,.right .ruby .hljs-title .hljs-keyword{color:#81a2be}.right .hljs-keyword,.right .javascript .hljs-function{color:#b294bb}.right .hljs{display:block;overflow-x:auto;background:#1d1f21;color:#c5c8c6;padding:.5em;-webkit-text-size-adjust:none}.right .coffeescript .javascript,.right .javascript .xml,.right .tex .hljs-formula,.right .xml .css,.right .xml .hljs-cdata,.right .xml .javascript,.right .xml .vbscript{opacity:.5}body{color:black;background:white;font:400 14px / 1.42 'Roboto',Helvetica,sans-serif}header{border-bottom:1px solid #f2f2f2;margin-bottom:12px}h1,h2,h3,h4,h5{color:black;margin:12px 0}h1 .permalink,h2 .permalink,h3 .permalink,h4 .permalink,h5 .permalink{margin-left:0;opacity:0;transition:opacity .25s ease}h1:hover .permalink,h2:hover .permalink,h3:hover .permalink,h4:hover .permalink,h5:hover .permalink{opacity:1}.triple h1 .permalink,.triple h2 .permalink,.triple h3 .permalink,.triple h4 .permalink,.triple h5 .permalink{opacity:.15}.triple h1:hover .permalink,.triple h2:hover .permalink,.triple h3:hover .permalink,.triple h4:hover .permalink,.triple h5:hover .permalink{opacity:.15}h1{font:200 36px 'Raleway',Helvetica,sans-serif;font-size:36px}h2{font:200 36px 'Raleway',Helvetica,sans-serif;font-size:30px}h3{font-size:100%;text-transform:uppercase}h5{font-size:100%;font-weight:normal}p{margin:0 0 10px}p.choices{line-height:1.6}a{color:#428bca;text-decoration:none}li p{margin:0}hr.split{border:0;height:1px;width:100%;padding-left:6px;margin:12px auto;background-image:linear-gradient(to right, rgba(0,0,0,0) 20%, rgba(0,0,0,0.2) 51.4%, rgba(255,255,255,0.2) 51.4%, rgba(255,255,255,0) 80%)}dl dt{float:left;width:130px;clear:left;text-align:right;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;font-weight:700}dl dd{margin-left:150px}blockquote{color:rgba(0,0,0,0.5);font-size:15.5px;padding:10px 20px;margin:12px 0;border-left:5px solid #e8e8e8}blockquote p:last-child{margin-bottom:0}pre{background-color:#f5f5f5;padding:12px;border:1px solid #cfcfcf;border-radius:6px;overflow:auto}pre code{color:black;background-color:transparent;padding:0;border:none}code{color:#444;background-color:#f5f5f5;font:'Inconsolata',monospace;padding:1px 4px;border:1px solid #cfcfcf;border-radius:3px}ul,ol{padding-left:2em}table{border-collapse:collapse;border-spacing:0;margin-bottom:12px}table tr:nth-child(2n){background-color:#fafafa}table th,table td{padding:6px 12px;border:1px solid #e6e6e6}.text-muted{opacity:.5}.note,.warning{padding:.3em 1em;margin:1em 0;border-radius:2px;font-size:90%}.note h1,.warning h1,.note h2,.warning h2,.note h3,.warning h3,.note h4,.warning h4,.note h5,.warning h5,.note h6,.warning h6{font-family:200 36px 'Raleway',Helvetica,sans-serif;font-size:135%;font-weight:500}.note p,.warning p{margin:.5em 0}.note{color:black;background-color:#f0f6fb;border-left:4px solid #428bca}.note h1,.note h2,.note h3,.note h4,.note h5,.note h6{color:#428bca}.warning{color:black;background-color:#fbf1f0;border-left:4px solid #c9302c}.warning h1,.warning h2,.warning h3,.warning h4,.warning h5,.warning h6{color:#c9302c}header{margin-top:24px}nav{position:fixed;top:24px;bottom:0;overflow-y:auto}nav .resource-group{padding:0}nav .resource-group .heading{position:relative}nav .resource-group .heading .chevron{position:absolute;top:12px;right:12px;opacity:.5}nav .resource-group .heading a{display:block;color:black;opacity:.7;border-left:2px solid transparent;margin:0}nav .resource-group .heading a:hover{text-decoration:none;background-color:bad-color;border-left:2px solid black}nav ul{list-style-type:none;padding-left:0}nav ul a{display:block;font-size:13px;color:rgba(0,0,0,0.7);padding:8px 12px;border-top:1px solid #d9d9d9;border-left:2px solid transparent;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}nav ul a:hover{text-decoration:none;background-color:bad-color;border-left:2px solid black}nav ul>li{margin:0}nav ul>li:first-child{margin-top:-12px}nav ul>li:last-child{margin-bottom:-12px}nav ul ul a{padding-left:24px}nav ul ul li{margin:0}nav ul ul li:first-child{margin-top:0}nav ul ul li:last-child{margin-bottom:0}nav>div>div>ul>li:first-child>a{border-top:none}.preload *{transition:none !important}.pull-left{float:left}.pull-right{float:right}.badge{display:inline-block;float:right;min-width:10px;min-height:14px;padding:3px 7px;font-size:12px;color:#000;background-color:#f2f2f2;border-radius:10px;margin:-2px 0}.badge.get{color:#70bbe1;background-color:#d9edf7}.badge.head{color:#70bbe1;background-color:#d9edf7}.badge.options{color:#70bbe1;background-color:#d9edf7}.badge.put{color:#f0db70;background-color:#fcf8e3}.badge.patch{color:#f0db70;background-color:#fcf8e3}.badge.post{color:#93cd7c;background-color:#dff0d8}.badge.delete{color:#ce8383;background-color:#f2dede}.collapse-button{float:right}.collapse-button .close{display:none;color:#428bca;cursor:pointer}.collapse-button .open{color:#428bca;cursor:pointer}.collapse-button.show .close{display:inline}.collapse-button.show .open{display:none}.collapse-content{max-height:0;overflow:hidden;transition:max-height .3s ease-in-out}nav{width:220px}.container{max-width:940px;margin-left:auto;margin-right:auto}.container .row .content{margin-left:244px;width:696px}.container .row:after{content:'';display:block;clear:both}.container-fluid nav{width:22%}.container-fluid .row .content{margin-left:24%}.container-fluid.triple nav{width:16.5%;padding-right:1px}.container-fluid.triple .row .content{position:relative;margin-left:16.5%;padding-left:24px}.middle:before,.middle:after{content:'';display:table}.middle:after{clear:both}.middle{box-sizing:border-box;width:51.5%;padding-right:12px}.right{box-sizing:border-box;float:right;width:48.5%;padding-left:12px}.right a{color:#428bca}.right h1,.right h2,.right h3,.right h4,.right h5,.right p,.right div{color:white}.right pre{background-color:#1d1f21;border:1px solid #1d1f21}.right pre code{color:#c5c8c6}.right .description{margin-top:12px}.triple .resource-heading{font-size:125%}.definition{margin-top:12px;margin-bottom:12px}.definition .method{font-weight:bold}.definition .method.get{color:#2e8ab8}.definition .method.head{color:#2e8ab8}.definition .method.options{color:#2e8ab8}.definition .method.post{color:#56b82e}.definition .method.put{color:#b8a22e}.definition .method.patch{color:#b8a22e}.definition .method.delete{color:#b82e2e}.definition .uri{word-break:break-all;word-wrap:break-word}.definition .hostname{opacity:.5}.example-names{background-color:#eee;padding:12px;border-radius:6px}.example-names .tab-button{cursor:pointer;color:black;border:1px solid #ddd;padding:6px;margin-left:12px}.example-names .tab-button.active{background-color:#d5d5d5}.right .example-names{background-color:#444}.right .example-names .tab-button{color:white;border:1px solid #666;border-radius:6px}.right .example-names .tab-button.active{background-color:#5e5e5e}#nav-background{position:fixed;left:0;top:0;bottom:0;width:16.5%;padding-right:14.4px;background-color:#fbfbfb;border-right:1px solid #f0f0f0;z-index:-1}#right-panel-background{position:absolute;right:-12px;top:-12px;bottom:-12px;width:48.6%;background-color:#333;z-index:-1}@media (max-width:1200px){nav{width:198px}.container{max-width:840px}.container .row .content{margin-left:224px;width:606px}}@media (max-width:992px){nav{width:169.4px}.container{max-width:720px}.container .row .content{margin-left:194px;width:526px}}@media (max-width:768px){nav{display:none}.container{width:95%;max-width:none}.container .row .content,.container-fluid .row .content,.container-fluid.triple .row .content{margin-left:auto;margin-right:auto;width:95%}#nav-background{display:none}#right-panel-background{width:48.6%}}.back-to-top{position:fixed;z-index:1;bottom:0;right:24px;padding:4px 8px;color:rgba(0,0,0,0.5);background-color:#f2f2f2;text-decoration:none !important;border-top:1px solid #d9d9d9;border-left:1px solid #d9d9d9;border-right:1px solid #d9d9d9;border-top-left-radius:3px;border-top-right-radius:3px}.resource-group{padding:12px;margin-bottom:12px;background-color:white;border:1px solid #d9d9d9;border-radius:6px}.resource-group h2.group-heading,.resource-group .heading a{padding:12px;margin:-12px -12px 12px -12px;background-color:#f2f2f2;border-bottom:1px solid #d9d9d9;border-top-left-radius:6px;border-top-right-radius:6px;white-space:nowrap;text-overflow:ellipsis;overflow:hidden}.triple .content .resource-group{padding:0;border:none}.triple .content .resource-group h2.group-heading,.triple .content .resource-group .heading a{margin:0 0 12px 0;border:1px solid #d9d9d9}nav .resource-group .heading a{padding:12px;margin-bottom:0}nav .resource-group .collapse-content{padding:0}.action{margin-bottom:12px;padding:12px 12px 0 12px;overflow:hidden;border:1px solid transparent;border-radius:6px}.action h4.action-heading{padding:6px 12px;margin:-12px -12px 12px -12px;border-bottom:1px solid transparent;border-top-left-radius:6px;border-top-right-radius:6px;overflow:hidden}.action h4.action-heading .name{float:right;font-weight:normal;padding:6px 0}.action h4.action-heading .method{padding:6px 12px;margin-right:12px;border-radius:3px;display:inline-block}.action h4.action-heading .method.get{color:#fff;background-color:#337ab7}.action h4.action-heading .method.head{color:#fff;background-color:#337ab7}.action h4.action-heading .method.options{color:#fff;background-color:#337ab7}.action h4.action-heading .method.put{color:#fff;background-color:#ed9c28}.action h4.action-heading .method.patch{color:#fff;background-color:#ed9c28}.action h4.action-heading .method.post{color:#fff;background-color:#5cb85c}.action h4.action-heading .method.delete{color:#fff;background-color:#d9534f}.action h4.action-heading code{color:#444;background-color:#f5f5f5;border-color:#cfcfcf;font-weight:normal;word-break:break-all;display:inline-block;margin-top:2px}.action dl.inner{padding-bottom:2px}.action .title{border-bottom:1px solid white;margin:0 -12px -1px -12px;padding:12px}.action.get{border-color:#bce8f1}.action.get h4.action-heading{color:#337ab7;background:#d9edf7;border-bottom-color:#bce8f1}.action.head{border-color:#bce8f1}.action.head h4.action-heading{color:#337ab7;background:#d9edf7;border-bottom-color:#bce8f1}.action.options{border-color:#bce8f1}.action.options h4.action-heading{color:#337ab7;background:#d9edf7;border-bottom-color:#bce8f1}.action.post{border-color:#d6e9c6}.action.post h4.action-heading{color:#5cb85c;background:#dff0d8;border-bottom-color:#d6e9c6}.action.put{border-color:#faebcc}.action.put h4.action-heading{color:#ed9c28;background:#fcf8e3;border-bottom-color:#faebcc}.action.patch{border-color:#faebcc}.action.patch h4.action-heading{color:#ed9c28;background:#fcf8e3;border-bottom-color:#faebcc}.action.delete{border-color:#ebccd1}.action.delete h4.action-heading{color:#d9534f;background:#f2dede;border-bottom-color:#ebccd1}</style></head><body class="preload"><a href="#top" class="text-muted back-to-top"><i class="fa fa-toggle-up"></i>&nbsp;Back to top</a><div class="container"><div class="row"><nav><div class="resource-group"><div class="heading"><div class="chevron"><i class="open fa fa-angle-down"></i></div><a href="#auth">Auth</a></div><div class="collapse-content"><ul><li><a href="#auth-auth-post"><span class="badge post"><i class="fa fa-plus"></i></span>Get token</a></li><li><a href="#auth-refresh-token-post"><span class="badge post"><i class="fa fa-plus"></i></span>Refresh token</a></li><li><a href="#auth-refresh-token-post-1"><span class="badge post"><i class="fa fa-plus"></i></span>Refresh token</a></li></ul></div></div><p style="text-align: center; word-wrap: break-word;"><a href="http://love.caudatfarm.com">http://love.caudatfarm.com</a></p></nav><div class="content"><header><h1 id="top">API for wholesale</h1></header><p>Api for wholesale connect oss</p>
+<!DOCTYPE html><html><head><meta charset="utf-8"><title>API for wholesale</title><link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css"><style>@import url('https://fonts.googleapis.com/css?family=Roboto:400,700|Inconsolata|Raleway:200');.hljs-comment,.hljs-title{color:#8e908c}.hljs-variable,.hljs-attribute,.hljs-tag,.hljs-regexp,.ruby .hljs-constant,.xml .hljs-tag .hljs-title,.xml .hljs-pi,.xml .hljs-doctype,.html .hljs-doctype,.css .hljs-id,.css .hljs-class,.css .hljs-pseudo{color:#c82829}.hljs-number,.hljs-preprocessor,.hljs-pragma,.hljs-built_in,.hljs-literal,.hljs-params,.hljs-constant{color:#f5871f}.ruby .hljs-class .hljs-title,.css .hljs-rules .hljs-attribute{color:#eab700}.hljs-string,.hljs-value,.hljs-inheritance,.hljs-header,.ruby .hljs-symbol,.xml .hljs-cdata{color:#718c00}.css .hljs-hexcolor{color:#3e999f}.hljs-function,.python .hljs-decorator,.python .hljs-title,.ruby .hljs-function .hljs-title,.ruby .hljs-title .hljs-keyword,.perl .hljs-sub,.javascript .hljs-title,.coffeescript .hljs-title{color:#4271ae}.hljs-keyword,.javascript .hljs-function{color:#8959a8}.hljs{display:block;background:white;color:#4d4d4c;padding:.5em}.coffeescript .javascript,.javascript .xml,.tex .hljs-formula,.xml .javascript,.xml .vbscript,.xml .css,.xml .hljs-cdata{opacity:.5}.right .hljs-comment{color:#969896}.right .css .hljs-class,.right .css .hljs-id,.right .css .hljs-pseudo,.right .hljs-attribute,.right .hljs-regexp,.right .hljs-tag,.right .hljs-variable,.right .html .hljs-doctype,.right .ruby .hljs-constant,.right .xml .hljs-doctype,.right .xml .hljs-pi,.right .xml .hljs-tag .hljs-title{color:#c66}.right .hljs-built_in,.right .hljs-constant,.right .hljs-literal,.right .hljs-number,.right .hljs-params,.right .hljs-pragma,.right .hljs-preprocessor{color:#de935f}.right .css .hljs-rule .hljs-attribute,.right .ruby .hljs-class .hljs-title{color:#f0c674}.right .hljs-header,.right .hljs-inheritance,.right .hljs-name,.right .hljs-string,.right .hljs-value,.right .ruby .hljs-symbol,.right .xml .hljs-cdata{color:#b5bd68}.right .css .hljs-hexcolor,.right .hljs-title{color:#8abeb7}.right .coffeescript .hljs-title,.right .hljs-function,.right .javascript .hljs-title,.right .perl .hljs-sub,.right .python .hljs-decorator,.right .python .hljs-title,.right .ruby .hljs-function .hljs-title,.right .ruby .hljs-title .hljs-keyword{color:#81a2be}.right .hljs-keyword,.right .javascript .hljs-function{color:#b294bb}.right .hljs{display:block;overflow-x:auto;background:#1d1f21;color:#c5c8c6;padding:.5em;-webkit-text-size-adjust:none}.right .coffeescript .javascript,.right .javascript .xml,.right .tex .hljs-formula,.right .xml .css,.right .xml .hljs-cdata,.right .xml .javascript,.right .xml .vbscript{opacity:.5}body{color:black;background:white;font:400 14px / 1.42 'Roboto',Helvetica,sans-serif}header{border-bottom:1px solid #f2f2f2;margin-bottom:12px}h1,h2,h3,h4,h5{color:black;margin:12px 0}h1 .permalink,h2 .permalink,h3 .permalink,h4 .permalink,h5 .permalink{margin-left:0;opacity:0;transition:opacity .25s ease}h1:hover .permalink,h2:hover .permalink,h3:hover .permalink,h4:hover .permalink,h5:hover .permalink{opacity:1}.triple h1 .permalink,.triple h2 .permalink,.triple h3 .permalink,.triple h4 .permalink,.triple h5 .permalink{opacity:.15}.triple h1:hover .permalink,.triple h2:hover .permalink,.triple h3:hover .permalink,.triple h4:hover .permalink,.triple h5:hover .permalink{opacity:.15}h1{font:200 36px 'Raleway',Helvetica,sans-serif;font-size:36px}h2{font:200 36px 'Raleway',Helvetica,sans-serif;font-size:30px}h3{font-size:100%;text-transform:uppercase}h5{font-size:100%;font-weight:normal}p{margin:0 0 10px}p.choices{line-height:1.6}a{color:#428bca;text-decoration:none}li p{margin:0}hr.split{border:0;height:1px;width:100%;padding-left:6px;margin:12px auto;background-image:linear-gradient(to right, rgba(0,0,0,0) 20%, rgba(0,0,0,0.2) 51.4%, rgba(255,255,255,0.2) 51.4%, rgba(255,255,255,0) 80%)}dl dt{float:left;width:130px;clear:left;text-align:right;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;font-weight:700}dl dd{margin-left:150px}blockquote{color:rgba(0,0,0,0.5);font-size:15.5px;padding:10px 20px;margin:12px 0;border-left:5px solid #e8e8e8}blockquote p:last-child{margin-bottom:0}pre{background-color:#f5f5f5;padding:12px;border:1px solid #cfcfcf;border-radius:6px;overflow:auto}pre code{color:black;background-color:transparent;padding:0;border:none}code{color:#444;background-color:#f5f5f5;font:'Inconsolata',monospace;padding:1px 4px;border:1px solid #cfcfcf;border-radius:3px}ul,ol{padding-left:2em}table{border-collapse:collapse;border-spacing:0;margin-bottom:12px}table tr:nth-child(2n){background-color:#fafafa}table th,table td{padding:6px 12px;border:1px solid #e6e6e6}.text-muted{opacity:.5}.note,.warning{padding:.3em 1em;margin:1em 0;border-radius:2px;font-size:90%}.note h1,.warning h1,.note h2,.warning h2,.note h3,.warning h3,.note h4,.warning h4,.note h5,.warning h5,.note h6,.warning h6{font-family:200 36px 'Raleway',Helvetica,sans-serif;font-size:135%;font-weight:500}.note p,.warning p{margin:.5em 0}.note{color:black;background-color:#f0f6fb;border-left:4px solid #428bca}.note h1,.note h2,.note h3,.note h4,.note h5,.note h6{color:#428bca}.warning{color:black;background-color:#fbf1f0;border-left:4px solid #c9302c}.warning h1,.warning h2,.warning h3,.warning h4,.warning h5,.warning h6{color:#c9302c}header{margin-top:24px}nav{position:fixed;top:24px;bottom:0;overflow-y:auto}nav .resource-group{padding:0}nav .resource-group .heading{position:relative}nav .resource-group .heading .chevron{position:absolute;top:12px;right:12px;opacity:.5}nav .resource-group .heading a{display:block;color:black;opacity:.7;border-left:2px solid transparent;margin:0}nav .resource-group .heading a:hover{text-decoration:none;background-color:bad-color;border-left:2px solid black}nav ul{list-style-type:none;padding-left:0}nav ul a{display:block;font-size:13px;color:rgba(0,0,0,0.7);padding:8px 12px;border-top:1px solid #d9d9d9;border-left:2px solid transparent;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}nav ul a:hover{text-decoration:none;background-color:bad-color;border-left:2px solid black}nav ul>li{margin:0}nav ul>li:first-child{margin-top:-12px}nav ul>li:last-child{margin-bottom:-12px}nav ul ul a{padding-left:24px}nav ul ul li{margin:0}nav ul ul li:first-child{margin-top:0}nav ul ul li:last-child{margin-bottom:0}nav>div>div>ul>li:first-child>a{border-top:none}.preload *{transition:none !important}.pull-left{float:left}.pull-right{float:right}.badge{display:inline-block;float:right;min-width:10px;min-height:14px;padding:3px 7px;font-size:12px;color:#000;background-color:#f2f2f2;border-radius:10px;margin:-2px 0}.badge.get{color:#70bbe1;background-color:#d9edf7}.badge.head{color:#70bbe1;background-color:#d9edf7}.badge.options{color:#70bbe1;background-color:#d9edf7}.badge.put{color:#f0db70;background-color:#fcf8e3}.badge.patch{color:#f0db70;background-color:#fcf8e3}.badge.post{color:#93cd7c;background-color:#dff0d8}.badge.delete{color:#ce8383;background-color:#f2dede}.collapse-button{float:right}.collapse-button .close{display:none;color:#428bca;cursor:pointer}.collapse-button .open{color:#428bca;cursor:pointer}.collapse-button.show .close{display:inline}.collapse-button.show .open{display:none}.collapse-content{max-height:0;overflow:hidden;transition:max-height .3s ease-in-out}nav{width:220px}.container{max-width:940px;margin-left:auto;margin-right:auto}.container .row .content{margin-left:244px;width:696px}.container .row:after{content:'';display:block;clear:both}.container-fluid nav{width:22%}.container-fluid .row .content{margin-left:24%}.container-fluid.triple nav{width:16.5%;padding-right:1px}.container-fluid.triple .row .content{position:relative;margin-left:16.5%;padding-left:24px}.middle:before,.middle:after{content:'';display:table}.middle:after{clear:both}.middle{box-sizing:border-box;width:51.5%;padding-right:12px}.right{box-sizing:border-box;float:right;width:48.5%;padding-left:12px}.right a{color:#428bca}.right h1,.right h2,.right h3,.right h4,.right h5,.right p,.right div{color:white}.right pre{background-color:#1d1f21;border:1px solid #1d1f21}.right pre code{color:#c5c8c6}.right .description{margin-top:12px}.triple .resource-heading{font-size:125%}.definition{margin-top:12px;margin-bottom:12px}.definition .method{font-weight:bold}.definition .method.get{color:#2e8ab8}.definition .method.head{color:#2e8ab8}.definition .method.options{color:#2e8ab8}.definition .method.post{color:#56b82e}.definition .method.put{color:#b8a22e}.definition .method.patch{color:#b8a22e}.definition .method.delete{color:#b82e2e}.definition .uri{word-break:break-all;word-wrap:break-word}.definition .hostname{opacity:.5}.example-names{background-color:#eee;padding:12px;border-radius:6px}.example-names .tab-button{cursor:pointer;color:black;border:1px solid #ddd;padding:6px;margin-left:12px}.example-names .tab-button.active{background-color:#d5d5d5}.right .example-names{background-color:#444}.right .example-names .tab-button{color:white;border:1px solid #666;border-radius:6px}.right .example-names .tab-button.active{background-color:#5e5e5e}#nav-background{position:fixed;left:0;top:0;bottom:0;width:16.5%;padding-right:14.4px;background-color:#fbfbfb;border-right:1px solid #f0f0f0;z-index:-1}#right-panel-background{position:absolute;right:-12px;top:-12px;bottom:-12px;width:48.6%;background-color:#333;z-index:-1}@media (max-width:1200px){nav{width:198px}.container{max-width:840px}.container .row .content{margin-left:224px;width:606px}}@media (max-width:992px){nav{width:169.4px}.container{max-width:720px}.container .row .content{margin-left:194px;width:526px}}@media (max-width:768px){nav{display:none}.container{width:95%;max-width:none}.container .row .content,.container-fluid .row .content,.container-fluid.triple .row .content{margin-left:auto;margin-right:auto;width:95%}#nav-background{display:none}#right-panel-background{width:48.6%}}.back-to-top{position:fixed;z-index:1;bottom:0;right:24px;padding:4px 8px;color:rgba(0,0,0,0.5);background-color:#f2f2f2;text-decoration:none !important;border-top:1px solid #d9d9d9;border-left:1px solid #d9d9d9;border-right:1px solid #d9d9d9;border-top-left-radius:3px;border-top-right-radius:3px}.resource-group{padding:12px;margin-bottom:12px;background-color:white;border:1px solid #d9d9d9;border-radius:6px}.resource-group h2.group-heading,.resource-group .heading a{padding:12px;margin:-12px -12px 12px -12px;background-color:#f2f2f2;border-bottom:1px solid #d9d9d9;border-top-left-radius:6px;border-top-right-radius:6px;white-space:nowrap;text-overflow:ellipsis;overflow:hidden}.triple .content .resource-group{padding:0;border:none}.triple .content .resource-group h2.group-heading,.triple .content .resource-group .heading a{margin:0 0 12px 0;border:1px solid #d9d9d9}nav .resource-group .heading a{padding:12px;margin-bottom:0}nav .resource-group .collapse-content{padding:0}.action{margin-bottom:12px;padding:12px 12px 0 12px;overflow:hidden;border:1px solid transparent;border-radius:6px}.action h4.action-heading{padding:6px 12px;margin:-12px -12px 12px -12px;border-bottom:1px solid transparent;border-top-left-radius:6px;border-top-right-radius:6px;overflow:hidden}.action h4.action-heading .name{float:right;font-weight:normal;padding:6px 0}.action h4.action-heading .method{padding:6px 12px;margin-right:12px;border-radius:3px;display:inline-block}.action h4.action-heading .method.get{color:#fff;background-color:#337ab7}.action h4.action-heading .method.head{color:#fff;background-color:#337ab7}.action h4.action-heading .method.options{color:#fff;background-color:#337ab7}.action h4.action-heading .method.put{color:#fff;background-color:#ed9c28}.action h4.action-heading .method.patch{color:#fff;background-color:#ed9c28}.action h4.action-heading .method.post{color:#fff;background-color:#5cb85c}.action h4.action-heading .method.delete{color:#fff;background-color:#d9534f}.action h4.action-heading code{color:#444;background-color:#f5f5f5;border-color:#cfcfcf;font-weight:normal;word-break:break-all;display:inline-block;margin-top:2px}.action dl.inner{padding-bottom:2px}.action .title{border-bottom:1px solid white;margin:0 -12px -1px -12px;padding:12px}.action.get{border-color:#bce8f1}.action.get h4.action-heading{color:#337ab7;background:#d9edf7;border-bottom-color:#bce8f1}.action.head{border-color:#bce8f1}.action.head h4.action-heading{color:#337ab7;background:#d9edf7;border-bottom-color:#bce8f1}.action.options{border-color:#bce8f1}.action.options h4.action-heading{color:#337ab7;background:#d9edf7;border-bottom-color:#bce8f1}.action.post{border-color:#d6e9c6}.action.post h4.action-heading{color:#5cb85c;background:#dff0d8;border-bottom-color:#d6e9c6}.action.put{border-color:#faebcc}.action.put h4.action-heading{color:#ed9c28;background:#fcf8e3;border-bottom-color:#faebcc}.action.patch{border-color:#faebcc}.action.patch h4.action-heading{color:#ed9c28;background:#fcf8e3;border-bottom-color:#faebcc}.action.delete{border-color:#ebccd1}.action.delete h4.action-heading{color:#d9534f;background:#f2dede;border-bottom-color:#ebccd1}</style></head><body class="preload"><a href="#top" class="text-muted back-to-top"><i class="fa fa-toggle-up"></i>&nbsp;Back to top</a><div class="container"><div class="row"><nav><div class="resource-group"><div class="heading"><div class="chevron"><i class="open fa fa-angle-down"></i></div><a href="#auth">Auth</a></div><div class="collapse-content"><ul><li><a href="#auth-auth-post"><span class="badge post"><i class="fa fa-plus"></i></span>Get token</a></li><li><a href="#auth-refresh-token-post"><span class="badge post"><i class="fa fa-plus"></i></span>Refresh token</a></li><li><a href="#auth-refresh-token-post-1"><span class="badge post"><i class="fa fa-plus"></i></span>Delete token</a></li></ul></div></div><div class="resource-group"><div class="heading"><div class="chevron"><i class="open fa fa-angle-down"></i></div><a href="#wholesale-saleorder">Wholesale - Saleorder</a></div><div class="collapse-content"><ul><li><a href="#wholesale-saleorder-order">Order</a><ul><li><a href="#wholesale-saleorder-order-post"><span class="badge post"><i class="fa fa-plus"></i></span>Create order</a></li><li><a href="#wholesale-saleorder-order-get"><span class="badge get"><i class="fa fa-arrow-down"></i></span>Get order</a></li></ul></li><li><a href="#wholesale-saleorder-order-1">Order</a><ul><li><a href="#wholesale-saleorder-order-get-1"><span class="badge get"><i class="fa fa-arrow-down"></i></span>Get order detail</a></li><li><a href="#wholesale-saleorder-order-put"><span class="badge put"><i class="fa fa-pencil"></i></span>Update order</a></li><li><a href="#wholesale-saleorder-order-delete"><span class="badge delete"><i class="fa fa-times"></i></span>Delete order</a></li></ul></li></ul></div></div><div class="resource-group"><div class="heading"><div class="chevron"><i class="open fa fa-angle-down"></i></div><a href="#wholesale-customer">Wholesale - Customer</a></div><div class="collapse-content"><ul><li><a href="#wholesale-customer-customer-post"><span class="badge post"><i class="fa fa-plus"></i></span>Create customer</a></li></ul></div></div><p style="text-align: center; word-wrap: break-word;"><a href="http://love.caudatfarm.com">http://love.caudatfarm.com</a></p></nav><div class="content"><header><h1 id="top">API for wholesale</h1></header><p>Api for wholesale connect oss</p>
 <p>NOTE: This document is a <strong>work in progress</strong>.</p>
+<p>All request with Authorization and content-type:</p>
+<pre><code class="language-http"><span class="hljs-attribute">Authorization</span>: <span class="hljs-string">5262d64b892e8d4341000001 (token_code from api get token)</span>
+<span class="hljs-attribute">Content-type</span>: <span class="hljs-string">text/plain</span></code></pre>
 <section id="auth" class="resource-group"><h2 class="group-heading">Auth <a href="#auth" class="permalink">&para;</a></h2><p>This section groups for auth</p>
 <div id="auth-auth" class="resource"><h3 class="resource-heading">Auth <a href="#auth-auth" class="permalink">&nbsp;&para;</a></h3><p>A Post is the other central object utilized by the <a href="http://App.net">App.net</a> Stream API. It has
 rich text and annotations which comprise all of the content a users sees in
 their feed. Posts are closely tied to the follow graph…</p>
 <div id="auth-auth-post" class="action post"><h4 class="action-heading"><div class="name">Get token</div><a href="#auth-auth-post" class="method post">POST</a><code class="uri">/api/auth/get_tokens</code></h4><p>Token data</p>
 <h4>Example URI</h4><div class="definition"><span class="method post">POST</span>&nbsp;<span class="uri"><span class="hostname">http://love.caudatfarm.com</span>/api/auth/get_tokens</span></div><div class="title"><strong>Request</strong><div class="collapse-button"><span class="close">Hide</span><span class="open">Show</span></div></div><div class="collapse-content"><div class="inner"><h5>Headers</h5><pre><code><span class="hljs-attribute">Content-Type</span>: <span class="hljs-string">text/plain</span></code></pre><div style="height: 1px;"></div><h5>Body</h5><pre><code>{
-  "<span class="hljs-attribute">db</span>": <span class="hljs-value"><span class="hljs-string">"thenewcdf"</span></span>,
-  "<span class="hljs-attribute">username</span>": <span class="hljs-value"><span class="hljs-string">"ossconnect@cdf.com"</span></span>,
-  "<span class="hljs-attribute">password</span>": <span class="hljs-value"><span class="hljs-string">"cdf@oss!2017"</span>
+  "<span class="hljs-attribute">db</span>": <span class="hljs-value"><span class="hljs-string">"crmcdf"</span></span>,
+  "<span class="hljs-attribute">username</span>": <span class="hljs-value"><span class="hljs-string">"love@cdf.com"</span></span>,
+  "<span class="hljs-attribute">password</span>": <span class="hljs-value"><span class="hljs-string">"0913579498"</span>
 </span>}</code></pre><div style="height: 1px;"></div></div></div><div class="title"><strong>Response&nbsp;&nbsp;<code>200</code></strong><div class="collapse-button"><span class="close">Hide</span><span class="open">Show</span></div></div><div class="collapse-content"><div class="inner"><h5>Headers</h5><pre><code><span class="hljs-attribute">Content-Type</span>: <span class="hljs-string">application/json</span></code></pre><div style="height: 1px;"></div><h5>Body</h5><pre><code>{
-    {
-        <span class="hljs-string">"user_context"</span>: {
-            <span class="hljs-string">"lang"</span>: <span class="hljs-string">"en_US"</span>,
-            <span class="hljs-string">"tz"</span>: <span class="hljs-string">"Asia/Saigon"</span>,
-            <span class="hljs-string">"uid"</span>: <span class="hljs-number">145</span>
-        },
-        <span class="hljs-string">"uid"</span>: <span class="hljs-number">145</span>,
-        <span class="hljs-string">"access_token"</span>: <span class="hljs-string">"56f26ff2ba6b1fdbe3656bd6ec8801b3c2a8abd8"</span>,
-        <span class="hljs-string">"expires_in"</span>: <span class="hljs-number">86400</span>,
-        <span class="hljs-string">"company_id"</span>: <span class="hljs-number">1</span>,
-        <span class="hljs-string">"refresh_expires_in"</span>: <span class="hljs-number">93600</span>,
-        <span class="hljs-string">"refresh_token"</span>: <span class="hljs-string">"f2c97b879da324722e6c674e4ec77a5d0a3d1968"</span>
-    }
-}</code></pre><div style="height: 1px;"></div></div></div><div class="title"><strong>Response&nbsp;&nbsp;<code>401</code></strong><div class="collapse-button"><span class="close">Hide</span><span class="open">Show</span></div></div><div class="collapse-content"><div class="inner"><h5>Headers</h5><pre><code><span class="hljs-attribute">Content-Type</span>: <span class="hljs-string">application/json</span></code></pre><div style="height: 1px;"></div><h5>Body</h5><pre><code>{
+  "<span class="hljs-attribute">user_context</span>": <span class="hljs-value">{
+    "<span class="hljs-attribute">lang</span>": <span class="hljs-value"><span class="hljs-string">"en_US"</span></span>,
+    "<span class="hljs-attribute">tz</span>": <span class="hljs-value"><span class="hljs-string">"Asia/Saigon"</span></span>,
+    "<span class="hljs-attribute">uid</span>": <span class="hljs-value"><span class="hljs-number">145</span>
+  </span>}</span>,
+  "<span class="hljs-attribute">uid</span>": <span class="hljs-value"><span class="hljs-number">145</span></span>,
+  "<span class="hljs-attribute">access_token</span>": <span class="hljs-value"><span class="hljs-string">"56f26ff2ba6b1fdbe3656bd6ec8801b3c2a8abd8"</span></span>,
+  "<span class="hljs-attribute">expires_in</span>": <span class="hljs-value"><span class="hljs-number">86400</span></span>,
+  "<span class="hljs-attribute">company_id</span>": <span class="hljs-value"><span class="hljs-number">1</span></span>,
+  "<span class="hljs-attribute">refresh_expires_in</span>": <span class="hljs-value"><span class="hljs-number">93600</span></span>,
+  "<span class="hljs-attribute">refresh_token</span>": <span class="hljs-value"><span class="hljs-string">"f2c97b879da324722e6c674e4ec77a5d0a3d1968"</span>
+</span>}</code></pre><div style="height: 1px;"></div></div></div><div class="title"><strong>Response&nbsp;&nbsp;<code>401</code></strong><div class="collapse-button"><span class="close">Hide</span><span class="open">Show</span></div></div><div class="collapse-content"><div class="inner"><h5>Headers</h5><pre><code><span class="hljs-attribute">Content-Type</span>: <span class="hljs-string">application/json</span></code></pre><div style="height: 1px;"></div><h5>Body</h5><pre><code>{
   "<span class="hljs-attribute">error_descrip</span>": <span class="hljs-value"><span class="hljs-string">"Odoo User authentication failed!"</span></span>,
   "<span class="hljs-attribute">error</span>": <span class="hljs-value"><span class="hljs-string">"odoo_user_authentication_failed"</span>
 </span>}</code></pre><div style="height: 1px;"></div></div></div><div class="title"><strong>Response&nbsp;&nbsp;<code>400</code></strong><div class="collapse-button"><span class="close">Hide</span><span class="open">Show</span></div></div><div class="collapse-content"><div class="inner"><h5>Headers</h5><pre><code><span class="hljs-attribute">Content-Type</span>: <span class="hljs-string">application/json</span></code></pre><div style="height: 1px;"></div><h5>Body</h5><pre><code>{
@@ -34,27 +35,25 @@ their feed. Posts are closely tied to the follow graph…</p>
 <h4>Example URI</h4><div class="definition"><span class="method post">POST</span>&nbsp;<span class="uri"><span class="hostname">http://love.caudatfarm.com</span>/api/auth/refresh_token</span></div><div class="title"><strong>Request</strong><div class="collapse-button"><span class="close">Hide</span><span class="open">Show</span></div></div><div class="collapse-content"><div class="inner"><h5>Headers</h5><pre><code><span class="hljs-attribute">Content-Type</span>: <span class="hljs-string">text/plain</span></code></pre><div style="height: 1px;"></div><h5>Body</h5><pre><code>{
   "<span class="hljs-attribute">refresh_token</span>": <span class="hljs-value"><span class="hljs-string">"30ad5a3356d4cecd0ee391caf8154b633ba4af11"</span>
 </span>}</code></pre><div style="height: 1px;"></div></div></div><div class="title"><strong>Response&nbsp;&nbsp;<code>200</code></strong><div class="collapse-button"><span class="close">Hide</span><span class="open">Show</span></div></div><div class="collapse-content"><div class="inner"><h5>Headers</h5><pre><code><span class="hljs-attribute">Content-Type</span>: <span class="hljs-string">application/json</span></code></pre><div style="height: 1px;"></div><h5>Body</h5><pre><code>{
-    {
-        <span class="hljs-string">"user_context"</span>: {
-            <span class="hljs-string">"lang"</span>: <span class="hljs-string">"en_US"</span>,
-            <span class="hljs-string">"tz"</span>: <span class="hljs-string">"Asia/Saigon"</span>,
-            <span class="hljs-string">"uid"</span>: <span class="hljs-number">145</span>
-        },
-        <span class="hljs-string">"uid"</span>: <span class="hljs-number">145</span>,
-        <span class="hljs-string">"access_token"</span>: <span class="hljs-string">"56f26ff2ba6b1fdbe3656bd6ec8801b3c2a8abd8"</span>,
-        <span class="hljs-string">"expires_in"</span>: <span class="hljs-number">86400</span>,
-        <span class="hljs-string">"company_id"</span>: <span class="hljs-number">1</span>,
-        <span class="hljs-string">"refresh_expires_in"</span>: <span class="hljs-number">93600</span>,
-        <span class="hljs-string">"refresh_token"</span>: <span class="hljs-string">"f2c97b879da324722e6c674e4ec77a5d0a3d1968"</span>
-    }
-}</code></pre><div style="height: 1px;"></div></div></div><div class="title"><strong>Response&nbsp;&nbsp;<code>401</code></strong><div class="collapse-button"><span class="close">Hide</span><span class="open">Show</span></div></div><div class="collapse-content"><div class="inner"><h5>Headers</h5><pre><code><span class="hljs-attribute">Content-Type</span>: <span class="hljs-string">application/json</span></code></pre><div style="height: 1px;"></div><h5>Body</h5><pre><code>{
+  "<span class="hljs-attribute">user_context</span>": <span class="hljs-value">{
+    "<span class="hljs-attribute">lang</span>": <span class="hljs-value"><span class="hljs-string">"en_US"</span></span>,
+    "<span class="hljs-attribute">tz</span>": <span class="hljs-value"><span class="hljs-string">"Asia/Saigon"</span></span>,
+    "<span class="hljs-attribute">uid</span>": <span class="hljs-value"><span class="hljs-number">145</span>
+  </span>}</span>,
+  "<span class="hljs-attribute">uid</span>": <span class="hljs-value"><span class="hljs-number">145</span></span>,
+  "<span class="hljs-attribute">access_token</span>": <span class="hljs-value"><span class="hljs-string">"56f26ff2ba6b1fdbe3656bd6ec8801b3c2a8abd8"</span></span>,
+  "<span class="hljs-attribute">expires_in</span>": <span class="hljs-value"><span class="hljs-number">86400</span></span>,
+  "<span class="hljs-attribute">company_id</span>": <span class="hljs-value"><span class="hljs-number">1</span></span>,
+  "<span class="hljs-attribute">refresh_expires_in</span>": <span class="hljs-value"><span class="hljs-number">93600</span></span>,
+  "<span class="hljs-attribute">refresh_token</span>": <span class="hljs-value"><span class="hljs-string">"f2c97b879da324722e6c674e4ec77a5d0a3d1968"</span>
+</span>}</code></pre><div style="height: 1px;"></div></div></div><div class="title"><strong>Response&nbsp;&nbsp;<code>401</code></strong><div class="collapse-button"><span class="close">Hide</span><span class="open">Show</span></div></div><div class="collapse-content"><div class="inner"><h5>Headers</h5><pre><code><span class="hljs-attribute">Content-Type</span>: <span class="hljs-string">application/json</span></code></pre><div style="height: 1px;"></div><h5>Body</h5><pre><code>{
   "<span class="hljs-attribute">error_descrip</span>": <span class="hljs-value"><span class="hljs-string">"Token is expired or invalid!"</span></span>,
   "<span class="hljs-attribute">error</span>": <span class="hljs-value"><span class="hljs-string">"invalid_token"</span>
 </span>}</code></pre><div style="height: 1px;"></div></div></div><div class="title"><strong>Response&nbsp;&nbsp;<code>400</code></strong><div class="collapse-button"><span class="close">Hide</span><span class="open">Show</span></div></div><div class="collapse-content"><div class="inner"><h5>Headers</h5><pre><code><span class="hljs-attribute">Content-Type</span>: <span class="hljs-string">application/json</span></code></pre><div style="height: 1px;"></div><h5>Body</h5><pre><code>{
   "<span class="hljs-attribute">error_descrip</span>": <span class="hljs-value"><span class="hljs-string">"Bad request"</span></span>,
   "<span class="hljs-attribute">error</span>": <span class="hljs-value"><span class="hljs-string">"ex:wrong_dbname"</span>
 </span>}</code></pre><div style="height: 1px;"></div></div></div></div></div><div id="auth-refresh-token-1" class="resource"><h3 class="resource-heading">Refresh token <a href="#auth-refresh-token-1" class="permalink">&nbsp;&para;</a></h3><p>Description here</p>
-<div id="auth-refresh-token-post-1" class="action post"><h4 class="action-heading"><div class="name">Refresh token</div><a href="#auth-refresh-token-post-1" class="method post">POST</a><code class="uri">/api/auth/delete_token</code></h4><p>Refresh access token when expire</p>
+<div id="auth-refresh-token-post-1" class="action post"><h4 class="action-heading"><div class="name">Delete token</div><a href="#auth-refresh-token-post-1" class="method post">POST</a><code class="uri">/api/auth/delete_token</code></h4><p>Delete access token when expire</p>
 <h4>Example URI</h4><div class="definition"><span class="method post">POST</span>&nbsp;<span class="uri"><span class="hostname">http://love.caudatfarm.com</span>/api/auth/delete_token</span></div><div class="title"><strong>Request</strong><div class="collapse-button"><span class="close">Hide</span><span class="open">Show</span></div></div><div class="collapse-content"><div class="inner"><h5>Headers</h5><pre><code><span class="hljs-attribute">Content-Type</span>: <span class="hljs-string">text/plain</span></code></pre><div style="height: 1px;"></div><h5>Body</h5><pre><code>{
   "<span class="hljs-attribute">refresh_token</span>": <span class="hljs-value"><span class="hljs-string">"30ad5a3356d4cecd0ee391caf8154b633ba4af11"</span>
 </span>}</code></pre><div style="height: 1px;"></div></div></div><div class="title"><strong>Response&nbsp;&nbsp;<code>200</code></strong><div class="collapse-button"><span class="close">Hide</span><span class="open">Show</span></div></div><div class="collapse-content"><div class="inner"><h5>Headers</h5><pre><code><span class="hljs-attribute">Content-Type</span>: <span class="hljs-string">application/json</span></code></pre><div style="height: 1px;"></div><h5>Body</h5><pre><code>{}</code></pre><div style="height: 1px;"></div></div></div><div class="title"><strong>Response&nbsp;&nbsp;<code>401</code></strong><div class="collapse-button"><span class="close">Hide</span><span class="open">Show</span></div></div><div class="collapse-content"><div class="inner"><h5>Headers</h5><pre><code><span class="hljs-attribute">Content-Type</span>: <span class="hljs-string">application/json</span></code></pre><div style="height: 1px;"></div><h5>Body</h5><pre><code>{
@@ -63,7 +62,622 @@ their feed. Posts are closely tied to the follow graph…</p>
 </span>}</code></pre><div style="height: 1px;"></div></div></div><div class="title"><strong>Response&nbsp;&nbsp;<code>400</code></strong><div class="collapse-button"><span class="close">Hide</span><span class="open">Show</span></div></div><div class="collapse-content"><div class="inner"><h5>Headers</h5><pre><code><span class="hljs-attribute">Content-Type</span>: <span class="hljs-string">application/json</span></code></pre><div style="height: 1px;"></div><h5>Body</h5><pre><code>{
   "<span class="hljs-attribute">error_descrip</span>": <span class="hljs-value"><span class="hljs-string">"Bad request"</span></span>,
   "<span class="hljs-attribute">error</span>": <span class="hljs-value"><span class="hljs-string">"ex:wrong_dbname"</span>
-</span>}</code></pre><div style="height: 1px;"></div></div></div></div></div></section></div></div></div><p style="text-align: center;" class="text-muted">Generated by&nbsp;<a href="https://github.com/danielgtaylor/aglio" class="aglio">aglio</a>&nbsp;on 04 Apr 2017</p><script>/* eslint-env browser */
+</span>}</code></pre><div style="height: 1px;"></div></div></div></div></div></section><section id="wholesale-saleorder" class="resource-group"><h2 class="group-heading">Wholesale - Saleorder <a href="#wholesale-saleorder" class="permalink">&para;</a></h2><p>CURD saleorder support wholesale</p>
+<div id="wholesale-saleorder-order" class="resource"><h3 class="resource-heading">Order <a href="#wholesale-saleorder-order" class="permalink">&nbsp;&para;</a></h3><p>Order (getlist / create)</p>
+<div id="wholesale-saleorder-order-post" class="action post"><h4 class="action-heading"><div class="name">Create order</div><a href="#wholesale-saleorder-order-post" class="method post">POST</a><code class="uri">/api/wholesale/sale.order</code></h4><p>Create seo order</p>
+<h4>Example URI</h4><div class="definition"><span class="method post">POST</span>&nbsp;<span class="uri"><span class="hostname">http://love.caudatfarm.com</span>/api/wholesale/sale.order</span></div><div class="title"><strong>Request&nbsp;&nbsp;<code>JSON Message</code></strong><div class="collapse-button"><span class="close">Hide</span><span class="open">Show</span></div></div><div class="collapse-content"><div class="inner"><h5>Body</h5><pre><code>{
+    <span class="hljs-string">"customer_id"</span>: <span class="hljs-number">4095</span>,
+    <span class="hljs-string">"partner_reciver_id"</span>: <span class="hljs-number">4095</span>
+    <span class="hljs-string">"partner_invoice_id"</span>: <span class="hljs-number">4095</span>,
+    <span class="hljs-string">"partner_shipping_id"</span>: <span class="hljs-number">4095</span>,
+    <span class="hljs-string">"sale_person"</span>:{
+        <span class="hljs-string">"code"</span>:<span class="hljs-string">"CDF000247"</span>,
+        <span class="hljs-string">"name"</span>:<span class="hljs-string">"CDF000247"</span>
+    },
+    <span class="hljs-string">"warehouse_code"</span>:<span class="hljs-string">"KTT"</span>,
+    <span class="hljs-string">"order_line"</span>:[
+        {
+            <span class="hljs-string">"price_unit"</span>:<span class="hljs-number">20000.0</span>,
+            <span class="hljs-string">"price_discount"</span>:<span class="hljs-number">0.0</span>,
+            <span class="hljs-string">"product_id"</span>:<span class="hljs-number">237</span>,
+            <span class="hljs-string">"product_uom_qty"</span>:<span class="hljs-number">1.0</span>
+        },
+        {
+            <span class="hljs-string">"price_unit"</span>:<span class="hljs-number">24000.0</span>,
+            <span class="hljs-string">"price_discount"</span>:<span class="hljs-number">1000.0</span>,
+            <span class="hljs-string">"product_id"</span>:<span class="hljs-number">241</span>,
+            <span class="hljs-string">"product_uom_qty"</span>:<span class="hljs-number">1.0</span>,
+            <span class="hljs-string">"discount_type"</span>: <span class="hljs-string">"fixprice"</span>
+        }
+    ],
+    <span class="hljs-string">"category_id"</span> : <span class="hljs-number">1</span>,
+    <span class="hljs-string">"discount"</span>:<span class="hljs-number">10000.0</span>,
+    <span class="hljs-string">"source"</span>:<span class="hljs-string">"oss_wholesale"</span>,
+    <span class="hljs-string">"order_channel"</span>:<span class="hljs-string">"wholesale"</span>,
+    <span class="hljs-string">"template_id"</span>: <span class="hljs-number">1</span>,
+    <span class="hljs-string">"pricelist_id"</span>: <span class="hljs-number">1</span>,
+    <span class="hljs-string">"order_date"</span>,
+    <span class="hljs-string">"validity_date"</span>,
+    <span class="hljs-string">"stock_tranfer_date"</span>,
+}</code></pre><div style="height: 1px;"></div><h5>Schema</h5><pre><code>{
+    "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"object"</span></span>,
+    "<span class="hljs-attribute">properties</span>": <span class="hljs-value">{
+        "<span class="hljs-attribute">customer_id</span>": <span class="hljs-value">{
+            "<span class="hljs-attribute">type</span>" : <span class="hljs-value"><span class="hljs-string">"integer"</span></span>,
+            "<span class="hljs-attribute">required</span>": <span class="hljs-value"><span class="hljs-string">"true"</span></span>,
+            "<span class="hljs-attribute">mean</span>": <span class="hljs-value"><span class="hljs-string">"Khách hàng"</span>
+        </span>}</span>,
+        "<span class="hljs-attribute">partner_reciver_id</span>": <span class="hljs-value">{
+            "<span class="hljs-attribute">type</span>" : <span class="hljs-value"><span class="hljs-string">"integer"</span></span>,
+            "<span class="hljs-attribute">mean</span>": <span class="hljs-value"><span class="hljs-string">"Người liên hệ (không chọn mặc định là khách hàng)"</span>
+        </span>}</span>,
+        "<span class="hljs-attribute">partner_invoice_id</span>": <span class="hljs-value">{
+            "<span class="hljs-attribute">type</span>" : <span class="hljs-value"><span class="hljs-string">"integer"</span></span>,
+            "<span class="hljs-attribute">required</span>": <span class="hljs-value"><span class="hljs-string">"true"</span></span>,
+            "<span class="hljs-attribute">mean</span>": <span class="hljs-value"><span class="hljs-string">"Người liên hệ (không chọn mặc định là khách hàng)"</span>
+        </span>}</span>,
+        "<span class="hljs-attribute">partner_shipping_id</span>": <span class="hljs-value">{
+            "<span class="hljs-attribute">type</span>" : <span class="hljs-value"><span class="hljs-string">"integer"</span></span>,
+            "<span class="hljs-attribute">required</span>": <span class="hljs-value"><span class="hljs-string">"true"</span></span>,
+            "<span class="hljs-attribute">mean</span>": <span class="hljs-value"><span class="hljs-string">"Người liên hệ (không chọn mặc định là khách hàng)"</span>
+        </span>}</span>,
+        "<span class="hljs-attribute">sale_person</span>":<span class="hljs-value">{
+            "<span class="hljs-attribute">code</span>": <span class="hljs-value">{
+                "<span class="hljs-attribute">type</span>" : <span class="hljs-value"><span class="hljs-string">"string"</span></span>,
+                "<span class="hljs-attribute">required</span>": <span class="hljs-value"><span class="hljs-string">"true"</span></span>,
+                "<span class="hljs-attribute">mean</span>": <span class="hljs-value"><span class="hljs-string">"Mã user bán hàng. CDF0000"</span>
+            </span>}</span>,
+            "<span class="hljs-attribute">name</span>": <span class="hljs-value">{
+                "<span class="hljs-attribute">type</span>" : <span class="hljs-value"><span class="hljs-string">"string"</span></span>,
+                "<span class="hljs-attribute">required</span>": <span class="hljs-value"><span class="hljs-string">"true"</span></span>,
+                "<span class="hljs-attribute">mean</span>": <span class="hljs-value"><span class="hljs-string">"Tên user bán hàng"</span>
+            </span>}
+        </span>}</span>,
+        "<span class="hljs-attribute">warehouse_code</span>": <span class="hljs-value">{
+            "<span class="hljs-attribute">type</span>" : <span class="hljs-value"><span class="hljs-string">"string"</span></span>,
+            "<span class="hljs-attribute">required</span>": <span class="hljs-value"><span class="hljs-string">"true"</span></span>,
+            "<span class="hljs-attribute">mean</span>": <span class="hljs-value"><span class="hljs-string">"Mã warehouse đã mapping"</span>
+        </span>}</span>,
+        "<span class="hljs-attribute">order_line</span>":<span class="hljs-value">[
+            {
+                "<span class="hljs-attribute">price_unit</span>":<span class="hljs-value">{
+                    "<span class="hljs-attribute">type</span>" : <span class="hljs-value"><span class="hljs-string">"double"</span></span>,
+                    "<span class="hljs-attribute">required</span>": <span class="hljs-value"><span class="hljs-string">"true"</span></span>,
+                    "<span class="hljs-attribute">mean</span>": <span class="hljs-value"><span class="hljs-string">"Giá. không nhập thì giá sẽ là giá sp"</span>
+                </span>}</span>,
+                "<span class="hljs-attribute">price_discount</span>":<span class="hljs-value">{
+                    "<span class="hljs-attribute">type</span>" : <span class="hljs-value"><span class="hljs-string">"double"</span></span>,
+                    "<span class="hljs-attribute">mean</span>": <span class="hljs-value"><span class="hljs-string">"Khuyêến mãi trên line"</span>
+                </span>}</span>,
+                "<span class="hljs-attribute">product_id</span>":<span class="hljs-value">{
+                    "<span class="hljs-attribute">type</span>" : <span class="hljs-value"><span class="hljs-string">"integer"</span></span>,
+                    "<span class="hljs-attribute">mean</span>": <span class="hljs-value"><span class="hljs-string">"Id sản phẩm"</span>
+                </span>}</span>,
+                "<span class="hljs-attribute">product_uom_qty</span>": <span class="hljs-value">{
+                    "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"integer"</span></span>,
+                    "<span class="hljs-attribute">mean</span>": <span class="hljs-value"><span class="hljs-string">"Số lượng"</span>
+                </span>}
+            </span>}
+        ]</span>,
+        "<span class="hljs-attribute">category_id</span>" : <span class="hljs-value">{
+            "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"integer"</span></span>,
+            "<span class="hljs-attribute">mean</span>": <span class="hljs-value"><span class="hljs-string">"Id danh mục"</span>
+        </span>}</span>,
+        "<span class="hljs-attribute">discount</span>":<span class="hljs-value">{
+            "<span class="hljs-attribute">type</span>" : <span class="hljs-value"><span class="hljs-string">"double"</span></span>,
+            "<span class="hljs-attribute">mean</span>": <span class="hljs-value"><span class="hljs-string">"Khuyến mãi"</span>
+        </span>}</span>,
+        "<span class="hljs-attribute">source</span>":  <span class="hljs-value">{
+            "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"enum('oss_wholesale')"</span></span>,
+            "<span class="hljs-attribute">mean</span>": <span class="hljs-value"><span class="hljs-string">"Nguồn từ oss"</span>
+        </span>}</span>,
+        "<span class="hljs-attribute">order_channel</span>": <span class="hljs-value">{
+            "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"enum('wholesale')"</span></span>,
+            "<span class="hljs-attribute">mean</span>": <span class="hljs-value"><span class="hljs-string">"Kênh wholesale"</span>
+        </span>}</span>,
+        "<span class="hljs-attribute">template_id</span>": <span class="hljs-value">{
+            "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"integer"</span></span>,
+            "<span class="hljs-attribute">mean</span>": <span class="hljs-value"><span class="hljs-string">"Id template"</span>
+        </span>}</span>,
+        "<span class="hljs-attribute">pricelist_id</span>": <span class="hljs-value">{
+            "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"integer"</span></span>,
+            "<span class="hljs-attribute">mean</span>": <span class="hljs-value"><span class="hljs-string">"Pricelist id áp dụng"</span>
+        </span>}</span>,
+        "<span class="hljs-attribute">order_date</span>": <span class="hljs-value">{
+            "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"string (%Y-%m-%d %H:%M:%S)"</span></span>,
+            "<span class="hljs-attribute">mean</span>": <span class="hljs-value"><span class="hljs-string">"Ngày mua hàng"</span>
+        </span>}</span>,
+        "<span class="hljs-attribute">validity_date</span>": <span class="hljs-value">{
+            "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"string (%Y-%m-%d %H:%M:%S)"</span></span>,
+            "<span class="hljs-attribute">mean</span>": <span class="hljs-value"><span class="hljs-string">"Ngày hết hạn"</span>
+        </span>}</span>,
+        "<span class="hljs-attribute">stock_tranfer_date</span>":<span class="hljs-value">{
+            "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"string (%Y-%m-%d %H:%M:%S)"</span></span>,
+            "<span class="hljs-attribute">mean</span>": <span class="hljs-value"><span class="hljs-string">"Ngày giao hàng"</span>
+        </span>}
+    </span>}</span>,
+    "<span class="hljs-attribute">additionalProperties</span>": <span class="hljs-value"><span class="hljs-literal">false</span>
+</span>}</code></pre><div style="height: 1px;"></div></div></div><div class="title"><strong>Response&nbsp;&nbsp;<code>200</code></strong><div class="collapse-button"><span class="close">Hide</span><span class="open">Show</span></div></div><div class="collapse-content"><div class="inner"><h5>Headers</h5><pre><code><span class="hljs-attribute">Content-Type</span>: <span class="hljs-string">application/json</span></code></pre><div style="height: 1px;"></div><h5>Body</h5><pre><code>{
+  "<span class="hljs-attribute">id</span>": <span class="hljs-value"><span class="hljs-number">1</span>
+</span>}</code></pre><div style="height: 1px;"></div></div></div><div class="title"><strong>Response&nbsp;&nbsp;<code>500</code></strong><div class="collapse-button"><span class="close">Hide</span><span class="open">Show</span></div></div><div class="collapse-content"><div class="inner"><h5>Headers</h5><pre><code><span class="hljs-attribute">Content-Type</span>: <span class="hljs-string">application/json</span></code></pre><div style="height: 1px;"></div><h5>Body</h5><pre><code>{
+  "<span class="hljs-attribute">error_descrip</span>": <span class="hljs-value"><span class="hljs-string">"Message"</span></span>,
+  "<span class="hljs-attribute">error</span>": <span class="hljs-value"><span class="hljs-string">"message_code"</span>
+</span>}</code></pre><div style="height: 1px;"></div></div></div><div class="title"><strong>Response&nbsp;&nbsp;<code>401</code></strong><div class="collapse-button"><span class="close">Hide</span><span class="open">Show</span></div></div><div class="collapse-content"><div class="inner"><h5>Headers</h5><pre><code><span class="hljs-attribute">Content-Type</span>: <span class="hljs-string">application/json</span></code></pre><div style="height: 1px;"></div><h5>Body</h5><pre><code>{
+  "<span class="hljs-attribute">error_descrip</span>": <span class="hljs-value"><span class="hljs-string">"Message"</span></span>,
+  "<span class="hljs-attribute">error</span>": <span class="hljs-value"><span class="hljs-string">"message_code"</span>
+</span>}</code></pre><div style="height: 1px;"></div></div></div><div class="title"><strong>Response&nbsp;&nbsp;<code>400</code></strong><div class="collapse-button"><span class="close">Hide</span><span class="open">Show</span></div></div><div class="collapse-content"><div class="inner"><h5>Headers</h5><pre><code><span class="hljs-attribute">Content-Type</span>: <span class="hljs-string">application/json</span></code></pre><div style="height: 1px;"></div><h5>Body</h5><pre><code>{
+  "<span class="hljs-attribute">error_descrip</span>": <span class="hljs-value"><span class="hljs-string">"Message"</span></span>,
+  "<span class="hljs-attribute">error</span>": <span class="hljs-value"><span class="hljs-string">"message_code"</span>
+</span>}</code></pre><div style="height: 1px;"></div></div></div></div><div id="wholesale-saleorder-order-get" class="action get"><h4 class="action-heading"><div class="name">Get order</div><a href="#wholesale-saleorder-order-get" class="method get">GET</a><code class="uri">/api/wholesale/sale.order</code></h4><p>Get sale order</p>
+<h4>Example URI</h4><div class="definition"><span class="method get">GET</span>&nbsp;<span class="uri"><span class="hostname">http://love.caudatfarm.com</span>/api/wholesale/sale.order</span></div><div class="title"><strong>Request</strong><div class="collapse-button"><span class="close">Hide</span><span class="open">Show</span></div></div><div class="collapse-content"><div class="inner"><h5>Body</h5><pre><code>{
+   <span class="hljs-string">"filters"</span>: <span class="hljs-string">"[('some_field_1', '=', some_value_1), ('some_field_2', '!=', some_value_2)]"</span>,   
+   <span class="hljs-string">"offset"</span>: <span class="hljs-string">"interger"</span>,
+   <span class="hljs-string">"limit"</span>: <span class="hljs-string">"interger"</span>,
+   <span class="hljs-string">"order"</span>: <span class="hljs-string">"list_of_fields"</span>
+}<span class="hljs-string">``</span><span class="hljs-string">`
+</span></code></pre><div style="height: 1px;"></div></div></div><div class="title"><strong>Response&nbsp;&nbsp;<code>200</code></strong><div class="collapse-button"><span class="close">Hide</span><span class="open">Show</span></div></div><div class="collapse-content"><div class="inner"><h5>Headers</h5><pre><code><span class="hljs-attribute">Content-Type</span>: <span class="hljs-string">application/json</span></code></pre><div style="height: 1px;"></div><h5>Body</h5><pre><code>{
+  "<span class="hljs-attribute">count</span>": <span class="hljs-value"><span class="hljs-number">1</span></span>,
+  "<span class="hljs-attribute">results</span>": <span class="hljs-value">[
+    {
+      "<span class="hljs-attribute">user_id</span>": <span class="hljs-value">{
+        "<span class="hljs-attribute">id</span>": <span class="hljs-value"><span class="hljs-number">22</span></span>,
+        "<span class="hljs-attribute">name</span>": <span class="hljs-value"><span class="hljs-string">"Hồ Minh Phú"</span>
+      </span>}</span>,
+      "<span class="hljs-attribute">name</span>": <span class="hljs-value"><span class="hljs-string">"SO28048"</span></span>,
+      "<span class="hljs-attribute">order_line</span>": <span class="hljs-value">[
+        {
+          "<span class="hljs-attribute">name</span>": <span class="hljs-value"><span class="hljs-string">"Cà phê Máy - 100% Robusta - Gói 1kg"</span></span>,
+          "<span class="hljs-attribute">price_unit</span>": <span class="hljs-value"><span class="hljs-number">45000</span></span>,
+          "<span class="hljs-attribute">product_uom_qty</span>": <span class="hljs-value"><span class="hljs-number">1</span></span>,
+          "<span class="hljs-attribute">price_subtotal</span>": <span class="hljs-value"><span class="hljs-number">40909.090000000004</span></span>,
+          "<span class="hljs-attribute">product_id</span>": <span class="hljs-value">{
+            "<span class="hljs-attribute">categ_id</span>": <span class="hljs-value"><span class="hljs-number">9</span></span>,
+            "<span class="hljs-attribute">barcode</span>": <span class="hljs-value"><span class="hljs-string">"8110012300001"</span></span>,
+            "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"product"</span></span>,
+            "<span class="hljs-attribute">id</span>": <span class="hljs-value"><span class="hljs-number">78</span></span>,
+            "<span class="hljs-attribute">name</span>": <span class="hljs-value"><span class="hljs-string">"Cà phê Máy - 100% Robusta - Gói 1kg"</span>
+          </span>}</span>,
+          "<span class="hljs-attribute">id</span>": <span class="hljs-value"><span class="hljs-number">60659</span></span>,
+          "<span class="hljs-attribute">tax_id</span>": <span class="hljs-value">[
+            {
+              "<span class="hljs-attribute">id</span>": <span class="hljs-value"><span class="hljs-number">4</span></span>,
+              "<span class="hljs-attribute">name</span>": <span class="hljs-value"><span class="hljs-string">"Thuế GTGT phải nộp 10%"</span>
+            </span>}
+          ]
+        </span>}
+      ]</span>,
+      "<span class="hljs-attribute">state</span>": <span class="hljs-value"><span class="hljs-string">"sale"</span></span>,
+      "<span class="hljs-attribute">date_order</span>": <span class="hljs-value"><span class="hljs-string">"2017-04-04 15:58:42"</span></span>,
+      "<span class="hljs-attribute">partner_id</span>": <span class="hljs-value">{
+        "<span class="hljs-attribute">customer_id</span>": <span class="hljs-value"><span class="hljs-string">"003671"</span></span>,
+        "<span class="hljs-attribute">id</span>": <span class="hljs-value"><span class="hljs-number">4419</span></span>,
+        "<span class="hljs-attribute">name</span>": <span class="hljs-value"><span class="hljs-string">"06_Anh Phúc - Đà Nẵng"</span>
+      </span>}</span>,
+      "<span class="hljs-attribute">id</span>": <span class="hljs-value"><span class="hljs-number">28053</span></span>,
+      "<span class="hljs-attribute">amount_total</span>": <span class="hljs-value"><span class="hljs-number">45000</span>
+    </span>}
+  ]
+</span>}</code></pre><div style="height: 1px;"></div></div></div><div class="title"><strong>Response&nbsp;&nbsp;<code>500</code></strong><div class="collapse-button"><span class="close">Hide</span><span class="open">Show</span></div></div><div class="collapse-content"><div class="inner"><h5>Headers</h5><pre><code><span class="hljs-attribute">Content-Type</span>: <span class="hljs-string">application/json</span></code></pre><div style="height: 1px;"></div><h5>Body</h5><pre><code>{
+  "<span class="hljs-attribute">error_descrip</span>": <span class="hljs-value"><span class="hljs-string">"Message"</span></span>,
+  "<span class="hljs-attribute">error</span>": <span class="hljs-value"><span class="hljs-string">"message_code"</span>
+</span>}</code></pre><div style="height: 1px;"></div></div></div><div class="title"><strong>Response&nbsp;&nbsp;<code>401</code></strong><div class="collapse-button"><span class="close">Hide</span><span class="open">Show</span></div></div><div class="collapse-content"><div class="inner"><h5>Headers</h5><pre><code><span class="hljs-attribute">Content-Type</span>: <span class="hljs-string">application/json</span></code></pre><div style="height: 1px;"></div><h5>Body</h5><pre><code>{
+  "<span class="hljs-attribute">error_descrip</span>": <span class="hljs-value"><span class="hljs-string">"Message"</span></span>,
+  "<span class="hljs-attribute">error</span>": <span class="hljs-value"><span class="hljs-string">"message_code"</span>
+</span>}</code></pre><div style="height: 1px;"></div></div></div><div class="title"><strong>Response&nbsp;&nbsp;<code>400</code></strong><div class="collapse-button"><span class="close">Hide</span><span class="open">Show</span></div></div><div class="collapse-content"><div class="inner"><h5>Headers</h5><pre><code><span class="hljs-attribute">Content-Type</span>: <span class="hljs-string">application/json</span></code></pre><div style="height: 1px;"></div><h5>Body</h5><pre><code>{
+  "<span class="hljs-attribute">error_descrip</span>": <span class="hljs-value"><span class="hljs-string">"Message"</span></span>,
+  "<span class="hljs-attribute">error</span>": <span class="hljs-value"><span class="hljs-string">"message_code"</span>
+</span>}</code></pre><div style="height: 1px;"></div></div></div></div></div><div id="wholesale-saleorder-order-1" class="resource"><h3 class="resource-heading">Order <a href="#wholesale-saleorder-order-1" class="permalink">&nbsp;&para;</a></h3><p>Order (getdetail/update/detail)</p>
+<div id="wholesale-saleorder-order-get-1" class="action get"><h4 class="action-heading"><div class="name">Get order detail</div><a href="#wholesale-saleorder-order-get-1" class="method get">GET</a><code class="uri">/api/wholesale/sale.order/{id}</code></h4><p>Get sale order detail</p>
+<h4>Example URI</h4><div class="definition"><span class="method get">GET</span>&nbsp;<span class="uri"><span class="hostname">http://love.caudatfarm.com</span>/api/wholesale/sale.order/<span class="hljs-attribute" title="id">12</span></span></div><div class="title"><strong>URI Parameters</strong><div class="collapse-button show"><span class="close">Hide</span><span class="open">Show</span></div></div><div class="collapse-content"><dl class="inner"><dt>id</dt><dd><code>string</code>&nbsp;<span class="required">(required)</span>&nbsp;<span class="text-muted example"><strong>Example:&nbsp;</strong><span>12</span></span><p>Unique identifier for a sale orrder</p>
+</dd></dl></div><div class="title"><strong>Response&nbsp;&nbsp;<code>200</code></strong><div class="collapse-button"><span class="close">Hide</span><span class="open">Show</span></div></div><div class="collapse-content"><div class="inner"><h5>Headers</h5><pre><code><span class="hljs-attribute">Content-Type</span>: <span class="hljs-string">application/json</span></code></pre><div style="height: 1px;"></div><h5>Body</h5><pre><code>{
+  "<span class="hljs-attribute">count</span>": <span class="hljs-value"><span class="hljs-number">1</span></span>,
+  "<span class="hljs-attribute">results</span>": <span class="hljs-value">[
+    {
+      "<span class="hljs-attribute">user_id</span>": <span class="hljs-value">{
+        "<span class="hljs-attribute">id</span>": <span class="hljs-value"><span class="hljs-number">22</span></span>,
+        "<span class="hljs-attribute">name</span>": <span class="hljs-value"><span class="hljs-string">"Hồ Minh Phú"</span>
+      </span>}</span>,
+      "<span class="hljs-attribute">name</span>": <span class="hljs-value"><span class="hljs-string">"SO28048"</span></span>,
+      "<span class="hljs-attribute">order_line</span>": <span class="hljs-value">[
+        {
+          "<span class="hljs-attribute">name</span>": <span class="hljs-value"><span class="hljs-string">"Cà phê Máy - 100% Robusta - Gói 1kg"</span></span>,
+          "<span class="hljs-attribute">price_unit</span>": <span class="hljs-value"><span class="hljs-number">45000</span></span>,
+          "<span class="hljs-attribute">product_uom_qty</span>": <span class="hljs-value"><span class="hljs-number">1</span></span>,
+          "<span class="hljs-attribute">price_subtotal</span>": <span class="hljs-value"><span class="hljs-number">40909.090000000004</span></span>,
+          "<span class="hljs-attribute">product_id</span>": <span class="hljs-value">{
+            "<span class="hljs-attribute">categ_id</span>": <span class="hljs-value"><span class="hljs-number">9</span></span>,
+            "<span class="hljs-attribute">barcode</span>": <span class="hljs-value"><span class="hljs-string">"8110012300001"</span></span>,
+            "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"product"</span></span>,
+            "<span class="hljs-attribute">id</span>": <span class="hljs-value"><span class="hljs-number">78</span></span>,
+            "<span class="hljs-attribute">name</span>": <span class="hljs-value"><span class="hljs-string">"Cà phê Máy - 100% Robusta - Gói 1kg"</span>
+          </span>}</span>,
+          "<span class="hljs-attribute">id</span>": <span class="hljs-value"><span class="hljs-number">60659</span></span>,
+          "<span class="hljs-attribute">tax_id</span>": <span class="hljs-value">[
+            {
+              "<span class="hljs-attribute">id</span>": <span class="hljs-value"><span class="hljs-number">4</span></span>,
+              "<span class="hljs-attribute">name</span>": <span class="hljs-value"><span class="hljs-string">"Thuế GTGT phải nộp 10%"</span>
+            </span>}
+          ]
+        </span>}
+      ]</span>,
+      "<span class="hljs-attribute">state</span>": <span class="hljs-value"><span class="hljs-string">"sale"</span></span>,
+      "<span class="hljs-attribute">date_order</span>": <span class="hljs-value"><span class="hljs-string">"2017-04-04 15:58:42"</span></span>,
+      "<span class="hljs-attribute">partner_id</span>": <span class="hljs-value">{
+        "<span class="hljs-attribute">customer_id</span>": <span class="hljs-value"><span class="hljs-string">"003671"</span></span>,
+        "<span class="hljs-attribute">id</span>": <span class="hljs-value"><span class="hljs-number">4419</span></span>,
+        "<span class="hljs-attribute">name</span>": <span class="hljs-value"><span class="hljs-string">"06_Anh Phúc - Đà Nẵng"</span>
+      </span>}</span>,
+      "<span class="hljs-attribute">id</span>": <span class="hljs-value"><span class="hljs-number">28053</span></span>,
+      "<span class="hljs-attribute">amount_total</span>": <span class="hljs-value"><span class="hljs-number">45000</span>
+    </span>}
+  ]
+</span>}</code></pre><div style="height: 1px;"></div></div></div><div class="title"><strong>Response&nbsp;&nbsp;<code>500</code></strong><div class="collapse-button"><span class="close">Hide</span><span class="open">Show</span></div></div><div class="collapse-content"><div class="inner"><h5>Headers</h5><pre><code><span class="hljs-attribute">Content-Type</span>: <span class="hljs-string">application/json</span></code></pre><div style="height: 1px;"></div><h5>Body</h5><pre><code>{
+  "<span class="hljs-attribute">error_descrip</span>": <span class="hljs-value"><span class="hljs-string">"Message"</span></span>,
+  "<span class="hljs-attribute">error</span>": <span class="hljs-value"><span class="hljs-string">"message_code"</span>
+</span>}</code></pre><div style="height: 1px;"></div></div></div><div class="title"><strong>Response&nbsp;&nbsp;<code>401</code></strong><div class="collapse-button"><span class="close">Hide</span><span class="open">Show</span></div></div><div class="collapse-content"><div class="inner"><h5>Headers</h5><pre><code><span class="hljs-attribute">Content-Type</span>: <span class="hljs-string">application/json</span></code></pre><div style="height: 1px;"></div><h5>Body</h5><pre><code>{
+  "<span class="hljs-attribute">error_descrip</span>": <span class="hljs-value"><span class="hljs-string">"Message"</span></span>,
+  "<span class="hljs-attribute">error</span>": <span class="hljs-value"><span class="hljs-string">"message_code"</span>
+</span>}</code></pre><div style="height: 1px;"></div></div></div><div class="title"><strong>Response&nbsp;&nbsp;<code>400</code></strong><div class="collapse-button"><span class="close">Hide</span><span class="open">Show</span></div></div><div class="collapse-content"><div class="inner"><h5>Headers</h5><pre><code><span class="hljs-attribute">Content-Type</span>: <span class="hljs-string">application/json</span></code></pre><div style="height: 1px;"></div><h5>Body</h5><pre><code>{
+  "<span class="hljs-attribute">error_descrip</span>": <span class="hljs-value"><span class="hljs-string">"Message"</span></span>,
+  "<span class="hljs-attribute">error</span>": <span class="hljs-value"><span class="hljs-string">"message_code"</span>
+</span>}</code></pre><div style="height: 1px;"></div></div></div></div><div id="wholesale-saleorder-order-put" class="action put"><h4 class="action-heading"><div class="name">Update order</div><a href="#wholesale-saleorder-order-put" class="method put">PUT</a><code class="uri">/api/wholesale/sale.order/{id}</code></h4><p>Update order</p>
+<h4>Example URI</h4><div class="definition"><span class="method put">PUT</span>&nbsp;<span class="uri"><span class="hostname">http://love.caudatfarm.com</span>/api/wholesale/sale.order/<span class="hljs-attribute" title="id">12</span></span></div><div class="title"><strong>URI Parameters</strong><div class="collapse-button show"><span class="close">Hide</span><span class="open">Show</span></div></div><div class="collapse-content"><dl class="inner"><dt>id</dt><dd><code>string</code>&nbsp;<span class="required">(required)</span>&nbsp;<span class="text-muted example"><strong>Example:&nbsp;</strong><span>12</span></span><p>Unique identifier for a sale orrder</p>
+</dd></dl></div><div class="title"><strong>Request</strong><div class="collapse-button"><span class="close">Hide</span><span class="open">Show</span></div></div><div class="collapse-content"><div class="inner"><h5>Body</h5><pre><code>{
+    <span class="hljs-string">"customer_id"</span>: <span class="hljs-number">4095</span>,
+    <span class="hljs-string">"partner_reciver_id"</span>: <span class="hljs-number">4095</span>
+    <span class="hljs-string">"partner_invoice_id"</span>: <span class="hljs-number">4095</span>,
+    <span class="hljs-string">"partner_shipping_id"</span>: <span class="hljs-number">4095</span>,
+    <span class="hljs-string">"sale_person"</span>:{
+        <span class="hljs-string">"code"</span>:<span class="hljs-string">"CDF000247"</span>,
+        <span class="hljs-string">"name"</span>:<span class="hljs-string">"CDF000247"</span>
+    },
+    <span class="hljs-string">"warehouse_code"</span>:<span class="hljs-string">"KTT"</span>,
+    <span class="hljs-string">"order_line"</span>:[
+        {
+            <span class="hljs-string">"price_unit"</span>:<span class="hljs-number">20000.0</span>,
+            <span class="hljs-string">"price_discount"</span>:<span class="hljs-number">0.0</span>,
+            <span class="hljs-string">"product_id"</span>:<span class="hljs-number">237</span>,
+            <span class="hljs-string">"product_uom_qty"</span>:<span class="hljs-number">1.0</span>
+        },
+        {
+            <span class="hljs-string">"price_unit"</span>:<span class="hljs-number">24000.0</span>,
+            <span class="hljs-string">"price_discount"</span>:<span class="hljs-number">1000.0</span>,
+            <span class="hljs-string">"product_id"</span>:<span class="hljs-number">241</span>,
+            <span class="hljs-string">"product_uom_qty"</span>:<span class="hljs-number">1.0</span>,
+            <span class="hljs-string">"discount_type"</span>: <span class="hljs-string">"fixprice"</span>
+        }
+    ],
+    <span class="hljs-string">"category_id"</span> : <span class="hljs-number">1</span>,
+    <span class="hljs-string">"discount"</span>:<span class="hljs-number">10000.0</span>,
+    <span class="hljs-string">"source"</span>:<span class="hljs-string">"oss_wholesale"</span>,
+    <span class="hljs-string">"order_channel"</span>:<span class="hljs-string">"wholesale"</span>,
+    <span class="hljs-string">"template_id"</span>: <span class="hljs-number">1</span>,
+    <span class="hljs-string">"pricelist_id"</span>: <span class="hljs-number">1</span>,
+    <span class="hljs-string">"order_date"</span>,
+    <span class="hljs-string">"validity_date"</span>,
+    <span class="hljs-string">"stock_tranfer_date"</span>,
+}</code></pre><div style="height: 1px;"></div><h5>Schema</h5><pre><code>{
+    "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"object"</span></span>,
+    "<span class="hljs-attribute">properties</span>": <span class="hljs-value">{
+        "<span class="hljs-attribute">customer_id</span>": <span class="hljs-value">{
+            "<span class="hljs-attribute">type</span>" : <span class="hljs-value"><span class="hljs-string">"integer"</span></span>,
+            "<span class="hljs-attribute">required</span>": <span class="hljs-value"><span class="hljs-string">"true"</span></span>,
+            "<span class="hljs-attribute">mean</span>": <span class="hljs-value"><span class="hljs-string">"Khách hàng"</span>
+        </span>}</span>,
+        "<span class="hljs-attribute">partner_reciver_id</span>": <span class="hljs-value">{
+            "<span class="hljs-attribute">type</span>" : <span class="hljs-value"><span class="hljs-string">"integer"</span></span>,
+            "<span class="hljs-attribute">mean</span>": <span class="hljs-value"><span class="hljs-string">"Người liên hệ (không chọn mặc định là khách hàng)"</span>
+        </span>}</span>,
+        "<span class="hljs-attribute">partner_invoice_id</span>": <span class="hljs-value">{
+            "<span class="hljs-attribute">type</span>" : <span class="hljs-value"><span class="hljs-string">"integer"</span></span>,
+            "<span class="hljs-attribute">required</span>": <span class="hljs-value"><span class="hljs-string">"true"</span></span>,
+            "<span class="hljs-attribute">mean</span>": <span class="hljs-value"><span class="hljs-string">"Người liên hệ (không chọn mặc định là khách hàng)"</span>
+        </span>}</span>,
+        "<span class="hljs-attribute">partner_shipping_id</span>": <span class="hljs-value">{
+            "<span class="hljs-attribute">type</span>" : <span class="hljs-value"><span class="hljs-string">"integer"</span></span>,
+            "<span class="hljs-attribute">required</span>": <span class="hljs-value"><span class="hljs-string">"true"</span></span>,
+            "<span class="hljs-attribute">mean</span>": <span class="hljs-value"><span class="hljs-string">"Người liên hệ (không chọn mặc định là khách hàng)"</span>
+        </span>}</span>,
+        "<span class="hljs-attribute">sale_person</span>":<span class="hljs-value">{
+            "<span class="hljs-attribute">code</span>": <span class="hljs-value">{
+                "<span class="hljs-attribute">type</span>" : <span class="hljs-value"><span class="hljs-string">"string"</span></span>,
+                "<span class="hljs-attribute">required</span>": <span class="hljs-value"><span class="hljs-string">"true"</span></span>,
+                "<span class="hljs-attribute">mean</span>": <span class="hljs-value"><span class="hljs-string">"Mã user bán hàng. CDF0000"</span>
+            </span>}</span>,
+            "<span class="hljs-attribute">name</span>": <span class="hljs-value">{
+                "<span class="hljs-attribute">type</span>" : <span class="hljs-value"><span class="hljs-string">"string"</span></span>,
+                "<span class="hljs-attribute">required</span>": <span class="hljs-value"><span class="hljs-string">"true"</span></span>,
+                "<span class="hljs-attribute">mean</span>": <span class="hljs-value"><span class="hljs-string">"Tên user bán hàng"</span>
+            </span>}
+        </span>}</span>,
+        "<span class="hljs-attribute">warehouse_code</span>": <span class="hljs-value">{
+            "<span class="hljs-attribute">type</span>" : <span class="hljs-value"><span class="hljs-string">"string"</span></span>,
+            "<span class="hljs-attribute">required</span>": <span class="hljs-value"><span class="hljs-string">"true"</span></span>,
+            "<span class="hljs-attribute">mean</span>": <span class="hljs-value"><span class="hljs-string">"Mã warehouse đã mapping"</span>
+        </span>}</span>,
+        "<span class="hljs-attribute">order_line</span>":<span class="hljs-value">[
+            {
+                "<span class="hljs-attribute">price_unit</span>":<span class="hljs-value">{
+                    "<span class="hljs-attribute">type</span>" : <span class="hljs-value"><span class="hljs-string">"double"</span></span>,
+                    "<span class="hljs-attribute">required</span>": <span class="hljs-value"><span class="hljs-string">"true"</span></span>,
+                    "<span class="hljs-attribute">mean</span>": <span class="hljs-value"><span class="hljs-string">"Giá. không nhập thì giá sẽ là giá sp"</span>
+                </span>}</span>,
+                "<span class="hljs-attribute">price_discount</span>":<span class="hljs-value">{
+                    "<span class="hljs-attribute">type</span>" : <span class="hljs-value"><span class="hljs-string">"double"</span></span>,
+                    "<span class="hljs-attribute">mean</span>": <span class="hljs-value"><span class="hljs-string">"Khuyêến mãi trên line"</span>
+                </span>}</span>,
+                "<span class="hljs-attribute">product_id</span>":<span class="hljs-value">{
+                    "<span class="hljs-attribute">type</span>" : <span class="hljs-value"><span class="hljs-string">"integer"</span></span>,
+                    "<span class="hljs-attribute">mean</span>": <span class="hljs-value"><span class="hljs-string">"Id sản phẩm"</span>
+                </span>}</span>,
+                "<span class="hljs-attribute">product_uom_qty</span>": <span class="hljs-value">{
+                    "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"integer"</span></span>,
+                    "<span class="hljs-attribute">mean</span>": <span class="hljs-value"><span class="hljs-string">"Số lượng"</span>
+                </span>}
+            </span>}
+        ]</span>,
+        "<span class="hljs-attribute">category_id</span>" : <span class="hljs-value">{
+            "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"integer"</span></span>,
+            "<span class="hljs-attribute">mean</span>": <span class="hljs-value"><span class="hljs-string">"Id danh mục"</span>
+        </span>}</span>,
+        "<span class="hljs-attribute">discount</span>":<span class="hljs-value">{
+            "<span class="hljs-attribute">type</span>" : <span class="hljs-value"><span class="hljs-string">"double"</span></span>,
+            "<span class="hljs-attribute">mean</span>": <span class="hljs-value"><span class="hljs-string">"Khuyến mãi"</span>
+        </span>}</span>,
+        "<span class="hljs-attribute">source</span>":  <span class="hljs-value">{
+            "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"enum('oss_wholesale')"</span></span>,
+            "<span class="hljs-attribute">mean</span>": <span class="hljs-value"><span class="hljs-string">"Nguồn từ oss"</span>
+        </span>}</span>,
+        "<span class="hljs-attribute">order_channel</span>": <span class="hljs-value">{
+            "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"enum('wholesale')"</span></span>,
+            "<span class="hljs-attribute">mean</span>": <span class="hljs-value"><span class="hljs-string">"Kênh wholesale"</span>
+        </span>}</span>,
+        "<span class="hljs-attribute">template_id</span>": <span class="hljs-value">{
+            "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"integer"</span></span>,
+            "<span class="hljs-attribute">mean</span>": <span class="hljs-value"><span class="hljs-string">"Id template"</span>
+        </span>}</span>,
+        "<span class="hljs-attribute">pricelist_id</span>": <span class="hljs-value">{
+            "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"integer"</span></span>,
+            "<span class="hljs-attribute">mean</span>": <span class="hljs-value"><span class="hljs-string">"Pricelist id áp dụng"</span>
+        </span>}</span>,
+        "<span class="hljs-attribute">order_date</span>": <span class="hljs-value">{
+            "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"string (%Y-%m-%d %H:%M:%S)"</span></span>,
+            "<span class="hljs-attribute">mean</span>": <span class="hljs-value"><span class="hljs-string">"Ngày mua hàng"</span>
+        </span>}</span>,
+        "<span class="hljs-attribute">validity_date</span>": <span class="hljs-value">{
+            "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"string (%Y-%m-%d %H:%M:%S)"</span></span>,
+            "<span class="hljs-attribute">mean</span>": <span class="hljs-value"><span class="hljs-string">"Ngày hết hạn"</span>
+        </span>}</span>,
+        "<span class="hljs-attribute">stock_tranfer_date</span>":<span class="hljs-value">{
+            "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"string (%Y-%m-%d %H:%M:%S)"</span></span>,
+            "<span class="hljs-attribute">mean</span>": <span class="hljs-value"><span class="hljs-string">"Ngày giao hàng"</span>
+        </span>}
+    </span>}</span>,
+    "<span class="hljs-attribute">additionalProperties</span>": <span class="hljs-value"><span class="hljs-literal">false</span>
+</span>}</code></pre><div style="height: 1px;"></div></div></div><div class="title"><strong>Response&nbsp;&nbsp;<code>200</code></strong><div class="collapse-button"><span class="close">Hide</span><span class="open">Show</span></div></div><div class="collapse-content"><div class="inner"><h5>Headers</h5><pre><code><span class="hljs-attribute">Content-Type</span>: <span class="hljs-string">application/json</span></code></pre><div style="height: 1px;"></div><h5>Body</h5><pre><code>{
+  "<span class="hljs-attribute">id</span>": <span class="hljs-value"><span class="hljs-number">1</span>
+</span>}</code></pre><div style="height: 1px;"></div></div></div><div class="title"><strong>Response&nbsp;&nbsp;<code>500</code></strong><div class="collapse-button"><span class="close">Hide</span><span class="open">Show</span></div></div><div class="collapse-content"><div class="inner"><h5>Headers</h5><pre><code><span class="hljs-attribute">Content-Type</span>: <span class="hljs-string">application/json</span></code></pre><div style="height: 1px;"></div><h5>Body</h5><pre><code>{
+  "<span class="hljs-attribute">error_descrip</span>": <span class="hljs-value"><span class="hljs-string">"Message"</span></span>,
+  "<span class="hljs-attribute">error</span>": <span class="hljs-value"><span class="hljs-string">"message_code"</span>
+</span>}</code></pre><div style="height: 1px;"></div></div></div><div class="title"><strong>Response&nbsp;&nbsp;<code>401</code></strong><div class="collapse-button"><span class="close">Hide</span><span class="open">Show</span></div></div><div class="collapse-content"><div class="inner"><h5>Headers</h5><pre><code><span class="hljs-attribute">Content-Type</span>: <span class="hljs-string">application/json</span></code></pre><div style="height: 1px;"></div><h5>Body</h5><pre><code>{
+  "<span class="hljs-attribute">error_descrip</span>": <span class="hljs-value"><span class="hljs-string">"Message"</span></span>,
+  "<span class="hljs-attribute">error</span>": <span class="hljs-value"><span class="hljs-string">"message_code"</span>
+</span>}</code></pre><div style="height: 1px;"></div></div></div><div class="title"><strong>Response&nbsp;&nbsp;<code>400</code></strong><div class="collapse-button"><span class="close">Hide</span><span class="open">Show</span></div></div><div class="collapse-content"><div class="inner"><h5>Headers</h5><pre><code><span class="hljs-attribute">Content-Type</span>: <span class="hljs-string">application/json</span></code></pre><div style="height: 1px;"></div><h5>Body</h5><pre><code>{
+  "<span class="hljs-attribute">error_descrip</span>": <span class="hljs-value"><span class="hljs-string">"Message"</span></span>,
+  "<span class="hljs-attribute">error</span>": <span class="hljs-value"><span class="hljs-string">"message_code"</span>
+</span>}</code></pre><div style="height: 1px;"></div></div></div></div><div id="wholesale-saleorder-order-delete" class="action delete"><h4 class="action-heading"><div class="name">Delete order</div><a href="#wholesale-saleorder-order-delete" class="method delete">DELETE</a><code class="uri">/api/wholesale/sale.order/{id}</code></h4><p>Xóa 1 order</p>
+<h4>Example URI</h4><div class="definition"><span class="method delete">DELETE</span>&nbsp;<span class="uri"><span class="hostname">http://love.caudatfarm.com</span>/api/wholesale/sale.order/<span class="hljs-attribute" title="id">12</span></span></div><div class="title"><strong>URI Parameters</strong><div class="collapse-button show"><span class="close">Hide</span><span class="open">Show</span></div></div><div class="collapse-content"><dl class="inner"><dt>id</dt><dd><code>string</code>&nbsp;<span class="required">(required)</span>&nbsp;<span class="text-muted example"><strong>Example:&nbsp;</strong><span>12</span></span><p>Unique identifier for a sale orrder</p>
+</dd></dl></div><div class="title"><strong>Response&nbsp;&nbsp;<code>200</code></strong><div class="collapse-button"><span class="close">Hide</span><span class="open">Show</span></div></div><div class="collapse-content"><div class="inner"><h5>Headers</h5><pre><code><span class="hljs-attribute">Content-Type</span>: <span class="hljs-string">application/json</span></code></pre><div style="height: 1px;"></div><h5>Body</h5><pre><code>{}</code></pre><div style="height: 1px;"></div></div></div><div class="title"><strong>Response&nbsp;&nbsp;<code>500</code></strong><div class="collapse-button"><span class="close">Hide</span><span class="open">Show</span></div></div><div class="collapse-content"><div class="inner"><h5>Headers</h5><pre><code><span class="hljs-attribute">Content-Type</span>: <span class="hljs-string">application/json</span></code></pre><div style="height: 1px;"></div><h5>Body</h5><pre><code>{
+  "<span class="hljs-attribute">error_descrip</span>": <span class="hljs-value"><span class="hljs-string">"Message"</span></span>,
+  "<span class="hljs-attribute">error</span>": <span class="hljs-value"><span class="hljs-string">"message_code"</span>
+</span>}</code></pre><div style="height: 1px;"></div></div></div><div class="title"><strong>Response&nbsp;&nbsp;<code>401</code></strong><div class="collapse-button"><span class="close">Hide</span><span class="open">Show</span></div></div><div class="collapse-content"><div class="inner"><h5>Headers</h5><pre><code><span class="hljs-attribute">Content-Type</span>: <span class="hljs-string">application/json</span></code></pre><div style="height: 1px;"></div><h5>Body</h5><pre><code>{
+  "<span class="hljs-attribute">error_descrip</span>": <span class="hljs-value"><span class="hljs-string">"Message"</span></span>,
+  "<span class="hljs-attribute">error</span>": <span class="hljs-value"><span class="hljs-string">"message_code"</span>
+</span>}</code></pre><div style="height: 1px;"></div></div></div><div class="title"><strong>Response&nbsp;&nbsp;<code>400</code></strong><div class="collapse-button"><span class="close">Hide</span><span class="open">Show</span></div></div><div class="collapse-content"><div class="inner"><h5>Headers</h5><pre><code><span class="hljs-attribute">Content-Type</span>: <span class="hljs-string">application/json</span></code></pre><div style="height: 1px;"></div><h5>Body</h5><pre><code>{
+  "<span class="hljs-attribute">error_descrip</span>": <span class="hljs-value"><span class="hljs-string">"Message"</span></span>,
+  "<span class="hljs-attribute">error</span>": <span class="hljs-value"><span class="hljs-string">"message_code"</span>
+</span>}</code></pre><div style="height: 1px;"></div></div></div></div></div></section><section id="wholesale-customer" class="resource-group"><h2 class="group-heading">Wholesale - Customer <a href="#wholesale-customer" class="permalink">&para;</a></h2><p>CURD Customer support wholesale</p>
+<div id="wholesale-customer-customer" class="resource"><h3 class="resource-heading">Customer <a href="#wholesale-customer-customer" class="permalink">&nbsp;&para;</a></h3><p>Customer (getlist / create)</p>
+<div id="wholesale-customer-customer-post" class="action post"><h4 class="action-heading"><div class="name">Create customer</div><a href="#wholesale-customer-customer-post" class="method post">POST</a><code class="uri">/api/wholesale/res.partner</code></h4><p>Create Create customer</p>
+<h4>Example URI</h4><div class="definition"><span class="method post">POST</span>&nbsp;<span class="uri"><span class="hostname">http://love.caudatfarm.com</span>/api/wholesale/res.partner</span></div><div class="title"><strong>Request&nbsp;&nbsp;<code>JSON Message</code></strong><div class="collapse-button"><span class="close">Hide</span><span class="open">Show</span></div></div><div class="collapse-content"><div class="inner"><h5>Body</h5><pre><code>{
+    <span class="hljs-string">"company_type"</span> : <span class="hljs-string">"person"</span>,          
+    <span class="hljs-string">"name"</span>: <span class="hljs-string">"Nguyễn Ngọc Lương"</span>,
+    <span class="hljs-string">"street"</span>: <span class="hljs-string">"458 Phan Văn Trị"</span>,
+    <span class="hljs-string">"city_id"</span>: <span class="hljs-number">1</span>,
+    <span class="hljs-string">"district_id"</span>: <span class="hljs-number">835</span>,
+    <span class="hljs-string">"ward_id"</span>: <span class="hljs-number">12778</span>,
+    <span class="hljs-string">"website"</span>: <span class="hljs-string">"www.xblue55.github.io"</span>,
+    <span class="hljs-string">"type_code"</span>: <span class="hljs-number">1</span>,
+    <span class="hljs-string">"category_id"</span>: <span class="hljs-string">"1,2,3,4"</span>,
+    <span class="hljs-string">"user_code"</span>: <span class="hljs-string">"CDF00242"</span>,
+    <span class="hljs-string">"user_code_2"</span>: <span class="hljs-string">"CDF00242"</span>,
+    <span class="hljs-string">"phone"</span>: <span class="hljs-string">"0988077558"</span>,
+    <span class="hljs-string">"mobile"</span>: <span class="hljs-string">"0988077559"</span>,
+    <span class="hljs-string">"email"</span>: <span class="hljs-string">"nnluong.it@gmail.com"</span>,
+    <span class="hljs-string">"title"</span>: <span class="hljs-number">1</span>,
+    <span class="hljs-string">"source_id"</span> : <span class="hljs-number">1</span>,
+    <span class="hljs-string">"customer_type"</span>: <span class="hljs-string">"cash"</span>,
+    <span class="hljs-string">"comment"</span>: <span class="hljs-string">"Thằng này tốt lắm"</span>,
+    <span class="hljs-string">"function"</span>: <span class="hljs-string">"devoloper"</span>,
+    <span class="hljs-string">"property_payment_term_id"</span>: <span class="hljs-number">1</span>,
+    <span class="hljs-string">"delivery_service"</span>: <span class="hljs-string">"partner"</span>,
+    <span class="hljs-string">"property_product_pricelist"</span>: <span class="hljs-number">1</span>
+    <span class="hljs-string">"child_ids"</span>,{
+        [
+            {
+                <span class="hljs-string">"type"</span> : <span class="hljs-string">"contact"</span>,
+                <span class="hljs-string">"name"</span> : <span class="hljs-string">"Nguyễn Ngọc Út"</span>,
+                <span class="hljs-string">"function"</span>: <span class="hljs-string">"tester"</span>,
+                <span class="hljs-string">"email"</span>: <span class="hljs-string">"tester@gmail.com"</span>,
+                <span class="hljs-string">"phone"</span>: <span class="hljs-string">"0988888888"</span>,
+                <span class="hljs-string">"mobile"</span>: <span class="hljs-string">"097777777"</span>,
+                <span class="hljs-string">"comment"</span>: <span class="hljs-string">"Thằng này ko liên hệ được đâu"</span>,
+                <span class="hljs-string">"street"</span>: <span class="hljs-string">"468 Phan văn trị"</span>,
+                <span class="hljs-string">"city_id"</span>: <span class="hljs-number">1</span>,
+                <span class="hljs-string">"district_id"</span>: <span class="hljs-number">835</span>,
+                <span class="hljs-string">"ward_id"</span>: <span class="hljs-number">12778</span>
+            }
+        ]
+    }
+}</code></pre><div style="height: 1px;"></div><h5>Schema</h5><pre><code>{
+    "company_type" : {
+        "type": "enum('person', 'company')",
+        "requried": true,
+        "mean": "Loại khách hàng công ty hay cá nhân"
+    },          
+    "name": {
+        "type": "string",
+        "requried": true,
+        "mean": "Tên khách hàng"
+    }, 
+    "street": {
+        "type": "string",
+        "mean": "Địa chỉ"
+    },
+    "city_id": {
+        "type": "integer",
+        "mean": "Tỉnh/Thành phố"
+    },
+    "district_id": {
+        "type": "integer",
+        "mean": "Quận huyện"
+    },
+    "ward_id": {
+        "type": "integer",
+        "mean": "Phường xã"
+    },
+    "website": {
+        "type": "string",
+        "mean": "Website"
+    },
+    "type_code": {
+        "type": "integer",
+        "mean": "Loại khách hàng MT/GT.... Mapping"
+    },
+    "category_id": {
+        "type": "string",
+        "mean": "Phân loại khách hàng, truyền lên id,id1,id2,id3 .... Đồng bộ"
+    },
+    "user_code": {
+        "type": "string",
+        "mean": "Mã nhân viên 1"
+    },
+    "user_code_2": {
+        "type": "string",
+        "mean": "Mã nhân viên 2"
+    },
+    "phone": {
+        "type": "string",
+        "unique" : true
+        "mean": "Số điện thoại"
+    },
+    "mobile": {
+        "type": "string",
+        "unique" : true
+        "mean": "Số điện thoại di động"
+    },
+    "email": {
+        "type": "string",
+        "unique" : true
+        "mean": "Email khách hàng"
+    },
+    "title": {
+        "type": "integer",
+        "mean": "Mr, misss..... bla. Đồng bộ"
+    },
+    "source_id" : {
+        "type": "integer",
+        "mean": "Nguồn khách hàng....Mapping"
+    },
+    "customer_type": {
+        "type": "enum('cash', 'debts', 'deposit', 'internal')",
+        "mean": "Loại thanh toán: Tiền mặt, công nợ, ký quỷ, nội bộ"
+    },
+    "comment": {
+        "type": "string",
+        "mean": "ghi chú khách hàng"
+    },
+    "function": {
+        "type" : "string",
+        "mean" : "Chức vụ"
+    },
+    "property_payment_term_id": {
+        "type": "integer",
+        "mean": "Kỳ hạn thanh toán ... Mapping"
+    },
+    "delivery_service": {
+        "type": "enum(internal,partner,collaborators)",
+        "mean": "Dịch vụ vẫn chuyển (nội bộ, Đối tác, Cộng tác viên)"
+    },
+    "property_product_pricelist": {
+        "type": "integer",
+        "mean": "Price list mặc định cho khách hàng... đồng bộ"
+    }
+    "child_ids",{
+        [
+            {
+                "type" : {
+                    "type": "enum(contact, invoice, delivery, other)"
+                },
+                "name": {
+                    "type": "string",
+                    "requried": true,
+                    "mean": "Tên khách hàng"
+                },
+                "function": {
+                    "type" : "string",
+                    "mean" : "Chức vụ"
+                },
+                "phone": {
+                    "type": "string",
+                    "unique" : true
+                    "mean": "Số điện thoại"
+                },
+                "mobile": {
+                    "type": "string",
+                    "unique" : true
+                    "mean": "Số điện thoại di động"
+                },
+                "email": {
+                    "type": "string",
+                    "unique" : true
+                    "mean": "Email khách hàng"
+                },
+                "comment": {
+                    "type": "string",
+                    "mean": "ghi chú khách hàng"
+                },
+                "street": {
+                    "type": "string",
+                    "mean": "Địa chỉ"
+                },
+                "city_id": {
+                    "type": "integer",
+                    "mean": "Tỉnh/Thành phố"
+                },
+                "district_id": {
+                    "type": "integer",
+                    "mean": "Quận huyện"
+                },
+                "ward_id": {
+                    "type": "integer",
+                    "mean": "Phường xã"
+                }
+            }
+        ]
+    }
+}</code></pre><div style="height: 1px;"></div></div></div><div class="title"><strong>Response&nbsp;&nbsp;<code>200</code></strong><div class="collapse-button"><span class="close">Hide</span><span class="open">Show</span></div></div><div class="collapse-content"><div class="inner"><h5>Headers</h5><pre><code><span class="hljs-attribute">Content-Type</span>: <span class="hljs-string">application/json</span></code></pre><div style="height: 1px;"></div><h5>Body</h5><pre><code>{
+  "<span class="hljs-attribute">id</span>": <span class="hljs-value"><span class="hljs-number">1</span>
+</span>}</code></pre><div style="height: 1px;"></div></div></div><div class="title"><strong>Response&nbsp;&nbsp;<code>500</code></strong><div class="collapse-button"><span class="close">Hide</span><span class="open">Show</span></div></div><div class="collapse-content"><div class="inner"><h5>Headers</h5><pre><code><span class="hljs-attribute">Content-Type</span>: <span class="hljs-string">application/json</span></code></pre><div style="height: 1px;"></div><h5>Body</h5><pre><code>{
+  "<span class="hljs-attribute">error_descrip</span>": <span class="hljs-value"><span class="hljs-string">"Message"</span></span>,
+  "<span class="hljs-attribute">error</span>": <span class="hljs-value"><span class="hljs-string">"message_code"</span>
+</span>}</code></pre><div style="height: 1px;"></div></div></div><div class="title"><strong>Response&nbsp;&nbsp;<code>401</code></strong><div class="collapse-button"><span class="close">Hide</span><span class="open">Show</span></div></div><div class="collapse-content"><div class="inner"><h5>Headers</h5><pre><code><span class="hljs-attribute">Content-Type</span>: <span class="hljs-string">application/json</span></code></pre><div style="height: 1px;"></div><h5>Body</h5><pre><code>{
+  "<span class="hljs-attribute">error_descrip</span>": <span class="hljs-value"><span class="hljs-string">"Message"</span></span>,
+  "<span class="hljs-attribute">error</span>": <span class="hljs-value"><span class="hljs-string">"message_code"</span>
+</span>}</code></pre><div style="height: 1px;"></div></div></div><div class="title"><strong>Response&nbsp;&nbsp;<code>400</code></strong><div class="collapse-button"><span class="close">Hide</span><span class="open">Show</span></div></div><div class="collapse-content"><div class="inner"><h5>Headers</h5><pre><code><span class="hljs-attribute">Content-Type</span>: <span class="hljs-string">application/json</span></code></pre><div style="height: 1px;"></div><h5>Body</h5><pre><code>{
+  "<span class="hljs-attribute">error_descrip</span>": <span class="hljs-value"><span class="hljs-string">"Message"</span></span>,
+  "<span class="hljs-attribute">error</span>": <span class="hljs-value"><span class="hljs-string">"message_code"</span>
+</span>}</code></pre><div style="height: 1px;"></div></div></div></div></div></section></div></div></div><p style="text-align: center;" class="text-muted">Generated by&nbsp;<a href="https://github.com/danielgtaylor/aglio" class="aglio">aglio</a>&nbsp;on 05 Apr 2017</p><script>/* eslint-env browser */
 /* eslint quotes: [2, "single"] */
 'use strict';
 
