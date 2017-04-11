@@ -12,7 +12,7 @@ Create seo order
         ```js
         {
             "customer_id": 4095,
-            "partner_reciver_id": 4095
+            "partner_reciver_id": 4095,
             "partner_invoice_id": 4095,
             "partner_shipping_id": 4095,
             "sale_person":{
@@ -41,9 +41,9 @@ Create seo order
             "order_channel":"wholesale",
             "template_id": 1,
             "pricelist_id": 1,
-            "order_date",
-            "validity_date",
-            "stock_tranfer_date",
+            "order_date": "3-10-2017 12:00:00",
+            "validity_date" : "3-10-2017 12:00:00",
+            "stock_tranfer_date" : "3-10-2017 12:00:00"
         }
         ```
     + Schema
@@ -367,7 +367,7 @@ Update order
         ```js
         {
             "customer_id": 4095,
-            "partner_reciver_id": 4095
+            "partner_reciver_id": 4095,
             "partner_invoice_id": 4095,
             "partner_shipping_id": 4095,
             "sale_person":{
@@ -396,9 +396,9 @@ Update order
             "order_channel":"wholesale",
             "template_id": 1,
             "pricelist_id": 1,
-            "order_date",
-            "validity_date",
-            "stock_tranfer_date",
+            "order_date": "3-10-2017 12:00:00",
+            "validity_date" : "3-10-2017 12:00:00",
+            "stock_tranfer_date" : "3-10-2017 12:00:00"
         }
         ```
     + Schema
