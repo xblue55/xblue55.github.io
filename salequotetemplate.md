@@ -45,11 +45,33 @@ Get sale quote template
 		{
 			"id": {
 				"type": "interger",
-				"mean": "ID"
+				"mean": "ID quote template"
 			},
-			"parent_id": {
-				"type": "interger",
-				"mean": "Quote template cha"
+			"quote_line": {
+				"id": {
+					"type": "interger",
+					"mean": "ID sản phẩm"
+				},
+				"name": {
+					"type": "string",
+					"mean": "Tên sản phẩm"
+				},
+				"product_id": {
+					"type": "interger",
+					"mean": "ID sản phẩm"
+				},
+				"product_uom_id": {
+					"type": "interger",
+					"mean": "ID đơn vị tính sản phẩm"
+				},
+				"product_uom_qty": {
+					"type": "interger",
+					"mean": "Số lượng sản phẩm"
+				},
+				"price_unit": {
+					"type": "interger",
+					"mean": "Giá sản phẩm"
+				},
 			},
 			"name": {
 				"type": "string",
@@ -92,32 +114,24 @@ Quote template (getdetail)
 Get sale quote template detail
 
 + Parameters
-	+ id: 2 (required) - Unique identifier for a sale quote template
+	+ id: 1 (required) - Unique identifier for a sale quote template
 
 + Response 200 (application/json)
 	+ Body
 		```js
 		{
-			"id": 2,
-			"parent_id": 1,
-			"name": "Khách hàng 2"
-		}
-		```
-	+ Schema
-		```js
-		{
-			"id": {
-				"type": "interger",
-				"mean": "ID"
-			},
-			"parent_id": {
-				"type": "interger",
-				"mean": "Quote template cha"
-			},
-			"name": {
-				"type": "string",
-				"mean": "Tên"
-			},
+			"quote_line": [
+				{
+					"product_id": 2,
+					"product_uom_id": 1,
+					"price_unit": 2,
+					"product_uom_qty": 1,
+					"id": 1,
+					"name": "Sản phẩm mẫu"
+				}
+			],
+			"id": 1,
+			"name": "Default Template"
 		}
 		```
 
