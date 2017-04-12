@@ -1,11 +1,11 @@
-# Group Wholesale - Account invoice
-	CURD account.invoice support wholesale
+# Group Wholesale - Account payment term
+	CURD account.payment.term support wholesale
 
-## Account invoice [/api/wholesale/account.invoice]
-Account invoice (getlist)
+## Account payment term [/api/wholesale/account.payment.term]
+Account payment term (getlist)
 
-### Get account invoice [GET]
-Get account invoice
+### Get account payment term [GET]
+Get account payment term
 
 + Request
 	```js
@@ -86,14 +86,14 @@ Get account invoice
 	}
 	```
 
-## Account invoice [/api/wholesale/account.invoice/{id}]
-Account invoice (getdetail)
+## Account payment term [/api/wholesale/account.payment.term/{id}]
+Account payment term (getdetail)
 
-### Get account invoice detail [GET]
-Get account invoice detail
+### Get account payment term detail [GET]
+Get account payment term detail
 
 + Parameters
-	+ id: 2 (required) - Unique identifier for a account invoice
+	+ id: 2 (required) - Unique identifier for a account payment term
 
 + Response 200 (application/json)
 	+ Body
