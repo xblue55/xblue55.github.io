@@ -29,6 +29,7 @@ Create Create customer
             "title": 1,
             "source_id" : 1,
             "customer_type": "cash",
+            "tax_code": "123123123",
             "comment": "Thằng này tốt lắm",
             "function": "devoloper",
             "property_payment_term_id": 1,
@@ -136,6 +137,10 @@ Create Create customer
             "comment": {
                 "type": "string",
                 "mean": "ghi chú khách hàng"
+            },
+            "tax_code": {
+                "type": "string",
+                "mean": "Mã số thuế"
             },
             "function": {
                 "type" : "string",
@@ -278,6 +283,7 @@ Get customer
                 "property_payment_term_id": null,
                 "user_id": null,
                 "title": null,
+                "tax_code": "12345676543",
                 "customer_id": "000003",
                 "delivery_service": null,
                 "email": "farm@gmail.com",
@@ -377,6 +383,7 @@ Get sale customer detail
             "property_payment_term_id": null,
             "user_id": null,
             "title": null,
+            "tax_code": "12345676543",
             "customer_id": "000003",
             "delivery_service": null,
             "email": "farm@gmail.com",
@@ -477,6 +484,7 @@ Edit customer
             "title": 1,
             "source_id" : 1,
             "customer_type": "cash",
+            "tax_code": "123513123",
             "comment": "Thằng này tốt lắm",
             "function": "devoloper",
             "property_payment_term_id": 1,
@@ -581,6 +589,10 @@ Edit customer
             "customer_type": {
                 "type": "enum('cash', 'debts', 'deposit', 'internal')",
                 "mean": "Loại thanh toán: Tiền mặt, công nợ, ký quỷ, nội bộ"
+            },
+            "tax_code": {
+                "type": "string",
+                "mean": "Mã số thuế"
             },
             "comment": {
                 "type": "string",
