@@ -21,8 +21,8 @@ Create Create customer
             "website": "www.xblue55.github.io",
             "type_code": 1,
             "category_id": "1,2,3,4",
-            "user_code": "CDF00242",
-            "user_code_2": "CDF00242",
+            "sale_persion": "CDF00242",
+            "sale_persion_2": "CDF00242",
             "phone": "0988077558",
             "mobile": "0988077559",
             "email": "nnluong.it2@gmail.com",
@@ -99,11 +99,11 @@ Create Create customer
                 "type": "string",
                 "mean": "Phân loại khách hàng, truyền lên id,id1,id2,id3 .... Đồng bộ"
             },
-            "user_code": {
+            "sale_persion": {
                 "type": "string",
                 "mean": "Mã nhân viên 1"
             },
-            "user_code_2": {
+            "sale_persion_2": {
                 "type": "string",
                 "mean": "Mã nhân viên 2"
             },
@@ -274,6 +274,7 @@ Get customer
                 "city_id": null,
                 "company_type": "person",
                 "parent_id" : 1,
+                "sale_person": null,
                 "sale_person_2": null,
                 "team_id": null,
                 "street": "86/8 Phổ quang",
@@ -281,7 +282,6 @@ Get customer
                 "property_product_pricelist": 1,
                 "id": 12,
                 "property_payment_term_id": null,
-                "user_id": null,
                 "title": null,
                 "tax_code": "12345676543",
                 "customer_id": "000003",
@@ -374,6 +374,7 @@ Get sale customer detail
             "city_id": null,
             "company_type": "person",
             "parent_id": 1,
+            "sale_person": null,
             "sale_person_2": null,
             "team_id": null,
             "street": "86/8 Phổ quang",
@@ -381,7 +382,6 @@ Get sale customer detail
             "property_product_pricelist": 1,
             "id": 12,
             "property_payment_term_id": null,
-            "user_id": null,
             "title": null,
             "tax_code": "12345676543",
             "customer_id": "000003",
@@ -476,8 +476,8 @@ Edit customer
             "website": "www.xblue55.github.io",
             "type_code": 1,
             "category_id": "1,2,3,4",
-            "user_code": "CDF00242",
-            "user_code_2": "CDF00242",
+            "sale_persion": "CDF00242",
+            "sale_persion_2": "CDF00242",
             "phone": "0988077558",
             "mobile": "0988077559",
             "email": "nnluong.it2@gmail.com",
@@ -555,11 +555,11 @@ Edit customer
                 "type": "string",
                 "mean": "Phân loại khách hàng, truyền lên id,id1,id2,id3 .... Đồng bộ"
             },
-            "user_code": {
+            "sale_persion": {
                 "type": "string",
                 "mean": "Mã nhân viên 1"
             },
-            "user_code_2": {
+            "sale_persion_2": {
                 "type": "string",
                 "mean": "Mã nhân viên 2"
             },
