@@ -11,47 +11,46 @@ Create Create customer
     + Body
         ```js
         {
-            "company_type" : "person",
-            "parent_id": 1,          
-            "name": "Nguyễn Ngọc Lương",
-            "street": "458 Phan Văn Trị",
-            "city_id": 65,
-            "district_id": 835,
-            "ward_id": 12778,
-            "website": "www.xblue55.github.io",
-            "type_code": 1,
-            "category_id": "1,2,3,4",
-            "sale_persion": "CDF00242",
-            "sale_persion_2": "CDF00242",
-            "phone": "0988077558",
-            "mobile": "0988077559",
-            "email": "nnluong.it2@gmail.com",
-            "title": 1,
-            "source_id" : 1,
-            "customer_type": "cash",
-            "tax_code": "123123123",
-            "comment": "Thằng này tốt lắm",
-            "function": "devoloper",
-            "property_payment_term_id": 1,
-            "delivery_service": "partner",
-            "property_product_pricelist": 1,
-            "child_ids": [
-                    {
-                        "type" : "contact",
-                        "name" : "Nguyễn Ngọc Út",
-                        "function": "tester",
-                        "email": "tester@gmail.com",
-                        "phone": "0988888888",
-                        "mobile": "097777777",
-                        "comment": "Thằng này ko liên hệ được đâu",
-                        "street": "468 Phan văn trị",
-                        "city_id": 65,
-                        "district_id": 835,
-                        "ward_id": 12778
-                    }
-                ]
-            
-        }
+			  "company_type": "person",
+			  "parent_id": 1,
+			  "name": "Nguyễn Ngọc Lương",
+			  "street": "458 Phan Văn Trị",
+			  "city_id": 68,
+			  "district_id": 835,
+			  "ward_id": 12778,
+			  "website": "www.xblue55.github.io",
+			  "type_code": 1,
+			  "category_id": "1,2,3,4",
+			  "sale_persion": "CDF00242",
+			  "sale_persion_2": "CDF00242",
+			  "phone": "0988077558",
+			  "mobile": "0988077559",
+			  "email": "nnluong.it2@gmail.com",
+			  "title": 1,
+			  "source_id": 1,
+			  "customer_type": "cash",
+			  "tax_code": "123123123",
+			  "comment": "Thằng này tốt lắm",
+			  "function": "devoloper",
+			  "property_payment_term_id": 1,
+			  "delivery_service": "partner",
+			  "property_product_pricelist": 1,
+			  "child_ids": [
+			    {
+			      "type": "contact",
+			      "name": "Nguyễn Ngọc Út",
+			      "function": "tester",
+			      "email": "tester@gmail.com",
+			      "phone": "0988888888",
+			      "mobile": "097777777",
+			      "comment": "Thằng này ko liên hệ được đâu",
+			      "street": "468 Phan văn trị",
+			      "city_id": 68,
+			      "district_id": 835,
+			      "ward_id": 12778
+			    }
+			  ]
+		}
         ```
     + Schema
         ```js
@@ -157,7 +156,15 @@ Create Create customer
             "property_product_pricelist": {
                 "type": "integer",
                 "mean": "Price list mặc định cho khách hàng... đồng bộ"
-            }
+            },
+            "contact_title_id": {
+                "type": "integer",
+                "mean": "Mr, misss..... bla. Đồng bộ"
+            },
+            "contact_name": {
+                "type": "string",
+                "mean": "Tên người liên hệ khi company_type company"
+            },
             "child_ids":{
                 [
                     {
@@ -288,6 +295,8 @@ Get customer
                 "delivery_service": null,
                 "email": "farm@gmail.com",
                 "website": null,
+                "contact_title_id": 1,
+                "contact_name" : "Nguyễn Ngọc Lương",
                 "child_ids": [
                     {
                       "function": null,
@@ -369,64 +378,46 @@ Get sale customer detail
     + Body
         ```js
         {
-            "comment": null,
-            "function": null,
-            "city_id": null,
-            "company_type": "person",
-            "parent_id": 1,
-            "sale_person": null,
-            "sale_person_2": null,
-            "team_id": null,
-            "street": "86/8 Phổ quang",
-            "type_code": null,
-            "property_product_pricelist": 1,
-            "id": 12,
-            "property_payment_term_id": null,
-            "title": null,
-            "tax_code": "12345676543",
-            "customer_id": "000003",
-            "delivery_service": null,
-            "email": "farm@gmail.com",
-            "website": null,
-            "child_ids": [
-                {
-                  "function": null,
-                  "comment": null,
-                  "name": "Nguyễn Ngọc Lương",
-                  "ward_id": null,
-                  "mobile": null,
-                  "district_id": null,
-                  "id": 18,
-                  "phone": null,
-                  "street": "86/8 Phổ quang",
-                  "city_id": null,
-                  "type": "invoice",
-                  "email": null
-                },
-                {
-                  "function": null,
-                  "comment": null,
-                  "name": "Shipping",
-                  "ward_id": null,
-                  "mobile": null,
-                  "district_id": null,
-                  "id": 19,
-                  "phone": null,
-                  "street": "468 Phan văn trị",
-                  "city_id": null,
-                  "type": "delivery",
-                  "email": null
-                }
-            ],
-            "phone": null,
-            "name": "Farm",
-            "ward_id": null,
-            "mobile": null,
-            "district_id": null,
-            "customer_type": null,
-            "source_id": null,
-            "category_id": null
-        }
+			  "company_type": "person",
+			  "parent_id": 1,
+			  "name": "Nguyễn Ngọc Lương",
+			  "street": "458 Phan Văn Trị",
+			  "city_id": 68,
+			  "district_id": 835,
+			  "ward_id": 12778,
+			  "website": "www.xblue55.github.io",
+			  "type_code": 1,
+			  "category_id": "1,2,3,4",
+			  "sale_persion": "CDF00242",
+			  "sale_persion_2": "CDF00242",
+			  "phone": "0988077558",
+			  "mobile": "0988077559",
+			  "email": "nnluong.it2@gmail.com",
+			  "title": 1,
+			  "source_id": 1,
+			  "customer_type": "cash",
+			  "tax_code": "123123123",
+			  "comment": "Thằng này tốt lắm",
+			  "function": "devoloper",
+			  "property_payment_term_id": 1,
+			  "delivery_service": "partner",
+			  "property_product_pricelist": 1,
+			  "child_ids": [
+			    {
+			      "type": "contact",
+			      "name": "Nguyễn Ngọc Út",
+			      "function": "tester",
+			      "email": "tester@gmail.com",
+			      "phone": "0988888888",
+			      "mobile": "097777777",
+			      "comment": "Thằng này ko liên hệ được đâu",
+			      "street": "468 Phan văn trị",
+			      "city_id": 68,
+			      "district_id": 835,
+			      "ward_id": 12778
+			    }
+			  ]
+		}
         ```
 
 + Response 500 (application/json)
@@ -490,6 +481,8 @@ Edit customer
             "property_payment_term_id": 1,
             "delivery_service": "partner",
             "property_product_pricelist": 1,
+            "contact_title_id": 1,
+            "contact_name" : "Lương",
             "child_ids": [
                     {
                         "id": 45,
@@ -614,6 +607,14 @@ Edit customer
                 "type": "integer",
                 "mean": "Price list mặc định cho khách hàng... đồng bộ"
             }
+            "contact_title_id": {
+                "type": "integer",
+                "mean": "Mr, misss..... bla. Đồng bộ"
+            },
+            "contact_name": {
+                "type": "string",
+                "mean": "Tên người liên hệ khi company_type company"
+            },
             "child_ids": [
                     {
                         "id" : {
