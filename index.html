@@ -1974,6 +1974,7 @@ their feed. Posts are closely tied to the follow graph…</p>
   "<span class="hljs-attribute">title</span>": <span class="hljs-value"><span class="hljs-number">1</span></span>,
   "<span class="hljs-attribute">source_id</span>": <span class="hljs-value"><span class="hljs-number">1</span></span>,
   "<span class="hljs-attribute">customer_type</span>": <span class="hljs-value"><span class="hljs-string">"cash"</span></span>,
+  "<span class="hljs-attribute">tax_code</span>": <span class="hljs-value"><span class="hljs-string">"123123123"</span></span>,
   "<span class="hljs-attribute">comment</span>": <span class="hljs-value"><span class="hljs-string">"Thằng này tốt lắm"</span></span>,
   "<span class="hljs-attribute">function</span>": <span class="hljs-value"><span class="hljs-string">"devoloper"</span></span>,
   "<span class="hljs-attribute">property_payment_term_id</span>": <span class="hljs-value"><span class="hljs-number">1</span></span>,
@@ -2076,6 +2077,10 @@ their feed. Posts are closely tied to the follow graph…</p>
     "comment": {
         "type": "string",
         "mean": "ghi chú khách hàng"
+    },
+    "tax_code": {
+        "type": "string",
+        "mean": "Mã số thuế"
     },
     "function": {
         "type" : "string",
@@ -2181,6 +2186,7 @@ their feed. Posts are closely tied to the follow graph…</p>
         <span class="hljs-string">"property_payment_term_id"</span>: <span class="hljs-literal">null</span>,
         <span class="hljs-string">"user_id"</span>: <span class="hljs-literal">null</span>,
         <span class="hljs-string">"title"</span>: <span class="hljs-literal">null</span>,
+        <span class="hljs-string">"tax_code"</span>: <span class="hljs-string">"12345676543"</span>,
         <span class="hljs-string">"customer_id"</span>: <span class="hljs-string">"000003"</span>,
         <span class="hljs-string">"delivery_service"</span>: <span class="hljs-literal">null</span>,
         <span class="hljs-string">"email"</span>: <span class="hljs-string">"farm@gmail.com"</span>,
@@ -2251,6 +2257,7 @@ their feed. Posts are closely tied to the follow graph…</p>
   "<span class="hljs-attribute">property_payment_term_id</span>": <span class="hljs-value"><span class="hljs-literal">null</span></span>,
   "<span class="hljs-attribute">user_id</span>": <span class="hljs-value"><span class="hljs-literal">null</span></span>,
   "<span class="hljs-attribute">title</span>": <span class="hljs-value"><span class="hljs-literal">null</span></span>,
+  "<span class="hljs-attribute">tax_code</span>": <span class="hljs-value"><span class="hljs-string">"12345676543"</span></span>,
   "<span class="hljs-attribute">customer_id</span>": <span class="hljs-value"><span class="hljs-string">"000003"</span></span>,
   "<span class="hljs-attribute">delivery_service</span>": <span class="hljs-value"><span class="hljs-literal">null</span></span>,
   "<span class="hljs-attribute">email</span>": <span class="hljs-value"><span class="hljs-string">"farm@gmail.com"</span></span>,
@@ -2323,6 +2330,7 @@ their feed. Posts are closely tied to the follow graph…</p>
   "<span class="hljs-attribute">title</span>": <span class="hljs-value"><span class="hljs-number">1</span></span>,
   "<span class="hljs-attribute">source_id</span>": <span class="hljs-value"><span class="hljs-number">1</span></span>,
   "<span class="hljs-attribute">customer_type</span>": <span class="hljs-value"><span class="hljs-string">"cash"</span></span>,
+  "<span class="hljs-attribute">tax_code</span>": <span class="hljs-value"><span class="hljs-string">"123513123"</span></span>,
   "<span class="hljs-attribute">comment</span>": <span class="hljs-value"><span class="hljs-string">"Thằng này tốt lắm"</span></span>,
   "<span class="hljs-attribute">function</span>": <span class="hljs-value"><span class="hljs-string">"devoloper"</span></span>,
   "<span class="hljs-attribute">property_payment_term_id</span>": <span class="hljs-value"><span class="hljs-number">1</span></span>,
@@ -2422,6 +2430,10 @@ their feed. Posts are closely tied to the follow graph…</p>
     "<span class="hljs-attribute">customer_type</span>": <span class="hljs-value">{
         "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"enum('cash', 'debts', 'deposit', 'internal')"</span></span>,
         "<span class="hljs-attribute">mean</span>": <span class="hljs-value"><span class="hljs-string">"Loại thanh toán: Tiền mặt, công nợ, ký quỷ, nội bộ"</span>
+    </span>}</span>,
+    "<span class="hljs-attribute">tax_code</span>": <span class="hljs-value">{
+        "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"string"</span></span>,
+        "<span class="hljs-attribute">mean</span>": <span class="hljs-value"><span class="hljs-string">"Mã số thuế"</span>
     </span>}</span>,
     "<span class="hljs-attribute">comment</span>": <span class="hljs-value">{
         "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"string"</span></span>,
