@@ -62,7 +62,7 @@ Create Create customer
             },  
             "parent_id" : {
                 "type": "int",
-                "requried": true,
+                "requried": false,
                 "mean": "Id của partner với company_type = company"
             },          
             "name": {
@@ -511,7 +511,7 @@ Edit customer
             },
             "parent_id" : {
                 "type": "int",
-                "requried": true,
+                "requried": false,
                 "mean": "Id của partner với company_type = company"
             },    
             "name": {
