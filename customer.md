@@ -11,7 +11,8 @@ Create Create customer
     + Body
         ```js
         {
-            "company_type" : "person",          
+            "company_type" : "person",
+            "parent_id": 1,          
             "name": "Nguyễn Ngọc Lương",
             "street": "458 Phan Văn Trị",
             "city_id": 65,
@@ -58,6 +59,11 @@ Create Create customer
                 "type": "enum('person', 'company')",
                 "requried": true,
                 "mean": "Loại khách hàng công ty hay cá nhân"
+            },  
+            "parent_id" : {
+                "type": "int",
+                "requried": true,
+                "mean": "Id của partner với company_type = company"
             },          
             "name": {
                 "type": "string",
@@ -262,6 +268,7 @@ Get customer
                 "function": null,
                 "city_id": null,
                 "company_type": "person",
+                "parent_id" : 1,
                 "sale_person_2": null,
                 "team_id": null,
                 "street": "86/8 Phổ quang",
@@ -360,6 +367,7 @@ Get sale customer detail
             "function": null,
             "city_id": null,
             "company_type": "person",
+            "parent_id": 1,
             "sale_person_2": null,
             "team_id": null,
             "street": "86/8 Phổ quang",
@@ -451,7 +459,8 @@ Edit customer
     + Body
         ```js
         {
-            "company_type" : "person",          
+            "company_type" : "person",
+            "parent_id": 1,    
             "name": "Nguyễn Ngọc Lương",
             "street": "458 Phan Văn Trị",
             "city_id": 65,
@@ -499,7 +508,12 @@ Edit customer
                 "type": "enum('person', 'company')",
                 "requried": true,
                 "mean": "Loại khách hàng công ty hay cá nhân"
-            },          
+            },
+            "parent_id" : {
+                "type": "int",
+                "requried": true,
+                "mean": "Id của partner với company_type = company"
+            },    
             "name": {
                 "type": "string",
                 "requried": true,
