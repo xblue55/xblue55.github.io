@@ -485,3 +485,122 @@ Get stock picking detail
         "error": "message_code"
     }
     ```
+
+## Delivery [/api/wholesale/stock.picking/from.sale.order/{id}]
+Delivery (detail)
+
+### Get delivery detail [GET]
+Get stock picking detail from order
+    
++ Parameters
+    + id: 1 (required) - Unique identifier for a customer
+
++ Response 200 (application/json)
+    + Body
+        ```js
+	[
+		{
+                    "origin": "PO00002",
+                    "pack_operation_product_ids": [
+                        {
+                            "qty_done": null,
+                            "product_id": 2,
+                            "product_unit_price": 10,
+                            "product_qty": 1
+                        }
+                    ],
+                    "apply_discount": null,
+                    "delivery_fee": null,
+                    "customer_reference": null,
+                    "note_stock_picking": null,
+                    "duration_time": "0.0 mins",
+                    "source_way": null,
+                    "partner_id": 7,
+                    "id": 45,
+                    "postage_delivery_fee": null,
+                    "amount_untaxed": 10,
+                    "stock_tranfer_date": "2017-04-11 02:46:56",
+                    "location_id": 8,
+                    "postage_delivery": null,
+                    "discount_type_id": null,
+                    "amount_tax": null,
+                    "state": "assigned",
+                    "picking_type_code": "incoming",
+                    "pricelist_id": null,
+                    "delivery_service": "internal",
+                    "move_lines": [
+                    {
+                        "price_total": 10,
+                        "price_tax": null,
+                        "product_id": 2,
+                        "discount_type": "percent",
+                        "price_unit": 10,
+                        "product_uom_qty": 1,
+                        "price_subtotal": 10,
+                        "discount": null,
+                        "state": "assigned",
+                        "tax_id": []
+                    }
+                    ],
+                    "start_time": null,
+                    "destination_way": null,
+                    "min_date": "2017-04-11 02:46:56",
+                    "discount_account": null,
+                    "amount_after_discount": 10,
+                    "google_map": null,
+                    "warehouse_destination_name": "My Company",
+                    "delivery_status": "pending_delivery",
+                    "warehouse_name": null,
+                    "postage_total": null,
+                    "amount_total": 10,
+                    "collaborators": null,
+                    "name": "WH/IN/00002",
+                    "total_way": null,
+                    "stock_outin_date": "2017-04-11 02:49:12",
+                    "forecast_time": null,
+                    "customer_type": null,
+                    "location_dest_id": 15,
+                    "end_time": null,
+                    "end_point": {
+                        "lat": null,
+                        "lng": null,
+                        "id": null,
+                        "name": null
+                    },
+                    "discount_value": null,
+                    "start_point": {
+                        "lat": null,
+                        "lng": null,
+                        "id": null,
+                        "name": null
+                    }
+                }
+	]
+        ```
+
++ Response 500 (application/json)
+
+    ```js
+    {
+        "error_descrip": "Message",
+        "error": "message_code"
+    }
+    ```
+
++ Response 401 (application/json)
+
+    ```js
+    {
+        "error_descrip": "Message",
+        "error": "message_code"
+    }
+    ```
+
++ Response 400 (application/json)
+
+    ```js
+    {
+        "error_descrip": "Message",
+        "error": "message_code"
+    }
+    ```
