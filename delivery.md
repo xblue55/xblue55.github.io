@@ -628,11 +628,88 @@ Validate stock picking
         {
             "success": {
                 "type": "boolean",
-                "mean": "Kết quả trả về"
+                "mean": "Kết quả"
             },
             "msg": {
                 "type": "string",
-                "mean": ""
+                "mean": "Thông báo"
+            },
+        }
+        ```
+
++ Response 500 (application/json)
+
+    ```js
+    {
+        "error_descrip": "Message",
+        "error": "message_code"
+    }
+    ```
+
++ Response 401 (application/json)
+
+    ```js
+    {
+        "error_descrip": "Message",
+        "error": "message_code"
+    }
+    ```
+
++ Response 400 (application/json)
+
+    ```js
+    {
+        "error_descrip": "Message",
+        "error": "message_code"
+    }
+    ```
+
+## Delivery [/api/wholesale/stock.pack.operation/{id}]
+Add product to DO
+
+### Update stock pack operation [PUT]
+Add product to stock pack operation
+    
++ Parameters
+    + id: 1 (required) - Unique identifier for a stock pack operation
+
++ Request JSON Message
+    + Body
+        ```js
+        {
+            "qty": 10
+        }
+        ```
+    + Schema
+        ```js
+        {
+            "qty": {
+                "type": "interger",
+                "required": True,
+                "mean": "Số lượng sản phẩm được thêm"
+            }
+        }
+        ```
+
++ Response 200 (application/json)
+    + Body
+        ```js
+        {
+            "success": True,
+            "msg": "Success"
+        }
+        ```
+
+    + Schema
+        ```js
+        {
+            "success": {
+                "type": "boolean",
+                "mean": "Kết quả"
+            },
+            "msg": {
+                "type": "string",
+                "mean": "Thông báo"
             },
         }
         ```
