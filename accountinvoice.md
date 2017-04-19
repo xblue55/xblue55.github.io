@@ -396,3 +396,217 @@ Get account invoice detail
 		"error": "message_code"
 	}
 	```
+
+## Validate invoice [/api/wholesale/account.invoice/validate/{id}]
+Validate invoice
+
+### Validate invoice[PUT]
+Validate account invoice
+    
++ Parameters
+    + id: 1 (required) - Unique identifier for a account invoice
+
++ Response 200 (application/json)
+    + Body
+        ```js
+        {
+            "success": True,
+            "msg": "Success"
+        }
+        ```
+
+    + Schema
+        ```js
+        {
+            "success": {
+                "type": "boolean",
+                "mean": "Kết quả"
+            },
+            "msg": {
+                "type": "string",
+                "mean": "Thông báo"
+            },
+        }
+        ```
+
++ Response 500 (application/json)
+
+    ```js
+    {
+        "error_descrip": "Message",
+        "error": "message_code"
+    }
+    ```
+
++ Response 401 (application/json)
+
+    ```js
+    {
+        "error_descrip": "Message",
+        "error": "message_code"
+    }
+    ```
+
++ Response 400 (application/json)
+
+    ```js
+    {
+        "error_descrip": "Message",
+        "error": "message_code"
+    }
+    ```
+
+## Cancel invoice [/api/wholesale/account.invoice/cancel/{id}]
+Cancel invoice
+
+### Cancel invoice[PUT]
+Cancel account invoice
+    
++ Parameters
+    + id: 1 (required) - Unique identifier for a account invoice
+
++ Response 200 (application/json)
+    + Body
+        ```js
+        {
+            "success": True,
+            "msg": "Success"
+        }
+        ```
+
+    + Schema
+        ```js
+        {
+            "success": {
+                "type": "boolean",
+                "mean": "Kết quả"
+            },
+            "msg": {
+                "type": "string",
+                "mean": "Thông báo"
+            },
+        }
+        ```
+
++ Response 500 (application/json)
+
+    ```js
+    {
+        "error_descrip": "Message",
+        "error": "message_code"
+    }
+    ```
+
++ Response 401 (application/json)
+
+    ```js
+    {
+        "error_descrip": "Message",
+        "error": "message_code"
+    }
+    ```
+
++ Response 400 (application/json)
+
+    ```js
+    {
+        "error_descrip": "Message",
+        "error": "message_code"
+    }
+    ```
+
+
+## Register payment [/api/wholesale/account.invoice/register.payment/{id}]
+Register payment
+
+### Register payment[PUT]
+Register payment
+    
++ Parameters
+    + id: 1 (required) - Unique identifier for a account invoice
+
++ Request JSON Message
+    + Body
+        ```js
+        {
+            "amount": 10000,
+            "date": "2017-04-30",
+            "journal_id": 4,
+            "payment_method_id": 1
+        }
+        ```
+    + Schema
+        ```js
+        {
+            "amount": {
+                "type": "float",
+                "required": False,
+                "mean": "Số tiền thanh toán, nếu không truyền thì sẽ lấy số tiền còn lại để thanh toán"
+            },
+            "date": {
+                "type": "date",
+                "required": False,
+                "mean": "Ngày thanh toán, nếu không truyền thì sẽ lấy ngày hiện tại"
+            },
+            "journal_id": {
+                "type": "interger",
+                "required": True,
+                "mean": "ID journal"
+            },
+            "payment_method_id": {
+                "type": "interger",
+                "required": True,
+                "mean": "ID payment method"
+            }
+        }
+        ```
+
++ Response 200 (application/json)
+    + Body
+        ```js
+        {
+            "success": True,
+            "msg": "Success"
+        }
+        ```
+
+    + Schema
+        ```js
+        {
+            "success": {
+                "type": "boolean",
+                "mean": "Kết quả"
+            },
+            "msg": {
+                "type": "string",
+                "mean": "Thông báo"
+            },
+        }
+        ```
+
++ Response 500 (application/json)
+
+    ```js
+    {
+        "error_descrip": "Message",
+        "error": "message_code"
+    }
+    ```
+
++ Response 401 (application/json)
+
+    ```js
+    {
+        "error_descrip": "Message",
+        "error": "message_code"
+    }
+    ```
+
++ Response 400 (application/json)
+
+    ```js
+    {
+        "error_descrip": "Message",
+        "error": "message_code"
+    }
+    ```

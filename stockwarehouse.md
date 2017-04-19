@@ -1,11 +1,11 @@
-# Group Wholesale - Tags
-	CURD res.partner.tags support wholesale
+# Group Wholesale - Warehouse
+	CURD warehouse support wholesale
 
-## Tags [/api/wholesale/tags]
-Tags (getlist)
+## Warehouse [/api/wholesale/warehouse]
+Warehouse (getlist)
 
-### Get tags [GET]
-Get res partner category
+### Get warehouse [GET]
+Get warehouse
 
 + Request
 	```js
@@ -24,14 +24,16 @@ Get res partner category
 			"count": 2,
 			"results": [
 				{
-					"parent_id": null,
+					"code": "WH",
+					"partner_id": 1,
 					"id": 1,
-					"name": "Khách hàng 1"
+					"name": "My Company"
 				},
 				{
-					"parent_id": 1,
+					"code": "home",
+					"partner_id": 8,
 					"id": 2,
-					"name": "Khách hàng 2"
+					"name": "home"
 				}
 			]
 		}
@@ -39,18 +41,22 @@ Get res partner category
 	+ Schema
 		```js
 		{
-			"id": {
-				"type": "interger",
-				"mean": "ID"
-			},
-			"parent_id": {
-				"type": "interger",
-				"mean": "Tag cha"
+			"code": {
+				"type": "string",
+				"mean": "Tên rút gọn category"
 			},
 			"name": {
 				"type": "string",
-				"mean": "Tên"
+				"mean": "Tên warehouse"
 			},
+			"partner_id": {
+				"type": "interger",
+				"mean": "ID partner"
+			},
+			"id": {
+				"type": "interger",
+				"mean": "ID warehouse"
+			}
 		}
 		```
 
@@ -81,39 +87,23 @@ Get res partner category
 	}
 	```
 
-## Tags [/api/wholesale/tags/{id}]
-Tags (getdetail)
+## Warehouse [/api/wholesale/warehouse/{id}]
+Warehouse (getdetail)
 
-### Get tags detail [GET]
-Get res partner category detail
+### Get warehouse detail [GET]
+Get warehouse detail
 
 + Parameters
-	+ id: 2 (required) - Unique identifier for a res partner category
+	+ id: 2 (required) - Unique identifier for a warehouse
 
 + Response 200 (application/json)
 	+ Body
 		```js
 		{
-			"id": 2,
-			"parent_id": 1,
-			"name": "Khách hàng 2"
-		}
-		```
-	+ Schema
-		```js
-		{
-			"id": {
-				"type": "interger",
-				"mean": "ID"
-			},
-			"parent_id": {
-				"type": "interger",
-				"mean": "Tag cha"
-			},
-			"name": {
-				"type": "string",
-				"mean": "Tên"
-			},
+			"code": "WH",
+			"partner_id": 1,
+			"id": 1,
+			"name": "My Company"
 		}
 		```
 
