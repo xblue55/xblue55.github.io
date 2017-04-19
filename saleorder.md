@@ -43,7 +43,9 @@ Create seo order
             "pricelist_id": 1,
             "order_date": "3-10-2017 12:00:00",
             "validity_date" : "3-10-2017 12:00:00",
-            "stock_tranfer_date" : "3-10-2017 12:00:00"
+            "stock_tranfer_date" : "3-10-2017 12:00:00",
+            "create_delivery": true,
+            "register_payment": true
         }
         ```
     + Schema
@@ -143,6 +145,14 @@ Create seo order
                 "stock_tranfer_date":{
                     "type": "string (%Y-%m-%d %H:%M:%S)",
                     "mean": "Ngày giao hàng"
+                },
+                "create_delivery":{
+                    "type": "boolean",
+                    "mean": "Dành cho đơn hàng muốn xuất kho và tạo invoice. bán hàng sỉ tại cửa hàng",
+                },
+                "register_payment":{
+                    "type": "boolean",
+                    "mean": "thanh toán tại thời điểm bán hàng luôn,",
                 }
             },
             "additionalProperties": false

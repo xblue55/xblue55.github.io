@@ -225,9 +225,74 @@ Create Create customer
     + Body
         ```js
         {
-            "id": 1   
+            "count": 1,
+            "results": [
+                "comment": null,
+                "function": null,
+                "city_id": null,
+                "company_type": "person",
+                "parent_id" : 1,
+                "sale_person": null,
+                "sale_person_2": null,
+                "team_id": null,
+                "street": "86/8 Phổ quang",
+                "agent_chanel_id": null,
+                "property_product_pricelist": 1,
+                "id": 12,
+                "property_payment_term_id": null,
+                "title": null,
+                "tax_code": "12345676543",
+                "customer_id": "000003",
+                "delivery_service": null,
+                "email": "farm@gmail.com",
+                "website": null,
+                "contact_title_id": 1,
+                "contact_name" : "Nguyễn Ngọc Lương",
+                "child_ids": [
+                    {
+                      "function": null,
+                      "comment": null,
+                      "name": "Nguyễn Ngọc Lương",
+                      "ward_id": null,
+                      "mobile": null,
+                      "district_id": null,
+                      "id": 18,
+                      "phone": null,
+                      "street": "86/8 Phổ quang",
+                      "city_id": null,
+                      "type": "invoice",
+                      "email": null
+                    },
+                    {
+                      "function": null,
+                      "comment": null,
+                      "name": "Shipping",
+                      "ward_id": null,
+                      "mobile": null,
+                      "district_id": null,
+                      "id": 19,
+                      "phone": null,
+                      "street": "468 Phan văn trị",
+                      "city_id": null,
+                      "type": "delivery",
+                      "email": null
+                    }
+                ],
+                "phone": null,
+                "name": "Farm",
+                "ward_id": null,
+                "mobile": null,
+                "district_id": null,
+                "customer_type": null,
+                "source_id": null,
+                "tags": [
+                  {
+                    "id": 1,
+                    "name": "Sale"
+                  }
+                ]
+            ]
         }
-
         ```
 
 + Response 500 (application/json)
@@ -334,7 +399,12 @@ Get customer
                 "district_id": null,
                 "customer_type": null,
                 "source_id": null,
-                "tags": null
+                "tags": [
+                  {
+                    "id": 1,
+                    "name": "Sale"
+                  }
+                ]
             ]
         }
         ```
@@ -677,7 +747,73 @@ Edit customer
 
     ```js
     {
-        "id": 12,
+        "count": 1,
+        "results": [
+            "comment": null,
+            "function": null,
+            "city_id": null,
+            "company_type": "person",
+            "parent_id" : 1,
+            "sale_person": null,
+            "sale_person_2": null,
+            "team_id": null,
+            "street": "86/8 Phổ quang",
+            "agent_chanel_id": null,
+            "property_product_pricelist": 1,
+            "id": 12,
+            "property_payment_term_id": null,
+            "title": null,
+            "tax_code": "12345676543",
+            "customer_id": "000003",
+            "delivery_service": null,
+            "email": "farm@gmail.com",
+            "website": null,
+            "contact_title_id": 1,
+            "contact_name" : "Nguyễn Ngọc Lương",
+            "child_ids": [
+                {
+                  "function": null,
+                  "comment": null,
+                  "name": "Nguyễn Ngọc Lương",
+                  "ward_id": null,
+                  "mobile": null,
+                  "district_id": null,
+                  "id": 18,
+                  "phone": null,
+                  "street": "86/8 Phổ quang",
+                  "city_id": null,
+                  "type": "invoice",
+                  "email": null
+                },
+                {
+                  "function": null,
+                  "comment": null,
+                  "name": "Shipping",
+                  "ward_id": null,
+                  "mobile": null,
+                  "district_id": null,
+                  "id": 19,
+                  "phone": null,
+                  "street": "468 Phan văn trị",
+                  "city_id": null,
+                  "type": "delivery",
+                  "email": null
+                }
+            ],
+            "phone": null,
+            "name": "Farm",
+            "ward_id": null,
+            "mobile": null,
+            "district_id": null,
+            "customer_type": null,
+            "source_id": null,
+            "tags": [
+              {
+                "id": 1,
+                "name": "Sale"
+              }
+            ]
+        ]
     }
     ```
 
