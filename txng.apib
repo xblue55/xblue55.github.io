@@ -1,0 +1,153 @@
+FORMAT: 1A
+HOST: http://love.caudatfarm.com
+PORT: 8069
+
+# API for wholesale
+Api for wholesale connect oss
+
+NOTE: This document is a **work in progress**.
+
+All request with Authorization and content-type:
+
+```http
+Authorization: 5262d64b892e8d4341000001 (token_code from api get token)
+Content-type: text/plain
+```
+
+# Group Auth
+This section groups for auth
+
+## Auth [/api/auth/get_tokens]
+A Post is the other central object utilized by the App.net Stream API. It has
+rich text and annotations which comprise all of the content a users sees in
+their feed. Posts are closely tied to the follow graph...
+
++ Model (application/json)
+
+    ```js
+    {
+        "user_context": {
+            "lang": "en_US",
+            "tz": "Asia/Saigon",
+            "uid": 145
+        },
+        "uid": 145,
+        "access_token": "56f26ff2ba6b1fdbe3656bd6ec8801b3c2a8abd8",
+        "expires_in": 86400,
+        "company_id": 1,
+        "refresh_expires_in": 93600,
+        "refresh_token": "f2c97b879da324722e6c674e4ec77a5d0a3d1968"
+    }
+    ```
+
+### Get token [POST]
+Token data
+
++ Request (text/plain)
+
+    ```js
+    {
+        "db":"crmcdf",
+        "username":"love@cdf.com",
+        "password":"0913579498"
+    }
+    ```
+
++ Response 200
+
+    [Auth][]
+
++ Response 401 (application/json)
+
+    ```js
+    {
+        "error_descrip": "Odoo User authentication failed!",
+        "error": "odoo_user_authentication_failed"
+    }
+    ```
+
++ Response 400 (application/json)
+
+    ```js
+    {
+        "error_descrip": "Bad request",
+        "error": "ex:wrong_dbname"
+    }
+    ```
+
+## Refresh token [/api/auth/refresh_token]
+Description here
+
+### Refresh token [POST]
+Refresh access token when expire
++ Request (text/plain)
+
+    ```js
+    {
+        "refresh_token": "30ad5a3356d4cecd0ee391caf8154b633ba4af11"
+    }
+    ```
++ Response 200
+
+    [Auth][]
+
++ Response 401 (application/json)
+
+    ```js
+    {
+        "error_descrip": "Token is expired or invalid!",
+        "error": "invalid_token"
+    }
+    ```
+
++ Response 400 (application/json)
+
+    ```js
+    {
+        "error_descrip": "Bad request",
+        "error": "ex:wrong_dbname"
+    }
+    ```
+
+
+## Refresh token [/api/auth/delete_token]
+Description here
+
+### Delete token [POST]
+Delete access token when expire
++ Request (text/plain)
+
+    ```js
+    {
+        "refresh_token": "30ad5a3356d4cecd0ee391caf8154b633ba4af11"
+    }
+    ```
++ Response 200 (application/json)
+
+    ```js
+    {
+        
+    }
+    ```
+
++ Response 401 (application/json)
+
+    ```js
+    {
+        "error_descrip": "Token is expired or invalid!",
+        "error": "invalid_token"
+    }
+    ```
+
++ Response 400 (application/json)
+
+    ```js
+    {
+        "error_descrip": "Bad request",
+        "error": "ex:wrong_dbname"
+    }
+    ```
+
+
+
+
