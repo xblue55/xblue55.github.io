@@ -34,6 +34,7 @@ Get account invoice
 					},
 					"discount_type_id": null,
 					"number": null,
+					"origin": "SO313",
 					"account_id": {
 						"display_name": "131 Phải thu của khách hàng",
 						"id": 7
@@ -123,8 +124,12 @@ Get account invoice
 						"mean": "Loại giảm giá"
 					},
 					"number": {
-						"type": "",
+						"type": "string",
 						"mean": ""
+					}
+					,"origin": {
+						"type": "string",
+						"mean": "Mã truy xuất"
 					},
 					"account_id": {
 						"display_name": {
@@ -319,6 +324,7 @@ Get account invoice detail
 			},
 			"discount_type_id": null,
 			"number": null,
+			"origin": "SO313",
 			"account_id": {
 				"display_name": "131 Phải thu của khách hàng",
 				"id": 7
