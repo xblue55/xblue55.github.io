@@ -400,15 +400,14 @@ Update order
                     "product_id":241,
                     "product_uom_qty":1.0,
                     "discount_type": "fixprice",
-                    "delete": True
+                    "delete": 1
                 },
                 {
                     "price_unit":24000.0,
                     "price_discount":1000.0,
                     "product_id":243,
                     "product_uom_qty":1.0,
-                    "discount_type": "fixprice",
-                    "delete": 1
+                    "discount_type": "fixprice"
                 }
             ],
             "category_id" : 1,
