@@ -1,0 +1,472 @@
+FORMAT: 1A
+HOST: http://love.caudatfarm.com
+PORT: 8069
+
+# API truy xuất nguồn gốc
+Api truy xuất nguồn gốc
+
+NOTE: This document is a **work in progress**.
+
+All request with Authorization and content-type:
+
+```http
+Authorization: 5262d64b892e8d4341000001 (token_code from api get token)
+Content-type: text/plain
+```
+
+# Group Auth
+This section groups for auth
+
+## Auth [/api/auth/get_tokens]
+A Post is the other central object utilized by the App.net Stream API. It has
+rich text and annotations which comprise all of the content a users sees in
+their feed. Posts are closely tied to the follow graph...
+
++ Model (application/json)
+
+    ```js
+    {
+        "user_context": {
+            "lang": "en_US",
+            "tz": "Asia/Saigon",
+            "uid": 145
+        },
+        "uid": 145,
+        "access_token": "56f26ff2ba6b1fdbe3656bd6ec8801b3c2a8abd8",
+        "expires_in": 86400,
+        "company_id": 1,
+        "refresh_expires_in": 93600,
+        "refresh_token": "f2c97b879da324722e6c674e4ec77a5d0a3d1968"
+    }
+    ```
+
+### Get token [POST]
+Token data
+
++ Request (text/plain)
+
+    ```js
+    {
+        "db":"crmcdf",
+        "username":"love@cdf.com",
+        "password":"0913579498"
+    }
+    ```
+
++ Response 200
+
+    [Auth][]
+
++ Response 401 (application/json)
+
+    ```js
+    {
+        "error_descrip": "Odoo User authentication failed!",
+        "error": "odoo_user_authentication_failed"
+    }
+    ```
+
++ Response 400 (application/json)
+
+    ```js
+    {
+        "error_descrip": "Bad request",
+        "error": "ex:wrong_dbname"
+    }
+    ```
+
+## Refresh token [/api/auth/refresh_token]
+Description here
+
+### Refresh token [POST]
+Refresh access token when expire
++ Request (text/plain)
+
+    ```js
+    {
+        "refresh_token": "30ad5a3356d4cecd0ee391caf8154b633ba4af11"
+    }
+    ```
++ Response 200
+
+    [Auth][]
+
++ Response 401 (application/json)
+
+    ```js
+    {
+        "error_descrip": "Token is expired or invalid!",
+        "error": "invalid_token"
+    }
+    ```
+
++ Response 400 (application/json)
+
+    ```js
+    {
+        "error_descrip": "Bad request",
+        "error": "ex:wrong_dbname"
+    }
+    ```
+
+
+## Refresh token [/api/auth/delete_token]
+Description here
+
+### Delete token [POST]
+Delete access token when expire
++ Request (text/plain)
+
+    ```js
+    {
+        "refresh_token": "30ad5a3356d4cecd0ee391caf8154b633ba4af11"
+    }
+    ```
++ Response 200 (application/json)
+
+    ```js
+    {
+        
+    }
+    ```
+
++ Response 401 (application/json)
+
+    ```js
+    {
+        "error_descrip": "Token is expired or invalid!",
+        "error": "invalid_token"
+    }
+    ```
+
++ Response 400 (application/json)
+
+    ```js
+    {
+        "error_descrip": "Bad request",
+        "error": "ex:wrong_dbname"
+    }
+    ```
+# Group TXNG - Truy xuất nguồn gốc
+    CURD Truy xuất nguồn gốc
+
+## Truy xuất nguồn gốc  [/api/stock.production.lot/{id}]
+Truy xuất nguồn gốc
+
+### Truy xuất nguồn gốc [GET]
+Truy xuất nguồn gốc
+
++ Parameters
+    + id: 0101011204 (required) - Unique identifier for a stock production lot
+
++ Response 200 (application/json)
+    + Body
+        ```js
+        {
+            "planting_place": "Đà lạt",
+            "name": "0101011204",
+            "picking_date": "2017-04-12",
+            "farm_id": {
+                "farmer_count": 10,
+                "area": 100,
+                "farm_land": "Đen",
+                "description": "Nông trại trồng cà phê",
+                "experience": "Hơn hai mươi năm trồng cà phê",
+                "height": 200,
+                "phone": "0987654321",
+                "time_availability": "Các tháng trong năm",
+                "address": "Đà lạt",
+                "image_ids": [
+                    {
+                    "image_medium": "iVBORw0KG...CYII=\n",
+                    "name": "Đà lạt",
+                    "image_alt": null,
+                    "sequence": 1,
+                    "image": "iVBORw0KG...CYII=\n",
+                    "image_small": "iVBORw0KG...CYII=\n",
+                    "description": null
+                    }
+                ],
+                "farm_type": "Cà phê",
+                "establish": "1991-10-18",
+                "name": "Đà lạt"
+            },
+            "simple_package_id": {
+                "phone": "0987654321",
+                "name": "Hồ Chí Minh",
+                "image_ids": [
+                    {
+                    "image_medium": "iVBORw0KG...CYII=\n",
+                    "name": "Hình mẫu 1",
+                    "image_alt": "Hình mẫu 1",
+                    "sequence": 1,
+                    "image": "iVBORw0KG...CYII=\n",
+                    "image_small": "iVBORw0KG...CYII=\n",
+                    "description": "Mô tả mẫu"
+                    }
+                ],
+                "address": "Hồ Chí Minh"
+            },
+            "planting_date": "2017-04-12",
+            "origins_seed": "Đà lạt",
+            "quality_control": "Tốt",
+            "partner_id": {
+                "name": "Ã7 Coffee",
+                "contracting_date": "2017-04-12"
+            },
+            "simple_package_date": "2017-04-12",
+            "product_id": {
+                "name": "Cà phê Phin - TCH - Gói 1kg",
+                "image": "iVBORw0KG...CYII=\n",
+                "image_medium": "iVBORw0KG...CYII=\n",
+                "image_small": "iVBORw0KG...CYII=\n",
+                "barcode": "8110004300001",
+                "packing": "Túi 1KG/ 0.5KG/ 250Gr",
+                "expiry_date": "\tTrong vòng 30 ngày, kể từ ngày rang được in trên bao bì",
+                "storage_conditions": "Ở nhiệt độ bình thường"
+            }
+        }
+        ```
+    + Schema
+        ```js
+        {
+            "planting_place": {
+                "type": "string",
+                "mean": "Nơi thu hoạch"
+            },
+            "name": {
+                "type": "string",
+                "mean": "Mã truy xuất nguồn gốc"
+            },
+            "picking_date": {
+                "type": "date",
+                "mean": "Ngày trồng"
+            },
+            "farm_id": {
+                "farmer_count": {
+                    "type": "interger",
+                    "mean": "Số lượng nông hộ"
+                },
+                "area": {
+                    "type": "float",
+                    "mean": "Diện tích"
+                },
+                "farm_land": {
+                    "type": "string",
+                    "mean": "Loại đất"
+                },
+                "description": {
+                    "type": "string",
+                    "mean": "Mô tả"
+                },
+                "experience": {
+                    "type": "string",
+                    "mean": "Kinh nghiệm canh tác"
+                },
+                "height": {
+                    "type": "float",
+                    "mean": "Độ cao"
+                },
+                "phone": {
+                    "type": "string",
+                    "mean": "Số điện thoại"
+                },
+                "time_availability": {
+                    "type": "string",
+                    "mean": "Thời gian sẵn sàng canh tác"
+                },
+                "address": {
+                    "type": "string",
+                    "mean": "Địa chỉ"
+                },
+                "image_ids": [
+                    {
+                        "image_medium": {
+                            "type": "string",
+                            "mean": "Hình ảnh(base64)"
+                        },
+                        "name": {
+                            "type": "string",
+                            "mean": "Tên"
+                        },
+                        "image_alt": {
+                            "type": "string",
+                            "mean": "Alt hình ảnh"
+                        },
+                        "sequence": {
+                            "type": "interger",
+                            "mean": "Sắp xếp"
+                        },
+                        "image": {
+                            "type": "string",
+                            "mean": "Hình ảnh(base64)"
+                        },
+                        "image_small": {
+                            "type": "string",
+                            "mean": "Hình ảnh(base64)"
+                        },
+                        "description": {
+                            "type": "string",
+                            "mean": "Mô tả"
+                        }
+                    }
+                ],
+                "farm_type": {
+                    "type": "string",
+                    "mean": "Loại nông trại"
+                },
+                "establish": {
+                    "type": "date",
+                    "mean": "Ngày thành lập"
+                },
+                "name": {
+                    "type": "string",
+                    "mean": "Tên nông trại"
+                }
+            },
+            "simple_package_id": {
+                "phone": {
+                    "type": "string",
+                    "mean": "Số điện thoại"
+                },
+                "name": {
+                    "type": "string",
+                    "mean": "Tên nơi sơ chế đóng gói"
+                },
+                "image_ids": [
+                    {
+                        "image_medium": {
+                            "type": "string",
+                            "mean": "Hình ảnh(base64)"
+                        },
+                        "name": {
+                            "type": "string",
+                            "mean": "Tên"
+                        },
+                        "image_alt": {
+                            "type": "string",
+                            "mean": "Alt hình ảnh"
+                        },
+                        "sequence": {
+                            "type": "interger",
+                            "mean": "Sắp xếp"
+                        },
+                        "image": {
+                            "type": "string",
+                            "mean": "Hình ảnh(base64)"
+                        },
+                        "image_small": {
+                            "type": "string",
+                            "mean": "Hình ảnh(base64)"
+                        },
+                        "description": {
+                            "type": "string",
+                            "mean": "Mô tả"
+                        }
+                    }
+                ],
+                "address": {
+                    "type": "string",
+                    "mean": "Địa chỉ"
+                }   
+            },
+            "planting_date": {
+                "type": "string",
+                "mean": "Ngày thu hoạch"
+            },
+            "origins_seed": {
+                "type": "string",
+                "mean": "Nguồn gốc giống"
+            },
+            "quality_control": {
+                "type": "string",
+                "mean": "Quản lý chất lượng"
+            },
+            "partner_id": {
+                "name": {
+                    "type": "string",
+                    "mean": "Tên nhà cung cấp"
+                },
+                "contracting_date": {
+                    "type": "date",
+                    "mean": "Ngày kí hợp đồng"
+                }
+            },
+            "simple_package_date": {
+                "type": "date",
+                "mean": "Ngày sơ chế đóng gói"
+            },
+            "product_id": {
+                "name": {
+                    "type": "string",
+                    "mean": "Tên sản phẩm"
+                },
+                "image": {
+                    "type": "string",
+                    "mean": "Hình ảnh(base64)"
+                },
+                "image_medium": {
+                    "type": "string",
+                    "mean": "Hình ảnh(base64)"
+                },
+                "image_small": {
+                    "type": "string",
+                    "mean": "Hình ảnh(base64)"
+                },
+                "barcode": {
+                    "type": "string",
+                    "mean": "Barcode"
+                },
+                "packing": {
+                    "type": "string",
+                    "mean": "Quy cách đóng gói"
+                },
+                "expiry_date": {
+                    "type": "string",
+                    "mean": "Hạn sử dụng"
+                },
+                "storage_conditions": {
+                    "type": "string",
+                    "mean": "Điều kiện bảo quản"
+                }
+            }
+        }
+        ```
+
++ Response 404 (application/json)
+
+    ```js
+    {
+        "error_descrip": "Message",
+        "error": "message_code"
+    }
+    ```
+        
++ Response 500 (application/json)
+
+    ```js
+    {
+        "error_descrip": "Message",
+        "error": "message_code"
+    }
+    ```
+
++ Response 401 (application/json)
+
+    ```js
+    {
+        "error_descrip": "Message",
+        "error": "message_code"
+    }
+    ```
+
++ Response 400 (application/json)
+
+    ```js
+    {
+        "error_descrip": "Message",
+        "error": "message_code"
+    }
+    ```
+
+
