@@ -408,7 +408,7 @@ Update order
                     "product_id":243,
                     "product_uom_qty":1.0,
                     "discount_type": "fixprice",
-                    "delete": True
+                    "delete": 1
                 }
             ],
             "category_id" : 1,
