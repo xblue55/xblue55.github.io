@@ -387,17 +387,28 @@ Update order
             "warehouse_code":"KTT",
             "order_line":[
                 {
+                    "id": 100,
                     "price_unit":20000.0,
                     "price_discount":0.0,
                     "product_id":237,
                     "product_uom_qty":1.0
                 },
                 {
+                    "id": 200,
                     "price_unit":24000.0,
                     "price_discount":1000.0,
                     "product_id":241,
                     "product_uom_qty":1.0,
-                    "discount_type": "fixprice"
+                    "discount_type": "fixprice",
+                    "delete": True
+                },
+                {
+                    "price_unit":24000.0,
+                    "price_discount":1000.0,
+                    "product_id":243,
+                    "product_uom_qty":1.0,
+                    "discount_type": "fixprice",
+                    "delete": True
                 }
             ],
             "category_id" : 1,
@@ -470,7 +481,15 @@ Update order
                         "product_uom_qty": {
                             "type": "integer",
                             "mean": "Số lượng"
-                        }
+                        },
+                        "id" {
+                            "type": "integer",
+                            "mean": "Id line muốn edit"
+                        },
+                        "delete" {
+                            "type": "integer",
+                            "mean": "Nếu muốn xóa line đó thì thêm key delete và id, nếu ko có key delete va id thì mặc định là thêm mới, nếu thì có id thì là update line đó"
+                        },
                     }
                 ],
                 "category_id" : {
