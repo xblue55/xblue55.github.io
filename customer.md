@@ -48,6 +48,11 @@ Create Create customer
                   "city_id": 68,
                   "district_id": 835,
                   "ward_id": 12778
+                },
+                "create_opportunity": {
+                		"name": "Khách hàng tìm năng đấy",
+                		"planned_revenue": 1000000,
+                		"rating": "2"
                 }
               ]
         }
@@ -217,6 +222,20 @@ Create Create customer
                         }
                     }
                 ]
+            },
+            "create_opportunity": {
+            		"name": {
+            			"type": "string",
+            			"mean": "Tên của pipeline"
+            		},
+            		"planned_revenue": {
+            			"type": "float",
+            			"mean": "Doanh thu dự kiến"
+            		},
+            		"priority": {
+            			"type": "enum('0','1','2','3')",
+            			"mean": "điểm đánh giá, giá trị là string"
+            		}
             }
         }
         ```

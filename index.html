@@ -66,45 +66,50 @@ their feed. Posts are closely tied to the follow graph…</p>
 <div id="wholesale-customer-customer" class="resource"><h3 class="resource-heading">Customer <a href="#wholesale-customer-customer" class="permalink">&nbsp;&para;</a></h3><p>Customer (getlist / create)</p>
 <div id="wholesale-customer-customer-post" class="action post"><h4 class="action-heading"><div class="name">Create customer</div><a href="#wholesale-customer-customer-post" class="method post">POST</a><code class="uri">/api/wholesale/res.partner</code></h4><p>Create Create customer</p>
 <h4>Example URI</h4><div class="definition"><span class="method post">POST</span>&nbsp;<span class="uri"><span class="hostname">http://love.caudatfarm.com</span>/api/wholesale/res.partner</span></div><div class="title"><strong>Request&nbsp;&nbsp;<code>JSON Message</code></strong><div class="collapse-button"><span class="close">Hide</span><span class="open">Show</span></div></div><div class="collapse-content"><div class="inner"><h5>Body</h5><pre><code>{
-  "<span class="hljs-attribute">company_type</span>": <span class="hljs-value"><span class="hljs-string">"person"</span></span>,
-  "<span class="hljs-attribute">parent_id</span>": <span class="hljs-value"><span class="hljs-number">1</span></span>,
-  "<span class="hljs-attribute">name</span>": <span class="hljs-value"><span class="hljs-string">"Nguyễn Ngọc Lương"</span></span>,
-  "<span class="hljs-attribute">street</span>": <span class="hljs-value"><span class="hljs-string">"458 Phan Văn Trị"</span></span>,
-  "<span class="hljs-attribute">city_id</span>": <span class="hljs-value"><span class="hljs-number">68</span></span>,
-  "<span class="hljs-attribute">district_id</span>": <span class="hljs-value"><span class="hljs-number">835</span></span>,
-  "<span class="hljs-attribute">ward_id</span>": <span class="hljs-value"><span class="hljs-number">12778</span></span>,
-  "<span class="hljs-attribute">website</span>": <span class="hljs-value"><span class="hljs-string">"www.xblue55.github.io"</span></span>,
-  "<span class="hljs-attribute">agent_channel_id</span>": <span class="hljs-value"><span class="hljs-number">1</span></span>,
-  "<span class="hljs-attribute">tags</span>": <span class="hljs-value"><span class="hljs-string">"1,2,3,4"</span></span>,
-  "<span class="hljs-attribute">sale_persion</span>": <span class="hljs-value"><span class="hljs-string">"CDF00242"</span></span>,
-  "<span class="hljs-attribute">sale_persion_2</span>": <span class="hljs-value"><span class="hljs-string">"CDF00242"</span></span>,
-  "<span class="hljs-attribute">phone</span>": <span class="hljs-value"><span class="hljs-string">"0988077558"</span></span>,
-  "<span class="hljs-attribute">mobile</span>": <span class="hljs-value"><span class="hljs-string">"0988077559"</span></span>,
-  "<span class="hljs-attribute">email</span>": <span class="hljs-value"><span class="hljs-string">"nnluong.it2@gmail.com"</span></span>,
-  "<span class="hljs-attribute">title</span>": <span class="hljs-value"><span class="hljs-number">1</span></span>,
-  "<span class="hljs-attribute">source_id</span>": <span class="hljs-value"><span class="hljs-number">1</span></span>,
-  "<span class="hljs-attribute">customer_type</span>": <span class="hljs-value"><span class="hljs-string">"cash"</span></span>,
-  "<span class="hljs-attribute">tax_code</span>": <span class="hljs-value"><span class="hljs-string">"123123123"</span></span>,
-  "<span class="hljs-attribute">comment</span>": <span class="hljs-value"><span class="hljs-string">"Thằng này tốt lắm"</span></span>,
-  "<span class="hljs-attribute">function</span>": <span class="hljs-value"><span class="hljs-string">"devoloper"</span></span>,
-  "<span class="hljs-attribute">property_payment_term_id</span>": <span class="hljs-value"><span class="hljs-number">1</span></span>,
-  "<span class="hljs-attribute">delivery_service</span>": <span class="hljs-value"><span class="hljs-string">"partner"</span></span>,
-  "<span class="hljs-attribute">property_product_pricelist</span>": <span class="hljs-value"><span class="hljs-number">1</span></span>,
-  "<span class="hljs-attribute">child_ids</span>": <span class="hljs-value">[
-    {
-      "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"contact"</span></span>,
-      "<span class="hljs-attribute">name</span>": <span class="hljs-value"><span class="hljs-string">"Nguyễn Ngọc Út"</span></span>,
-      "<span class="hljs-attribute">function</span>": <span class="hljs-value"><span class="hljs-string">"tester"</span></span>,
-      "<span class="hljs-attribute">email</span>": <span class="hljs-value"><span class="hljs-string">"tester@gmail.com"</span></span>,
-      "<span class="hljs-attribute">phone</span>": <span class="hljs-value"><span class="hljs-string">"0988888888"</span></span>,
-      "<span class="hljs-attribute">mobile</span>": <span class="hljs-value"><span class="hljs-string">"097777777"</span></span>,
-      "<span class="hljs-attribute">comment</span>": <span class="hljs-value"><span class="hljs-string">"Thằng này ko liên hệ được đâu"</span></span>,
-      "<span class="hljs-attribute">street</span>": <span class="hljs-value"><span class="hljs-string">"468 Phan văn trị"</span></span>,
+      "<span class="hljs-attribute">company_type</span>": <span class="hljs-value"><span class="hljs-string">"person"</span></span>,
+      "<span class="hljs-attribute">parent_id</span>": <span class="hljs-value"><span class="hljs-number">1</span></span>,
+      "<span class="hljs-attribute">name</span>": <span class="hljs-value"><span class="hljs-string">"Nguyễn Ngọc Lương"</span></span>,
+      "<span class="hljs-attribute">street</span>": <span class="hljs-value"><span class="hljs-string">"458 Phan Văn Trị"</span></span>,
       "<span class="hljs-attribute">city_id</span>": <span class="hljs-value"><span class="hljs-number">68</span></span>,
       "<span class="hljs-attribute">district_id</span>": <span class="hljs-value"><span class="hljs-number">835</span></span>,
-      "<span class="hljs-attribute">ward_id</span>": <span class="hljs-value"><span class="hljs-number">12778</span>
-    </span>}
-  ]
+      "<span class="hljs-attribute">ward_id</span>": <span class="hljs-value"><span class="hljs-number">12778</span></span>,
+      "<span class="hljs-attribute">website</span>": <span class="hljs-value"><span class="hljs-string">"www.xblue55.github.io"</span></span>,
+      "<span class="hljs-attribute">agent_channel_id</span>": <span class="hljs-value"><span class="hljs-number">1</span></span>,
+      "<span class="hljs-attribute">tags</span>": <span class="hljs-value"><span class="hljs-string">"1,2,3,4"</span></span>,
+      "<span class="hljs-attribute">sale_persion</span>": <span class="hljs-value"><span class="hljs-string">"CDF00242"</span></span>,
+      "<span class="hljs-attribute">sale_persion_2</span>": <span class="hljs-value"><span class="hljs-string">"CDF00242"</span></span>,
+      "<span class="hljs-attribute">phone</span>": <span class="hljs-value"><span class="hljs-string">"0988077558"</span></span>,
+      "<span class="hljs-attribute">mobile</span>": <span class="hljs-value"><span class="hljs-string">"0988077559"</span></span>,
+      "<span class="hljs-attribute">email</span>": <span class="hljs-value"><span class="hljs-string">"nnluong.it2@gmail.com"</span></span>,
+      "<span class="hljs-attribute">title</span>": <span class="hljs-value"><span class="hljs-number">1</span></span>,
+      "<span class="hljs-attribute">source_id</span>": <span class="hljs-value"><span class="hljs-number">1</span></span>,
+      "<span class="hljs-attribute">customer_type</span>": <span class="hljs-value"><span class="hljs-string">"cash"</span></span>,
+      "<span class="hljs-attribute">tax_code</span>": <span class="hljs-value"><span class="hljs-string">"123123123"</span></span>,
+      "<span class="hljs-attribute">comment</span>": <span class="hljs-value"><span class="hljs-string">"Thằng này tốt lắm"</span></span>,
+      "<span class="hljs-attribute">function</span>": <span class="hljs-value"><span class="hljs-string">"devoloper"</span></span>,
+      "<span class="hljs-attribute">property_payment_term_id</span>": <span class="hljs-value"><span class="hljs-number">1</span></span>,
+      "<span class="hljs-attribute">delivery_service</span>": <span class="hljs-value"><span class="hljs-string">"partner"</span></span>,
+      "<span class="hljs-attribute">property_product_pricelist</span>": <span class="hljs-value"><span class="hljs-number">1</span></span>,
+      "<span class="hljs-attribute">child_ids</span>": <span class="hljs-value">[
+        {
+          "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"contact"</span></span>,
+          "<span class="hljs-attribute">name</span>": <span class="hljs-value"><span class="hljs-string">"Nguyễn Ngọc Út"</span></span>,
+          "<span class="hljs-attribute">function</span>": <span class="hljs-value"><span class="hljs-string">"tester"</span></span>,
+          "<span class="hljs-attribute">email</span>": <span class="hljs-value"><span class="hljs-string">"tester@gmail.com"</span></span>,
+          "<span class="hljs-attribute">phone</span>": <span class="hljs-value"><span class="hljs-string">"0988888888"</span></span>,
+          "<span class="hljs-attribute">mobile</span>": <span class="hljs-value"><span class="hljs-string">"097777777"</span></span>,
+          "<span class="hljs-attribute">comment</span>": <span class="hljs-value"><span class="hljs-string">"Thằng này ko liên hệ được đâu"</span></span>,
+          "<span class="hljs-attribute">street</span>": <span class="hljs-value"><span class="hljs-string">"468 Phan văn trị"</span></span>,
+          "<span class="hljs-attribute">city_id</span>": <span class="hljs-value"><span class="hljs-number">68</span></span>,
+          "<span class="hljs-attribute">district_id</span>": <span class="hljs-value"><span class="hljs-number">835</span></span>,
+          "<span class="hljs-attribute">ward_id</span>": <span class="hljs-value"><span class="hljs-number">12778</span>
+        </span>},
+        <span class="hljs-string">"create_opportunity"</span>: {
+                "<span class="hljs-attribute">name</span>": <span class="hljs-value"><span class="hljs-string">"Khách hàng tìm năng đấy"</span></span>,
+                "<span class="hljs-attribute">planned_revenue</span>": <span class="hljs-value"><span class="hljs-number">1000000</span></span>,
+                "<span class="hljs-attribute">rating</span>": <span class="hljs-value"><span class="hljs-string">"2"</span>
+        </span>}
+      ]
 </span>}</code></pre><div style="height: 1px;"></div><h5>Schema</h5><pre><code>{
     "company_type" : {
         "type": "enum('person', 'company')",
@@ -268,6 +273,20 @@ their feed. Posts are closely tied to the follow graph…</p>
                 }
             }
         ]
+    },
+    "create_opportunity": {
+            "name": {
+                "type": "string",
+                "mean": "Tên của pipeline"
+            },
+            "planned_revenue": {
+                "type": "float",
+                "mean": "Doanh thu dự kiến"
+            },
+            "priority": {
+                "type": "enum('0','1','2','3')",
+                "mean": "điểm đánh giá, giá trị là string"
+            }
     }
 }</code></pre><div style="height: 1px;"></div></div></div><div class="title"><strong>Response&nbsp;&nbsp;<code>200</code></strong><div class="collapse-button"><span class="close">Hide</span><span class="open">Show</span></div></div><div class="collapse-content"><div class="inner"><h5>Headers</h5><pre><code><span class="hljs-attribute">Content-Type</span>: <span class="hljs-string">application/json</span></code></pre><div style="height: 1px;"></div><h5>Body</h5><pre><code>{
     "<span class="hljs-attribute">count</span>": <span class="hljs-value"><span class="hljs-number">1</span></span>,
@@ -3211,7 +3230,7 @@ their feed. Posts are closely tied to the follow graph…</p>
 </span>}</code></pre><div style="height: 1px;"></div></div></div><div class="title"><strong>Response&nbsp;&nbsp;<code>400</code></strong><div class="collapse-button"><span class="close">Hide</span><span class="open">Show</span></div></div><div class="collapse-content"><div class="inner"><h5>Headers</h5><pre><code><span class="hljs-attribute">Content-Type</span>: <span class="hljs-string">application/json</span></code></pre><div style="height: 1px;"></div><h5>Body</h5><pre><code>{
   "<span class="hljs-attribute">error_descrip</span>": <span class="hljs-value"><span class="hljs-string">"Message"</span></span>,
   "<span class="hljs-attribute">error</span>": <span class="hljs-value"><span class="hljs-string">"message_code"</span>
-</span>}</code></pre><div style="height: 1px;"></div></div></div></div></div></section></div></div></div><p style="text-align: center;" class="text-muted">Generated by&nbsp;<a href="https://github.com/danielgtaylor/aglio" class="aglio">aglio</a>&nbsp;on 26 Apr 2017</p><script>/* eslint-env browser */
+</span>}</code></pre><div style="height: 1px;"></div></div></div></div></div></section></div></div></div><p style="text-align: center;" class="text-muted">Generated by&nbsp;<a href="https://github.com/danielgtaylor/aglio" class="aglio">aglio</a>&nbsp;on 04 May 2017</p><script>/* eslint-env browser */
 /* eslint quotes: [2, "single"] */
 'use strict';
 
