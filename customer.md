@@ -49,12 +49,12 @@ Create Create customer
                   "district_id": 835,
                   "ward_id": 12778
                 },
-                "create_opportunity": {
-                		"name": "Khách hàng tìm năng đấy",
-                		"planned_revenue": 1000000,
-                		"rating": "2"
-                }
-              ]
+              ],
+              "create_opportunity": {
+                "name": "Khách hàng tìm năng đấy",
+                "planned_revenue": 1000000,
+                "rating": "2"
+              }
         }
         ```
     + Schema
