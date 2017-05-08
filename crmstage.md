@@ -4,7 +4,7 @@
 ## Source [/api/wholesale/crm.stage]
 Source (getlist)
 
-### Get source [GET]
+### Get Stage [GET]
 Get crm.stage
 
 + Request
@@ -112,8 +112,8 @@ Get crm.stage
 
 ## Source [/api/wholesale/crm.stage/{id}]
 Source (getdetail)
-### Get source detail [GET]
-Get utm source detail
+### Get Stage detail [GET]
+Get Crm Stage detail
 
 + Parameters
     + id: 4 (required) - Unique identifier for a res partner title
@@ -181,7 +181,7 @@ Get utm source detail
 ## Source [/api/wholesale/crm.stage/fromteamid/{id}]
 Source (getdetail)
 ### Get stage detail [GET]
-Get crm stage detail
+Get crm stage detail from leadid
 
 + Parameters
     + id: 4 (required) - Unique identifier for a res partner title
