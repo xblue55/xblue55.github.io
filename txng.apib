@@ -150,20 +150,20 @@ Delete access token when expire
 # Group TXNG - Truy xuất nguồn gốc
     CURD Truy xuất nguồn gốc
 
-## Truy xuất nguồn gốc  [/api/stock.production.lot/{id}]
+## Truy xuất nguồn gốc  [/api/stock.production.lot/{uuid}/{name}]
 Truy xuất nguồn gốc
 
 ### Truy xuất nguồn gốc [GET]
 Truy xuất nguồn gốc
 
 + Parameters
-    + id: 0101011204 (required) - Unique identifier for a stock production lot
+    + uuid: ABCDF (required) - Unique identifier
+    + name: 0101011204-20170606 (required) - Unique identifier
 
 + Response 200 (application/json)
     + Body
         ```js
         {
-            "planting_place": "Đà lạt",
             "name": "0101011204",
             "picking_date": "2017-04-12",
             "farm_id": {
@@ -178,12 +178,10 @@ Truy xuất nguồn gốc
                 "address": "Đà lạt",
                 "image_ids": [
                     {
-                    "image_medium": "iVBORw0KG...CYII=\n",
                     "name": "Đà lạt",
                     "image_alt": null,
                     "sequence": 1,
                     "image": "iVBORw0KG...CYII=\n",
-                    "image_small": "iVBORw0KG...CYII=\n",
                     "description": null
                     }
                 ],
@@ -196,30 +194,47 @@ Truy xuất nguồn gốc
                 "name": "Hồ Chí Minh",
                 "image_ids": [
                     {
-                    "image_medium": "iVBORw0KG...CYII=\n",
                     "name": "Hình mẫu 1",
                     "image_alt": "Hình mẫu 1",
                     "sequence": 1,
                     "image": "iVBORw0KG...CYII=\n",
-                    "image_small": "iVBORw0KG...CYII=\n",
                     "description": "Mô tả mẫu"
                     }
                 ],
                 "address": "Hồ Chí Minh"
             },
             "planting_date": "2017-04-12",
-            "origins_seed": "Đà lạt",
+            "origins_seed_id": {
+                "id": 1,
+                "name": Đà lạt"
+            },
             "quality_control": "Tốt",
             "partner_id": {
                 "name": "Ã7 Coffee",
                 "contracting_date": "2017-04-12"
             },
+            "uom_type_id": {
+                "id": "1",
+                "name": "10 gói 1 thùng"
+            },
+            "solution_cultivation_ids": [{
+                "id": "1",
+                "name": "Tưới nhiều nước"
+            }, {
+                "id": "2",
+                "name": "Ánh sáng nhiều"
+            }],
+            "quality_control_ids": [{
+                "id": "1",
+                "name": "VIETGAP 1.0"
+            }, {
+                "id": "2",
+                "name": "VIETGAP 2.0"
+            }],
             "simple_package_date": "2017-04-12",
             "product_id": {
                 "name": "Cà phê Phin - TCH - Gói 1kg",
                 "image": "iVBORw0KG...CYII=\n",
-                "image_medium": "iVBORw0KG...CYII=\n",
-                "image_small": "iVBORw0KG...CYII=\n",
                 "barcode": "8110004300001",
                 "packing": "Túi 1KG/ 0.5KG/ 250Gr",
                 "expiry_date": "\tTrong vòng 30 ngày, kể từ ngày rang được in trên bao bì",
@@ -230,10 +245,6 @@ Truy xuất nguồn gốc
     + Schema
         ```js
         {
-            "planting_place": {
-                "type": "string",
-                "mean": "Nơi thu hoạch"
-            },
             "name": {
                 "type": "string",
                 "mean": "Mã truy xuất nguồn gốc"
@@ -281,10 +292,6 @@ Truy xuất nguồn gốc
                 },
                 "image_ids": [
                     {
-                        "image_medium": {
-                            "type": "string",
-                            "mean": "Hình ảnh(base64)"
-                        },
                         "name": {
                             "type": "string",
                             "mean": "Tên"
@@ -298,10 +305,6 @@ Truy xuất nguồn gốc
                             "mean": "Sắp xếp"
                         },
                         "image": {
-                            "type": "string",
-                            "mean": "Hình ảnh(base64)"
-                        },
-                        "image_small": {
                             "type": "string",
                             "mean": "Hình ảnh(base64)"
                         },
@@ -335,10 +338,6 @@ Truy xuất nguồn gốc
                 },
                 "image_ids": [
                     {
-                        "image_medium": {
-                            "type": "string",
-                            "mean": "Hình ảnh(base64)"
-                        },
                         "name": {
                             "type": "string",
                             "mean": "Tên"
@@ -352,10 +351,6 @@ Truy xuất nguồn gốc
                             "mean": "Sắp xếp"
                         },
                         "image": {
-                            "type": "string",
-                            "mean": "Hình ảnh(base64)"
-                        },
-                        "image_small": {
                             "type": "string",
                             "mean": "Hình ảnh(base64)"
                         },
@@ -374,13 +369,17 @@ Truy xuất nguồn gốc
                 "type": "string",
                 "mean": "Ngày thu hoạch"
             },
-            "origins_seed": {
-                "type": "string",
-                "mean": "Nguồn gốc giống"
+            "origins_seed_id": {
+                "name": {
+                    "type": "string",
+                    "mean": "Nguồn gốc giống"
+                }
             },
-            "quality_control": {
-                "type": "string",
-                "mean": "Quản lý chất lượng"
+            "quality_control_ids": {
+                "name": {
+                    "type": "string",
+                    "mean": "Quản lý chất lượng"
+                }
             },
             "partner_id": {
                 "name": {
@@ -390,6 +389,18 @@ Truy xuất nguồn gốc
                 "contracting_date": {
                     "type": "date",
                     "mean": "Ngày kí hợp đồng"
+                }
+            },
+            "uom_type_id": {
+                "name": {
+                    "type": "string",
+                    "mean": "Quy cách đóng thùng"
+                }
+            },
+            "solution_cultivation_ids": {
+                "name": {
+                    "type": "string",
+                    "mean": "Biện pháp canh tác"
                 }
             },
             "simple_package_date": {
@@ -402,14 +413,6 @@ Truy xuất nguồn gốc
                     "mean": "Tên sản phẩm"
                 },
                 "image": {
-                    "type": "string",
-                    "mean": "Hình ảnh(base64)"
-                },
-                "image_medium": {
-                    "type": "string",
-                    "mean": "Hình ảnh(base64)"
-                },
-                "image_small": {
                     "type": "string",
                     "mean": "Hình ảnh(base64)"
                 },
